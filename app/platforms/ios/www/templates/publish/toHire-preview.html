@@ -1,0 +1,106 @@
+<ion-view view-title="才聘详情" hide-tabs="true" >
+  <ion-content style="background: #fff">
+    <div class="toHireDetailed">
+      <div class="heardTitle">
+        <h1 class="title" ng-bind="ephemeralData['职位']"></h1>
+        <p class="name">{{ephemeralData['公司名称']}}</p>
+      </div>
+      <div class="info">
+        <div class="info-noe">
+          <div class="info-noe-center">
+            <p class="left-icon yellow"><i class="ion-location"></i></p>
+            <p class="right-text">
+              <span class="big textOverHide" >{{ephemeralData['地区'].join(',')}}</span><br>
+              <span class="small">地址</span>
+            </p>
+          </div>
+        </div>
+        <div class="info-noe">
+          <div class="info-noe-center">
+            <p class="left-icon yellow"><i class="icon ion-calculator"></i></p>
+            <p class="right-text">
+              <span class="big yellow">{{ephemeralData['年薪']}}</span><br>
+              <span class="small">薪资</span>
+            </p>
+          </div>
+        </div>
+        <div class="info-noe">
+          <div class="info-noe-center">
+            <p class="left-icon yellow"><i class="icon ion-clock"></i></p>
+            <p class="right-text">
+              <span class="big textOverHide">{{ephemeralData['选择日期'] | date :"yyyy-MM-dd"}}</span><br>
+              <span class="small">职位有效期</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="issuer">
+        <P class="title">职位发布人</P>
+        <div class="personage">
+          <p class="photo"><img img-auto="" src="{{ephemeralData.postPublisher.headUrl}}"></p>
+          <div class="personage-info">
+            <h1 class="name">
+              {{ephemeralData.postPublisher.nickname}}
+              <span class="name-small"></span>
+            </h1>
+            <p class="position">{{ephemeralData.postPublisher.company}}</p>
+          </div>
+          <i class="icon-right ion-chevron-right ng-hide" ></i>
+        </div>
+      </div>
+      <ul class="toHire-detailed-list">
+        <li class="list-item">
+          <p class="title">岗位描述</p>
+          <div class="html">
+            {{ephemeralData['岗位描述']}}
+          </div>
+        </li>
+      </ul>
+      <ul class="toHire-detailed-list">
+        <li class="list-item">
+          <p class="title">岗位特点</p>
+          <div class="html">
+            <p class="rect" ng-repeat="text in ephemeralData['岗位特点']">{{text}}</p>
+          </div>
+        </li>
+      </ul>
+      <ul class="toHire-detailed-list">
+        <li class="list-item">
+          <p class="title">岗位要求</p>
+          <div class="html">
+            {{ephemeralData['岗位要求']}}
+          </div>
+        </li>
+      </ul>
+      <ul class="toHire-detailed-list">
+        <li class="list-item property">
+          <p class="title">岗位性质</p>
+          <p class="type">{{ephemeralData['岗位性质']}}</p>
+        </li>
+      </ul>
+      <ul class="toHire-detailed-list">
+        <li class="list-item">
+          <p class="title">公司邮箱</p>
+          <div class="text">
+            {{ephemeralData['公司邮箱']}}
+          </div>
+        </li>
+        <li class="list-item">
+          <p class="title">公司地址</p>
+          <div class="text">
+           {{ephemeralData['公司地址']}}
+          </div>
+        </li>
+      </ul>
+      <ul class="toHire-detailed-list">
+        <li class="list-item curriculumVitae">
+          <p class="noe">简历推荐&nbsp;&nbsp;&nbsp;&nbsp;{{ephemeralData['推荐奖励']}}元</p>
+          <p class="noe">推荐成功&nbsp;&nbsp;&nbsp;&nbsp;{{ephemeralData['推荐成功奖励']}}元</p>
+        </li>
+      </ul>
+    </div>
+  </ion-content>
+  <ion-footer-bar style="background: #FF9800" ng-click="publishEvent()">
+    <p style="line-height: 34px;text-align: center;color: #fff;width: 100%;font-size: 16px">发布</p>
+  </ion-footer-bar>
+</ion-view>

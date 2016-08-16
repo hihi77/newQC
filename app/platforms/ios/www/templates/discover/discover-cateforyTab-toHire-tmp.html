@@ -1,0 +1,25 @@
+<ul class="toHire-list">
+  <li  ng-repeat="data in  nowData|orderBy:'createTime':true" class="animated {{data.class}}" ng-show="!data.hide">
+    <a href="#/tab/{{pageMarking}}/{{pageMarking}}-toHire-detailed/{{data.id}}/{{id}}" class="list-item-toHire" style="display: block">
+    <div class="left-info">
+      <p class="title textOverHide">{{data.profession}}</p>
+      <p class="info textOverHide">{{((data.createTime || data.time ) | date: 'MM月dd日')}} | {{data.address.join(',')}}</p>
+      <p class="info textOverHide">{{data.company}}</p>
+    </div>
+    <div class="right-info ">{{data.salary}}&nbsp;&nbsp;<i class="icon ion-chevron-right" style="color: #444"></i></div></a>
+    <div class="item tabs tabs-secondary tabs-icon-left  ng-hide">
+      <a class="tab-item" href="#/tab/{{pageMarking}}-toHire-{{pageMarking}}-{{data.id}}">
+        编辑
+        <i class="icon ion-edit"></i>
+      </a>
+      <a class="tab-item" href="#">
+        应聘明细
+        <i class="icon ion-eye"></i>
+      </a>
+      <a class="tab-item"  ng-click="deleteItem($index,data.id)">
+        删除
+        <i class="icon ion-close-round"></i>
+      </a>
+    </div>
+  </li>
+</ul>

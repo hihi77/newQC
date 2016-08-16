@@ -1,0 +1,45 @@
+<ion-view title="({{activityName}})成员审核" hide-tabs="true">
+  <ion-content>
+    <div class="examineAndVerify">
+      <div class="tabsBox">
+
+        <ul class="my-tabs ng-hide">
+          <li class="my-tab-item {{heardIndex==0?'hover':''}}" ng-click="heardClick(0)">
+            待审核
+          </li>
+          <li class="my-tab-item center {{heardIndex==1?'hover':''}}" ng-click="heardClick(1)">
+            未通过
+          </li>
+          <li class="my-tab-item {{heardIndex==2?'hover':''}}" ng-click="heardClick(2)">
+            已退出
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="examineAndVerify-content">
+      <ul class="list-examineAndVerify">
+        <li class="list-item" ng-repeat="data in lists">
+          <div class="user">
+            <p class="photo"><img img-auto src="{{data.creator.headUrl}}"></p>
+            <p class="name" ng-bind="data.creator.nickname"></p>
+            <div class="selectBox" style="float:right;" ng-show="heardIndex==0&&!data.text">
+              <button class="button" style="color: green" ng-click="agree(data)"><i class="ion-checkmark-circled size-24"></i></button>
+              <button class="button" ng-click="refuse(data)"><i class="ion-close-circled size-24"></i></button>
+            </div>
+            <div class="item-note" ng-show="data.text" ng-bind="data.text"></div>
+          </div>
+          <div class="info">
+            <p class="info-item" ng-repeat="noe in data.data">
+              <span class="left textOverHide" ng-bind="noe.text"></span>
+              <span class="right textOverHide" ng-bind="noe.value"></span>
+            </p>
+          </div>
+        </li>
+      </ul>
+      <div class="none" ng-show="!lists.length">
+        <i class="ion-android-sad"></i>
+        <div class="none-text">没有数据~</div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

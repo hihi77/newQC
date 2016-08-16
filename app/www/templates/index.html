@@ -1,0 +1,27 @@
+<ion-view view-title="才聘" >
+    <ion-content>
+      <!--中间内容-->
+      <div class="">
+        <ul class="list-style-A" ng-repeat="keyParent in listData">
+          <li class="itme-A" ng-repeat="keyChild in keyParent" ng-click="keyChild.click?keyChild.click($index):listClick($index)">
+            {{keyChild.name}}
+            <!--用户选择后的文本加在此处即可-->
+            <p class="select-text" ng-show="false">选择后的文字</p>
+            <label class="info-input" ng-if="keyChild.placeholder?true:false">
+              <input class="init" placeholder="{{keyChild.placeholder}}">
+            </label>
+            <p class="award" ng-if="keyChild.number?true:false">
+              <label class="number">
+                <input  class="init" placeholder="{{keyChild.number}}" type="tel">
+              </label>
+              元
+            </p>
+            <!--这里我只做样式具体功能你们应该有自己熟悉的控件-->
+            <p class="date" ng-if="keyChild.date">选择日期</p>
+            <i class="ion-chevron-right size-12 icon-right"></i>
+          </li>
+        </ul>
+        <button class="button button-block button-light button-color-blue">发布职位</button>
+      </div>
+    </ion-content>
+  </ion-view>

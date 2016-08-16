@@ -1,0 +1,60 @@
+<ion-view view-title="圈子" hide-tabs="true">
+  <ion-content>
+    <div class="addCircle">
+      <ul class="list-style-A list-style-B">
+        <a href="#/tab/circle-selectType"><li class="itme-A">
+          选择类型
+          <p class="select-text textOverHide ng-binding ng-hide" ng-show="circleEphemeralData['选择类型']?true:false">{{circleEphemeralData['选择类型'].join(',')}}</p>
+          <i class="ion-chevron-right size-12 icon-right" ></i>
+        </li></a>
+
+          <a href="#/tab/circle-circleArea">
+            <li class="itme-A">
+              地区
+            
+              <p class="select-text textOverHide" >{{circleEphemeralData["地区"]}}</p>
+            
+            
+           
+   
+              <i class="ion-chevron-right size-12 icon-right" ng-if="true"></i>
+            </li>
+          </a>
+
+        <a><li class="itme-A">
+          圈子名称
+          <label class="info-input">
+            <input class="init ng-pristine ng-untouched ng-valid" maxlength="15" placeholder="请输入圈子名称" ng-model="circleEphemeralData['圈子名称']" name="圈子名称">
+          </label>
+        </li></a>
+        <li class="itme-A" style="height: auto">
+          圈子海报
+          <div class="playbill upload-photo-control" upload-photo-control></div>
+        </li>
+      </ul>
+      <div class="activityDetailed">
+        <h1 class="title">圈子描述</h1>
+        <div class="detailedBox">
+          <div class="detailedText">
+            <textarea class="init ng-pristine ng-untouched" ng-model="circleEphemeralData['圈子描述'].text" maxlength="128" placeholder=""></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ul class="list-style-A list-style-B">
+      <li class="itme-A" style="line-height: normal;">
+        <ion-toggle ng-model="circleEphemeralData['是否公开']" >是否公开</ion-toggle>
+      </li>
+      <a href="#/tab/{{pageMarking}}-termsForEntry"><li class="itme-A">
+        加入条件设置
+        <p class="select-text textOverHide ng-binding ng-hide" ng-show="circleEphemeralData['加入条件']?true:false"></p>
+        <i class="ion-chevron-right size-12 icon-right" ></i>
+      </li></a>
+    </ul>
+  </ion-content>
+  <ion-footer-bar style="padding: 0">
+    <div class="button-style3 button" style="height: 100%" ng-click="publishCircle()">
+      发布圈子
+    </div>
+  </ion-footer-bar>
+</ion-view>

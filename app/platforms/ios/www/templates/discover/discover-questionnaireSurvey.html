@@ -1,0 +1,47 @@
+<ion-view view-title="问卷调查">
+  <ion-content style="position: relative">
+    <div class="questionnaireSurvey">
+      <div class="herdPrompt">
+        <p class="left-text">{{data.title}}</p>
+        <p class="right-text">共{{data.questions.length}}题</p>
+      </div>
+      <div class="info">
+        <div class="noe">
+          <p class="left-text">赏金:{{data.moneyReward}}元</p>
+          <p class="right-text">发布:{{newDate(data.startTime).Format('MM月dd日 hh:mm')}}</p>
+        </div>
+        <div class="noe">
+          <p class="left-text">限额:{{data.alreadyPortion||0}}/{{data.maxPortion}}</p>
+          <p class="right-text">截止:{{newDate(data.endTime).Format('MM月dd日 hh:mm')}}</p>
+        </div>
+      </div>
+      <div class="textBox">
+        <p class="title">尊敬的用户</p>
+        <p class="text ng-binding">{{data.questdes.text}}</p>
+        <ion-slide-box>
+          <ion-slide  ng-repeat="image in data.questdes.images">
+            <p class="image"><img src="{{image.tsrc||image.src}}"></p>
+          </ion-slide>
+        </ion-slide-box>
+      </div>
+    </div>
+  </ion-content>
+  <div class="shareButton" ng-click="modal.show()" ng-controller="shareController">
+    <i class="ion-share"></i>
+  </div>
+  <a href="{{url}}" ng-show="!data.isRespondent">
+    <ion-footer-bar  class="bar-positive">
+      <h1 class="title" >开始答卷</h1>
+    </ion-footer-bar>
+  </a>
+  <a ng-show="(data.viewauthority=='非公开结果')&&data.ccc" >
+    <ion-footer-bar  class="bar-positive">
+      <h1 class="title" >已参与答卷</h1>
+    </ion-footer-bar>
+  </a>
+  <a href="{{url}}" ng-show="(data.viewauthority!='非公开结果')&&data.isRespondent">
+    <ion-footer-bar  class="bar-positive">
+      <h1 class="title" >查看结果</h1>
+    </ion-footer-bar>
+  </a>
+</ion-view>

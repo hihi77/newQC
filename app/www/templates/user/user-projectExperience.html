@@ -1,0 +1,40 @@
+<ion-view view-title="项目经验" hide-tabs="true">
+  <ion-content>
+    <div class="user-projectExperience">
+      <ul class="list-style-D">
+        <li class="list-item">
+          <p class="leftText">项目名称</p>
+          <p class="rightText"><input class="init" ng-model="projectExperience.projectName" placeholder="请输入项目名称"></p>
+        </li>
+        <li class="list-item">
+          <p class="leftText">开始时间</p>
+          <p class="rightText"><input class="init" ng-model="projectExperience.startTime"  type="date"></p>
+        </li>
+        <li class="list-item">
+          <p class="leftText">结束时间</p>
+          <p class="rightText"><input class="init" ng-model="projectExperience.endTime"  type="date"></p>
+        </li>
+        <li class="list-item">
+          <p class="leftText">公司名称</p>
+          <p class="rightText"><input class="init" maxlength="30" ng-model="projectExperience.corporateName"></p>
+        </li>
+        <li class="list-item">
+          <p class="leftText">项目职务</p>
+          <p class="rightText"><input class="init" maxlength="30" ng-model="projectExperience.projectPosition"  placeholder="请输入项目职务"></p>
+        </li>
+        <li class="list-item">
+          <p class="leftText">项目描述</p>
+          <p class="rightText" style="height: 80px;"><textarea  maxlength="500" ng-model="projectExperience.itemDescription" class="init" placeholder="请输入项目描述"></textarea></p>
+        </li>
+        <li class="list-item">
+          <p class="leftText">项目职责</p>
+          <p class="rightText" style="height: 80px;"><textarea  maxlength="500"  class="init" ng-model="projectExperience.projectResponsibilities" placeholder="请输入项目职责"></textarea></p>
+        </li>
+        <li class="list-item">
+          <p class="leftText">项目业绩</p>
+          <p class="rightText" style="height: 80px;"><textarea maxlength="500" class="init" ng-model="projectExperience.projectPerformance" placeholder="请输入项目业绩"></textarea></p>
+        </li>
+      </ul>
+    </div>
+  </ion-content>
+</ion-view>

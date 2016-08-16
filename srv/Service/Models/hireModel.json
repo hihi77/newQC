@@ -1,0 +1,157 @@
+{
+    "线上活动地址" : "",
+    "线下活动" : "",
+    "createTime" : "2016-05-26T09:11:35.102Z",
+    "type" : [
+        "游学"
+    ],
+    "title" : "test11113333",
+    "applyEndTime" : "2016-05-27T05:00:00.000Z",
+    "activityStartTime" : "2016-05-29T17:00:00.000Z",
+    "activityEndTime" : "2016-06-09T05:00:00.000Z",
+    "activeAddress" : true,
+    "signUpCount" : "11",
+    "price" : "111",
+    "eventProperty" : "公开",
+    "registrationAdditional" : [
+        {
+            "icon" : "ion-android-person",
+            "text" : "姓名",
+            "checkBox" : true
+        },
+        {
+            "icon" : "ion-android-phone-portrait",
+            "text" : "手机",
+            "checkBox" : true
+        },
+        {
+            "icon" : "ion-android-happy",
+            "text" : "公司",
+            "checkBox" : true
+        },
+        {
+            "icon" : "ion-android-happy",
+            "text" : "邮箱"
+        }
+    ],
+    "activitySatisfaction" : [
+        {
+            "icon" : "ion-android-happy",
+            "text" : "时间安排"
+        },
+        {
+            "icon" : "ion-android-happy",
+            "text" : "地点安排"
+        },
+        {
+            "icon" : "ion-android-happy",
+            "text" : "主题安排"
+        },
+        {
+            "icon" : "ion-android-happy",
+            "text" : "活动内容",
+            "checkBox" : true
+        },
+        {
+            "icon" : "ion-android-happy",
+            "text" : "活动组织",
+            "checkBox" : true
+        },
+        {
+            "icon" : "ion-android-happy",
+            "text" : "活动效果"
+        },
+        {
+            "icon" : "ion-android-happy",
+            "text" : "总体评价"
+        }
+    ],
+    "recommendedSuccess" : "",
+    "courseSatisfaction" : "",
+    "eventDetails" : {
+        "text" : "1232323"
+    },
+    "draflag" : "1",
+    "userId" : "18650809701",
+    "creator" : {
+        "nickname" : "tina",
+        "phone" : "18650809701",
+        "userId" : "1462604006514",
+        "config" : {
+            "位置隐身可见" : false,
+            "基本信息可见" : false,
+            "个人简历可见" : false
+        }
+    },
+    "id" : "1462698163424",
+    "signIn" : {
+        "startSignIn" : false
+    },
+    "signUpRecord" : [
+        {
+            "data" : [
+                {
+                    "icon" : "ion-android-person",
+                    "text" : "姓名",
+                    "checkBox" : true,
+                    "value" : "Apple"
+                }
+            ],
+            "type" : "signUp",
+            "userId" : "15980603577",
+            "creator" : {
+                "nickname" : "Apple",
+                "phone" : "15980603577",
+                "userId" : "15980603577",
+                "headUrl" : "http://139.196.152.35:8081/uploads/1461746641009.jpg",
+                "heardPhoto" : "http://139.196.152.35:8081/uploads/1461746641009.jpg",
+                "config" : {
+                    "位置隐身可见" : true,
+                    "基本信息可见" : true,
+                    "个人简历可见" : true
+                }
+            },
+            "status" : "1"
+        },
+        {
+            "data" : [
+                {
+                    "icon" : "ion-android-person",
+                    "text" : "姓名",
+                    "checkBox" : true,
+                    "value" : "tina"
+                },
+                {
+                    "icon" : "ion-android-phone-portrait",
+                    "text" : "手机",
+                    "checkBox" : true,
+                    "value" : "18650809701"
+                },
+                {
+                    "icon" : "ion-android-happy",
+                    "text" : "公司",
+                    "checkBox" : true,
+                    "value" : "tyuu'"
+                }
+            ],
+            "type" : "signUp",
+            "userId" : "18650809701",
+            "creator" : {
+                "nickname" : "tina",
+                "phone" : "18650809701",
+                "userId" : "18650809701",
+                "config" : {
+                    "手机号码可见" : false,
+                    "基本信息可见" : true,
+                    "扩展信息可见" : false
+                },
+                "sysSetting" : false
+            }
+        }
+    ],
+    "signUpSuccess" : 3,
+    "verifiedApplicant" : [
+        "15980603577",
+        "18650809701"
+    ]
+}

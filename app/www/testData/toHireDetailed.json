@@ -1,0 +1,26 @@
+{
+  "company":"xx",
+  "address":"无地址",
+  "salary":"10--20w",
+  "periodOfValidity":"xx-xx-xx xx:xx:xx",
+  "postPublisher":{
+    "heardPhotoUrl":"",
+    "name":"马云",
+    "position":"传世人",
+    "company":"阿里巴巴集团"
+  },
+  "jobDescription":"无描述",
+  "jobCharacteristics":[
+    "特点1",
+    "特点2"
+  ],
+  "jobRequirements":"无要求",
+  "personalSkills":[
+    "技能1",
+    "技能2"
+  ],
+  "jobNature":"全职",
+  "companyMail":"xx@xx.com",
+  "recommendedAward":"100",
+  "recommendedSuccess":"100"
+}

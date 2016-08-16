@@ -1,0 +1,38 @@
+<ion-view title="圈子成员" hide-tabs="true">
+  <ion-content>
+    <ul class="list-style-A" style="margin: 0">
+      <li class="itme-A itme-photo">
+        <a href="#/tab/circle-userInfo/{{userInfo.userId}}" ng-repeat="userInfo in membersData.members">
+          <div class="photo-box">
+            <p class="photo"><img src="{{userInfo.headUrl}}"></p>
+            <p class="name" ng-bind="userInfo.name"></p>
+          </div>
+        </a>
+        <a href="#/tab/circle-selectContacts">
+          <div class="photo-box">
+            <p class="add"><i class="ion-plus-round"></i></p>
+          </div>
+        </a>
+      </li>
+      <a>
+        <li class="itme-A">
+          圈子描述
+        </li>
+      </a>
+      <a>
+        <li class="itme-A size-14" ng-bind-html="membersData.describe">
+
+        </li>
+      </a>
+      <a href="#/tab/circle-report/{{id}}">
+        <li class="itme-A">
+          举报
+          <i class="ion-chevron-right size-12 icon-right"></i>
+        </li>
+      </a>
+    </ul>
+    <div class="bar  bar-assertive">
+      <h1 class="title">删除并退出</h1>
+    </div>
+  </ion-content>
+</ion-view>

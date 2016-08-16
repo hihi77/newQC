@@ -1,0 +1,15 @@
+<ion-view view-title="新朋友" hide-tabs="true">
+    <ion-content>
+        <ion-list>
+            <a class="item item-avatar item-button-right" ng-repeat="data in applyFriends" ng-href="#/tab/chat/user-userOtherInfo/{{data.from.userId}}">
+
+                <img src="{{data.from.headUrl||default_headUrl}}">
+                <h2>{{data.from.nickname}}</h2>
+
+                <button ng-show="data.status==0||data.status==2" class="button button-positive icon-left ion-plus size-8" style="font-size:15px" ng-click="agreeFriendApply($index,data,$event);$event.stopPropagation();">同意</button>
+                <p ng-show="data.status==1">已添加</p>
+
+            </a>
+        </ion-list>
+    </ion-content>
+</ion-view>

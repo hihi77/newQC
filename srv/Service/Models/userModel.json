@@ -1,0 +1,157 @@
+
+{
+    "userId" : "18650809701",
+    "phone" : "18650809701",
+    "nickname" : "hihi77",
+    "headUrl":"",
+    "password" : "890303",
+    "participate" : {
+        "information" : [ 
+            {
+                "images" : [],
+                "type" : "沙龙",
+                "title" : "Test",
+                "des" : {
+                    "text" : "Test"
+                },
+                "contacts" : "12346",
+                "contactmethod" : "12345",
+                "endtime" : "2016-03-14T00:55:37.619Z",
+                "draflag" : "1",
+                "id" : "1457916959196",
+                "userId" : "tina",
+                "browseRecord" : [ 
+                ],
+                "alikeRecord" : [],
+                "clickALike" : 16,
+                "browse" : 119,
+                "comment" : 0
+            }
+        ],
+        "activity":[],
+        "hire":[],
+        "invest":[]
+
+    },
+    "messages":{
+        "toPerson":[
+            {
+                "id":"M1",
+                "members":["userId1","userId2"],
+                "fromFlag":1,
+                "type":"pp/group/tgroup",
+                "name": "李明",
+                "pic": "img/adam.jpg",
+                "lastMessage": {
+                    "mId":"",
+                    "originalTime": "2015-11-27 06:34:55",
+                    "time": "",
+                    "timeFrome1970": 0,
+                    "content": "你在干什么?",
+                    "isFromMe": false
+                },
+                "noReadMessages": 2,
+                "showHints": true,
+                "isTop": 0
+            }
+        ],
+        "circle":[],
+        "tempGroup":[]
+    },
+    "mypublish":{
+        "information" : [ 
+            {
+                "images" : [],
+                "type" : "沙龙",
+                "title" : "Test",
+                "des" : {
+                    "text" : "Test"
+                },
+                "contacts" : "12346",
+                "contactmethod" : "12345",
+                "endtime" : "2016-03-14T00:55:37.619Z",
+                "draflag" : "1",
+                "id" : "1457916959196",
+                "userId" : "tina",
+                "browseRecord" : [ 
+                ],
+                "alikeRecord" : [],
+                "clickALike" : 16,
+                "browse" : 119,
+                "comment" : 0
+            }
+        ],
+        "activity":[],
+        "hire":[],
+        "invest":[]
+        },
+    "basicinfo" : {
+        "nickname" : "",
+        "headUrl":""
+    },
+    "name" : "Tina",
+    "sex" : "女",
+    "birthDate" : "1889",
+    "area" : "上海 - 徐汇区",
+    "email" : "781889126@qq.com",
+    "currentCompany" : "AMEC",
+    "currentTrade" : "沙龙",
+    "currentFunction" : "游学",
+    "goodSkill" : "游学",
+    "hobbiesAndInterests" : "游学",
+    "linguisticCapacit" : "游学",
+    "selfAssessment" : "test",
+
+    "messages" : [
+        {
+            "id" : "1462856921373",
+            "members" : [
+                "15980603577",
+                "18650809701"
+            ],
+            "isFromMe" : 1,
+            "userId" : "15980603577",
+            "type" : "toPerson",
+            "name" : "apple",
+            "pic" : null,
+            "lastMessage" : {
+                "id" : "",
+                "content" : {
+                    "text" : "This is tona"
+                },
+                "name" : "tina",
+                "face" : "http://192.168.27.151:8081/uploads/1464260332537.jpg",
+                "isFromMe" : 1,
+                "time" : "2016-05-26T10:59:10.661Z",
+                "praise" : 0,
+                "replycount" : 0
+            },
+            "noReadMessages" : 0,
+            "showHints" : true,
+            "isTop" : 0,
+            "messageBadge" : 0,
+            "status" : 0
+        },
+        {
+            "id" : "1464142539986",
+            "members" : [
+                "18650809701",
+                "159806035177"
+            ],
+            "isFromMe" : 0,
+            "userId" : "159806035177",
+            "type" : "toPerson",
+            "name" : "apple",
+            "pic" : null,
+            "lastMessage" : {},
+            "noReadMessages" : 0,
+            "showHints" : true,
+            "isTop" : 0,
+            "messageBadge" : 0
+        }
+    ],
+    "extraMessage" : "test",
+    "messageBadge" : 0,
+    "allSysNotice" : 0
+}
+

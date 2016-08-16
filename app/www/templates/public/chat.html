@@ -1,0 +1,54 @@
+<ion-view hide-tabs ng-controller="myChat">
+  <ion-content  on-touch="tool.class=''">
+    <ion-refresher
+      pulling-text="下拉刷新..."
+      on-refresh="doRefresh()">
+    </ion-refresher>
+    <div class="chatContent">
+      <div class="dialog {{noe.targetId!=userinfo.senderUserId?'other':''}}" ng-repeat="noe in historyMessages">
+        <p class="photo"><img src=""></p>
+        <div class="text">
+          <span class="arrow"></span>
+          <div class="textContent" ng-init="newsExe(noe)" ng-bind-html="noe.html" ng-click="noe.click()">
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+  <ion-footer-bar class="bar-footer-editMessage transition_3 bar bar-footer has-tabs {{tool.class}}" keyboard-attach>
+    <div class="editMessageBox">
+      <div class="editMessage">
+        <button class="button button-left" ng-click="startAudio()"><i class="ion-mic-a icon-left"></i></button>
+        <div class="edit" id="edit">
+          <input class="init"  autocomplete="off" autocorrect="off" ng-focus="tool.class=''" maxlength="64" data-sug="1" ng-model="editText">
+        </div>
+        <div class="button-right button button-right1" ng-click="tool.class='showTool'">
+          <i class="ion-ios-plus-outline size-24"></i>
+        </div>
+        <button class="button button-right" ng-click="sendText()">
+          发送
+        </button>
+      </div>
+      <div class="tool">
+        <p class="toolNoe" ng-click="showEmojis()">
+          <i class="ion-happy-outline iconTool"></i>
+          <span>表情</span>
+        </p>
+        <p class="toolNoe">
+          <i class="ion-image iconTool" ng-click="photoAlbum()"></i>
+          <span>图片</span>
+        </p>
+        <p class="toolNoe">
+          <i class="ion-camera iconTool" ng-click="photograph()"></i>
+          <span>拍照</span>
+        </p>
+        <p class="toolNoe">
+          <i class="ion-location iconTool"></i>
+          <span>位置</span>
+        </p>
+      </div>
+      <div emoji-box></div>
+    </div>
+  </ion-footer-bar>
+</ion-view>

@@ -1,0 +1,8 @@
+<ion-view view-title="个人信息" hide-tabs="true">
+  <ion-content>
+    <div ng-include="'./templates/public/my-userInfo.html'"></div>
+  </ion-content>
+  <ion-footer-bar ng-show="!(userInfo=={})" class="bar bar-footer bar-positive">
+    <h1  class="title" ng-click="newsSend()">发消息</h1>
+  </ion-footer-bar>
+</ion-view>

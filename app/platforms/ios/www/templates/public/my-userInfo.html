@@ -1,0 +1,210 @@
+<div class="myInfo" ng-controller="informationDisplay">
+  <div class="heard">
+    <p class="photo"><img src="{{userInfo.headUrl}}" img-auto=""></p>
+    <p class="name" ng-bind="userInfo.config['基本信息可见'] ? '全部信息':'基本信息'"></p>
+  </div>
+  <ul class="list-style-D">
+    <li class="list-item" >
+      <p class="leftText">昵称</p>
+      <div class="rightText" ng-bind="userInfo.nickname"></div>
+    </li>
+  </ul>
+  <div ng-show="userInfo.config['基本信息可见']">
+  <ul class="list-style-D" >
+
+    <li class="list-item" ng-show="userInfo.config['基本信息可见']">
+      <p class="leftText">真实姓名</p>
+      <div class="rightText"><input  readonly="readonly"  ng-model="userInfo.name"  class="init"></div>
+    </li>
+    <li class="list-item">
+      <p class="leftText">性别</p>
+      <div class="rightText">
+        {{userInfo.sex}}
+      </div>
+    </li>
+    <li class="list-item"  ng-show="userInfo.config['基本信息可见']">
+      <p class="leftText">出生年份</p>
+      <div class="rightText">
+        {{userInfo.birthDate}}
+      </div>
+    </li>
+    <li class="list-item">
+      <p class="leftText">所在地区</p>
+      <div class="rightText">
+        {{userInfo.area}}
+      </div>
+    </li>
+    <li class="list-item" ng-show="userInfo.config['手机号码可见']">
+      <p class="leftText">手机号码</p>
+      <div class="rightText">
+        <input  readonly="readonly"  value="{{userInfo.config['手机号码可见']?userInfo.phone:phone(userInfo.phone)}}" class="init">
+      </div>
+    </li>
+    <li class="list-item">
+      <p class="leftText">电子邮箱</p>
+      <div class="rightText">
+        <input  readonly="readonly"  ng-model="userInfo.email"class="init">
+      </div>
+    </li>
+  </ul>
+  <ul class="list-style-D">
+    <li class="list-item">
+      <p class="leftText">当前公司</p>
+      <div class="rightText"><input  readonly="readonly"  class="init" ng-blur="update('currentCompany',userInfo.currentCompany)" ng-model="userInfo.currentCompany"></div>
+    </li>
+    <li class="list-item">
+      <p class="leftText">当前行业</p>
+      <div class="rightText">{{userInfo.currentTrade.join(',')}}</div>
+    </li>
+    <li class="list-item">
+      <p class="leftText">当前职能</p>
+      <div class="rightText">{{userInfo.currentFunction.join(',')}}</div>
+    </li>
+  </ul>
+  <ul class="list-style-D">
+    <li class="list-item" >
+      <p class="leftText">擅长技能</p>
+      <div class="rightText">{{userInfo.goodSkill.join(',')}}</div>
+    </li>
+    <li class="list-item" >
+      <p class="leftText">兴趣爱好</p>
+      <div class="rightText">{{userInfo.hobbiesAndInterests.join(',')}}</div>
+    </li>
+  </ul>
+
+  </div>
+    <div ng-show="userInfo.config['扩展信息可见']">
+      <ul class="list-style-D" >
+        <li class="list-item">
+          <p class="leftText">语言能力</p>
+          <div class="rightText ng-binding">汉语</div>
+        </li>
+        <li class="list-item">
+          <p class="leftText">自我评价</p>
+          <div class="rightText" ng-bind="userInfo.selfAssessment" style="height: auto;">
+          </div>
+        </li>
+        <li class="list-item">
+          <p class="leftText">附加信息</p>
+          <div class="rightText" ng-bind="userInfo.extraMessage.text"  style="height: auto;">
+          </div>
+          <img ng-src="{{img.tsrc}}" ng-repeat="img in userInfo.extraMessage.images">
+        </li>
+      </ul>
+    <div class="user-projectExperience" ng-repeat="projectExperience in userInfo.projectExperience">
+      <ul class="list-style-D">
+        <li>
+          <h4 class="center" ng-bind="($index+1)+'.'+'项目经验'"></h4>
+        </li>
+        <li class="list-item">
+          <p class="leftText">项目名称</p>
+          <p class="rightText" ng-bind="projectExperience.projectName"></p>
+        </li>
+        <li class="list-item">
+          <p class="leftText">开始时间</p>
+          <p class="rightText" ng-bind="projectExperience.startTime | date : 'yyyy-MM-dd'"></p>
+        </li>
+        <li class="list-item">
+          <p class="leftText">结束时间</p>
+          <p class="rightText" ng-bind="projectExperience.endTime | date : 'yyyy-MM-dd'"></p>
+        </li>
+        <li class="list-item">
+          <p class="leftText">公司名称</p>
+          <p class="rightText" ng-bind="projectExperience.corporateName | date : 'yyyy-MM-dd'"></p>
+        </li>
+        <li class="list-item">
+          <p class="leftText">项目职务</p>
+          <p class="rightText" ng-bind="projectExperience.projectPosition | date : 'yyy-MM-dd'"></p>
+        </li>
+        <li class="list-item">
+          <p class="leftText">项目描述</p>
+          <p class="rightText" ng-bind="projectExperience.itemDescription"></p>
+        </li>
+        <li class="list-item">
+          <p class="leftText">项目职责</p>
+          <p class="rightText" ng-bind="projectExperience.projectResponsibilities"></p>
+        </li>
+        <li class="list-item">
+          <p class="leftText">项目业绩</p>
+          <p class="rightText" ng-bind="projectExperience.projectPerformance"></p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="user-projectExperience" ng-repeat="workExperience in userInfo.workExperience">
+      <ul class="list-style-D">
+        <li>
+          <h4 class="center" ng-bind="($index+1)+'.'+'工作经历'"></h4>
+        </li>
+        <li class="list-item">
+          <p class="leftText">公司名称</p>
+          <p class="rightText" ng-bind="workExperience.corporateName"></p>
+        </li>
+        <li class="list-item">
+          <p class="leftText">职位名称</p>
+          <p class="rightText" ng-bind="workExperience.jobTitle"></p>
+        </li>
+        <li class="list-item">
+          <p class="leftText">工作地点</p>
+          <p class="rightText" ng-bind="workExperience.workingPlace"></p>
+        </li>
+        <li class="list-item">
+          <p class="leftText">开始时间</p>
+          <p class="rightText" ng-bind="workExperience.startTime | date :'yyy-MM-dd'"></p>
+        </li>
+        <li class="list-item">
+          <p class="leftText">结束时间</p>
+          <p class="rightText" ng-bind="workExperience.endTime | date :'yyy-MM-dd'"></p>
+        </li>
+        <li class="list-item">
+          <p class="leftText">年薪(万元)</p>
+          <p class="rightText" ng-bind="workExperience.yearlySalary"></p>
+        </li>
+        <li class="list-item">
+          <p class="leftText">工作业绩</p>
+          <p class="rightText" ng-bind="workExperience.jobPerformance"></p>
+        </li>
+        <li class="list-item">
+          <p class="leftText">工作职责</p>
+          <p class="rightText" ng-bind="workExperience.operatingDuty"></p>
+        </li>
+      </ul>
+    </div>
+    <div class="user-projectExperience" ng-repeat="educationalBackground in userInfo.educationalBackground">
+      <ul class="list-style-D list-style-A">
+        <li>
+          <h4 class="center" ng-bind="($index+1)+'.'+'教育背景'"></h4>
+        </li>
+        <li class="list-item">
+          <p class="leftText">学校名称</p>
+          <div class="rightText" ng-bind="educationalBackground.schoolName">
+          </div>
+        </li>
+        <li class="list-item">
+          <p class="leftText">开始时间</p>
+          <p class="rightText" ng-bind="educationalBackground.startTime | date : 'yyyy-MM-dd'"></p>
+        </li>
+        <li class="list-item">
+          <p class="leftText">结束时间</p>
+          <p class="rightText" ng-bind="educationalBackground.endTime | date : 'yyyy-MM-dd'"></p>
+        </li>
+        <li class="list-item">
+          <p class="leftText">专业</p>
+          <div class="rightText" ng-bind="educationalBackground.specialty">
+          </div>
+        </li>
+        <li class="list-item">
+          <p class="leftText">学历</p>
+          <div class="rightText" ng-bind="educationalBackground.recordOfFormalSchooling">
+
+          </div></li>
+        <li class="list-item">
+          <p class="leftText">统招</p>
+          <p class="rightText" ng-bind="educationalBackground.theEntranceExamination">
+          </p>
+        </li>
+      </ul>
+    </div>
+    </div>
+  </div>
+</div>

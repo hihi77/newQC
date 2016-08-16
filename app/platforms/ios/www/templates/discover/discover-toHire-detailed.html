@@ -1,0 +1,108 @@
+<ion-view view-title="才聘详情">
+  <ion-content>
+    <div class="toHireDetailed">
+      <div class="heardTitle">
+        <h1 class="title">{{toHireDetailed['profession']}}</h1>
+        <p class="name">{{toHireDetailed['company']}}</p>
+      </div>
+      <div class="info">
+        <div class="info-noe">
+          <div class="info-noe-center">
+            <p class="left-icon yellow"><i class="ion-location"></i></p>
+            <p class="right-text">
+              <span class="big textOverHide" >{{toHireDetailed['address'].join(',')}}</span><br>
+              <span class="small">地址</span>
+            </p>
+          </div>
+        </div>
+        <div class="info-noe">
+          <div class="info-noe-center">
+            <p class="left-icon yellow"><i class="icon ion-calculator"></i></p>
+            <p class="right-text">
+              <span class="big yellow">{{toHireDetailed['salary']}}</span><br>
+              <span class="small">薪资</span>
+            </p>
+          </div>
+        </div>
+        <div class="info-noe">
+          <div class="info-noe-center">
+            <p class="left-icon yellow"><i class="icon ion-clock"></i></p>
+            <p class="right-text">
+              <span class="big textOverHide">{{toHireDetailed['time'] | date:"yyyy-MM-dd"}}</span><br>
+              <span class="small">职位有效期</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <a href="#/tab/{{pageMarking}}/{{pageMarking}}-toHire-userIfo/{{id}}/{{pageMarking}}"><div class="issuer">
+        <P class="title">职位发布人</P>
+        <div class="personage">
+          <p class="photo"><img src="{{toHireDetailed.postPublisher.headUrl}}" img-auto></p>
+          <div class="personage-info">
+            <h1 class="name">
+              {{toHireDetailed.postPublisher.nickname}}
+              <span class="name-small"></span>
+            </h1>
+            <p class="position">{{toHireDetailed.postPublisher.currentCompany}}</p>
+          </div>
+          <i class="icon-right ion-chevron-right"></i>
+        </div>
+      </div></a>
+      <ul class="toHire-detailed-list">
+        <li class="list-item">
+          <p class="title">岗位描述</p>
+          <div class="html" ng-bind-html="toHireDetailed['jobDescription'].replace(_n,'<br>')">
+          </div>
+        </li>
+      </ul>
+      <ul class="toHire-detailed-list">
+        <li class="list-item">
+          <p class="title">岗位特点</p>
+          <div class="html">
+            <p class="rect" ng-repeat="text in toHireDetailed['jobCharacteristics']">{{text}}</p>
+          </div>
+        </li>
+      </ul>
+      <ul class="toHire-detailed-list">
+        <li class="list-item">
+          <p class="title">岗位要求</p>
+          <div class="html" ng-bind-html="toHireDetailed['jobRequirements'].replace(_n,'<br>')">
+          </div>
+        </li>
+      </ul>
+      <ul class="toHire-detailed-list">
+        <li class="list-item property">
+          <p class="title">岗位性质</p>
+          <p class="type">{{toHireDetailed['jobNature']}}</p>
+        </li>
+      </ul>
+      <ul class="toHire-detailed-list">
+        <li class="list-item">
+          <p class="title">公司邮箱</p>
+          <div class="text">
+            {{toHireDetailed['companyMail']}}
+          </div>
+        </li>
+        <li class="list-item">
+          <p class="title">公司地址</p>
+          <div class="text">
+           {{toHireDetailed['companyAddress']}}
+          </div>
+        </li>
+      </ul>
+      <ul class="toHire-detailed-list">
+        <li class="list-item curriculumVitae">
+          <p class="noe">简历推荐&nbsp;&nbsp;{{toHireDetailed['recommendedAward']}}元</p>
+          <p class="noe">推荐成功&nbsp;&nbsp;{{toHireDetailed['recommendedSuccess']}}元</p>
+        </li>
+      </ul>
+    </div>
+  </ion-content>
+  <div class="shareButton" ng-click="modal.show()" ng-controller="shareController">
+    <i class="ion-share"></i>
+  </div>
+  <ion-footer-bar style="padding: 0"  ng-show="toHireDetailed.applyAvr">
+    <button class="button button-style2" style="background: #FF9800;width: 100%;margin: 0;" ng-click="acceptAnOfferOfEmployment()" ng-show = "!toHireDetailed.alreadyApply">应聘</button>
+    <button class="button button-style2" style="background: #FF9800;width: 100%;margin: 0;" disabled = "disabled" ng-show = "toHireDetailed.alreadyApply">已应聘</button>
+  </ion-footer-bar>
+</ion-view>

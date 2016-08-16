@@ -1,0 +1,20 @@
+<ion-modal-view>
+    <ion-header-bar class="bar-positive">
+        <div class="buttons">
+            <button class="button" ng-click="modal.hide()">取消</button>
+        </div>
+        <h1 class="title">通知详情</h1>
+    </ion-header-bar>
+    <ion-content>
+        <div class="list-notice">
+            <div class="list-item">
+                <h3 class="title" ng-bind="noticeDetail.data.noticeTitle"></h3>
+                <p class="text1" ng-bind="noticeDetail.data.notice"></p>
+                <p class="foot-info">
+                    <span class="name" ng-bind="noticeDetail.creator.nickname"></span>
+                    <span class="time" ng-bind="(noticeDetail.startTime|date:'MM月dd日 HH:mm')"></span>
+                </p>
+            </div>
+        </div>
+    </ion-content>
+</ion-modal-view>

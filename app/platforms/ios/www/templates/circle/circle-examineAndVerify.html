@@ -1,0 +1,66 @@
+<ion-view title="成员审核" hide-tabs="true">
+  <ion-content>
+    <div class="examineAndVerify">
+      <div class="tabsBox">
+
+        <ul class="my-tabs">
+          <li class="my-tab-item {{heardIndex==0?'hover':''}}" ng-click="heardClick(0)">
+            待审核
+          </li>
+          <li class="my-tab-item center {{heardIndex==1?'hover':''}}" ng-click="heardClick(1)">
+            未通过
+          </li>
+          <li class="my-tab-item {{heardIndex==2?'hover':''}}" ng-click="heardClick(2)">
+            已退出
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+<!--     <div class="content has-header ionic-pseudo">
+      <div class="list">
+        <ion-item class="item item-avatar" href="#" ng-repeat="data in lists">
+          <img src="{{data.headUrl}}">
+          <h2>{{data.nickname}}</h2>
+          <p>{{data.notice}}</p>
+        <ion-option-button class="button-assertive" ng-click="deletproject(project)">
+          Delete
+        </ion-option-button>
+        </ion-item>
+      </div>
+    </div> -->
+
+    <div class="examineAndVerify-content">
+      <ul class="list-examineAndVerify">
+        <li class="list-item " ng-repeat="data in lists">
+          <div class="user">
+            <p class="photo"><img src="{{data.headUrl}}"></p>
+            <p class="name" ng-bind="data.nickname"></p>
+            <div class="selectBox" style="float:right;" ng-show="heardIndex==0&&!data.text">
+              <button class="button" style="color: green" ng-click="agree(data)"><i class="ion-checkmark-circled size-24"></i></button>
+              <button class="button" ng-click="refuse(data)"><i class="ion-close-circled size-24"></i></button>
+            </div>
+            <div class="item-note" ng-show="data.text" ng-bind="data.text"></div>
+          </div>
+          <div class="info">
+            <p class="info-item" ng-repeat="item in data.registrationAdditional|filter:'!是否需要上传认证'">
+              <span class="left textOverHide" ng-bind="item.text"></span>
+              <span class="right textOverHide" ng-bind="item.value"></span>
+            </p>
+          </div>
+
+          <div class="info">
+            <p class="info-item" ng-repeat="item in data.registrationAdditional|filter:'是否需要上传认证'">
+              <img src="{{image.src}}" ng-repeat="image in item.value.images">
+            </p>
+          </div>
+        </li>
+      </ul>
+      <div class="none" ng-show="!lists.length">
+        <i class="ion-android-sad"></i>
+        <div class="none-text">没有数据~</div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

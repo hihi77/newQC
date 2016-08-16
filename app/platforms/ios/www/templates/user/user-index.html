@@ -1,0 +1,79 @@
+<ion-view view-title="我的">
+  <ion-content>
+    <ul class="list-style-A list-style-C">
+      <a href="#tab/user/info"><li class="userInfo">
+        <div class="heardPhone" >
+          <img class ="headUrl" img-auto src="{{userInfo.headUrl}}">
+        </div>
+        <div class="baseInfo">
+          <p class="name">{{userInfo.nickname}}</p>
+          <p class="info">{{userInfo.school}}</p>
+          <p class="info">{{userInfo.occupation}}</p>
+        </div>
+        <i class="icon ion-arrow-swap icon-right"></i>
+      </li></a>
+      <a href="#/tab/user/user-addressList"><li class="itme-A">
+        <i class="icon ion-android-phone-portrait icon-left"></i>
+        通讯录
+        <i class="ion-chevron-right size-12 icon-right"></i>
+      </li></a>
+      <a href="#/tab/user/user-partake"><li class="itme-A">
+        <i class="icon ion-android-calendar icon-left"></i>
+        我参与的
+        <i class="ion-chevron-right  icon-right"></i>
+      </li></a>
+      <a href="#/tab/user/user-publish"><li class="itme-A">
+        <i class="icon ion-paper-airplane icon-left"></i>
+        我发布的
+        <i class="ion-chevron-right  icon-right"></i>
+      </li></a>
+
+      <a><li class="itme-A" ng-init="develop=false" ng-click="develop=!develop">
+        <i class="icon ion-eye icon-left"></i>
+        我的隐私
+        <i class="ion-chevron-{{develop?'down':'right'}}  icon-right"></i>
+      </li></a>
+      <li class="myConceal" ng-show="develop">
+        <ion-toggle class="myConceal-item" ng-repeat="(key,value) in userInfo.config" ng-checked="value" ng-model="userInfo.config[key]" ng-click="myConcealToggle(userInfo.config,value)">
+          {{key}}
+        </ion-toggle >
+      </li>
+      <a href="#/user/user-coupleBack"><li class="itme-A">
+        <i class="icon ion-pound icon-left"></i>
+        用户反馈以及举报
+        <i class="ion-chevron-right  icon-right"></i>
+      </li></a>
+      <a><li class="itme-A" ng-init="sysSetting=false" ng-click="sysSetting=!sysSetting">
+        <i class="icon ion-ios-gear icon-left"></i>
+        系统设置
+        <i class="ion-chevron-{{sysSetting?'down':'right'}}  icon-right"></i>
+      </li></a>
+      <li class="sysSetting" ng-show="sysSetting">
+        <ion-toggle class="sysSetting-item"  ng-checked="value"  ng-model="userInfo.sysSetting" ng-click="sysSettingToggle(userInfo.sysSetting,value)">
+          清除缓存
+        </ion-toggle >
+      </li>
+      <li class="sysSetting" ng-show="sysSetting">
+        <ion-item class="sysSetting-item"  >
+          v0707
+        </ion-item >
+      </li>
+      <a href="#/tab/user/reset_password/{{phone}}"><li class="itme-A">
+
+        <i class="icon ion-edit icon-left"></i>
+        修改密码
+        <i class="ion-chevron-right  icon-right"></i>
+      </li></a>
+
+
+  <!--   <a ng-controller= "shareController" href="" ng-click="shareEnroll()"><li class="itme-A">
+
+      <i class="icon ion-edit icon-left"></i>
+      报名链接
+      <i class="ion-chevron-right  icon-right"></i>
+    </li></a> -->
+
+    </ul>
+    <button class="button button-block button-light" on-touch="doLogOut()">退出登录</button>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,185 @@
+<ion-view view-title="才聘"  hide-tabs="true"  >
+
+    <ion-content>
+      <!--中间内容-->
+      <div class="">
+        <ul class="list-style-A">
+          <a><li class="itme-A">
+            公司
+            <!--用户选择后的文本加在此处即可-->
+            <div class="select-text" ng-class="small"  ng-if="true"></div>
+        
+            <label class="info-input">
+              <input class="init" placeholder="请输入公司名称" maxlength="30"  ng-model="ephemeralData['公司名称']" name="公司">
+            </label>
+          
+          </li></a>
+
+          <a href="#/tab/discover-toHire/selectTmp/area">
+            <li class="itme-A">
+              地区
+            
+              <p class="select-text textOverHide" ng-show="ephemeralData['地区']?true:false">{{ephemeralData["地区"].join(',')}}</p>
+              <i class="ion-chevron-right size-12 icon-right" ng-if="true"></i>
+            </li>
+          </a>
+          <a><li class="itme-A">
+            职位
+            <!--用户选择后的文本加在此处即可-->
+            <div class="select-text" ng-class="small"  ng-if="true"></div>
+          
+            <label class="info-input">
+              <input class="init" placeholder="请输入职位" maxlength="30"  ng-model="ephemeralData['职位']" name="职位">
+            </label>
+        
+            <!--这里我只做样式具体功能你们应该有自己熟悉的控件-->
+       
+          </li></a>
+          <a href="#/tab/{{pageMarking}}-toHire/selectTrade"><li class="itme-A">
+            行业
+
+            <p class="select-text textOverHide" ng-show="ephemeralData['行业']?true:false">{{ephemeralData["行业"].join(',')}}</p>
+          
+       
+            <i class="ion-chevron-right size-12 icon-right" ng-if="true"></i>
+          </li></a>
+
+          <a href="#/tab/{{pageMarking}}-toHire/selectTmp/duty"><li class="itme-A">
+            职能
+            <!--用户选择后的文本加在此处即可-->
+          
+            <p class="select-text textOverHide" ng-show="ephemeralData['职能']?true:false">{{ephemeralData["职能"].join(',')}}</p>
+         
+            <i class="ion-chevron-right size-12 icon-right" ng-if="true"></i>
+          </li></a>
+
+          <a href="#/tab/{{pageMarking}}-toHire/yearlySalary"><li class="itme-A">
+            年薪
+            <!--用户选择后的文本加在此处即可-->
+            <div class="select-text" ng-class="small"  ng-if="false"></div>
+            <p class="select-text textOverHide" ng-show="ephemeralData['年薪']?true:false">{{ephemeralData["年薪"]}}</p>
+         
+            <!--这里我只做样式具体功能你们应该有自己熟悉的控件-->
+         
+            <i class="ion-chevron-right size-12 icon-right" ng-if="true"></i>
+          </li></a>
+        </ul>
+
+        <ul class="list-style-A">
+          <a href="#/tab/{{pageMarking}}-toHire/JobDescription/describe"><li class="itme-A">
+            岗位描述
+            <!--用户选择后的文本加在此处即可-->
+            <p class="select-text textOverHide {{ephemeralData['岗位描述']?'':'small'}}">{{ephemeralData["岗位描述"]||'请填写'}}</p>
+            <i class="ion-chevron-right size-12 icon-right" ng-if="true"></i>
+          </li>
+          </a>
+
+          <a href="#/tab/{{pageMarking}}-toHire/JobDescription/demand"><li class="itme-A">
+            岗位要求
+            <!--用户选择后的文本加在此处即可-->
+            <p class="select-text textOverHide {{ephemeralData['岗位要求']?'':'small'}}">{{ephemeralData["岗位要求"]||'请填写'}}</p>
+       
+            <!--这里我只做样式具体功能你们应该有自己熟悉的控件-->
+          
+            <i class="ion-chevron-right size-12 icon-right" ng-if="true"></i>
+          </li></a>
+
+          <a href="#/tab/{{pageMarking}}-toHire/jobCharacteristics"><li class="itme-A">
+            岗位特点
+            <!--用户选择后的文本加在此处即可-->
+            <p class="select-text textOverHide {{ephemeralData['岗位特点']?'':'small'}}">{{ephemeralData["岗位特点"].join(',')}}</p>
+        
+            <i class="ion-chevron-right size-12 icon-right" ng-if="true"></i>
+          </li></a>
+
+          <a><li class="itme-A">
+            岗位性质
+            <label class="info-select">
+              <p class="text ng-binding">{{ephemeralData['岗位性质']||'请选择'}}</p>
+              <i class="ion-arrow-down-b  icon-right"></i>
+              <select class="init ng-pristine ng-untouched ng-valid" ng-model="ephemeralData['岗位性质']">
+                <option  class="ng-binding" value="全职">全职</option>
+                <option  class="ng-binding" value="兼职">兼职</option>
+                <option  class="ng-binding" value="实习">实习</option>
+              </select>
+            </label>
+          </li></a>
+        </ul>
+
+        <ul class="list-style-A">
+
+          <a><li class="itme-A">
+            公司邮箱
+   
+            <label class="info-input" ng-show="true">
+              <input class="init " placeholder="请输入公司邮箱 " type="email"   mail-test ng-model="ephemeralData['公司邮箱']" name="邮箱">
+            </label>
+        
+          </li></a>
+
+          <a><li class="itme-A">
+            公司地址
+            <!--用户选择后的文本加在此处即可-->
+       
+            <label class="info-input" ng-show="true">
+              <input class="init" placeholder="请输入公司地址" maxlength="30" ng-model="ephemeralData['公司地址']" name="地址">
+            </label>
+       
+    
+          </li></a>
+
+          <a><li class="itme-A">
+            简历推荐奖励
+        
+            <p class="award" ng-if="true">
+              <label class="number" >
+                <input  class="init" placeholder="0"  ng-model="ephemeralData['推荐奖励']" type="tel" name="推荐奖励">
+              </label>
+              元
+            </p>
+       
+          </li></a>
+
+          <a><li class="itme-A">
+            推荐成功奖励
+        
+            <p class="award" ng-if="true">
+              <label class="number" >
+                <input  class="init" placeholder="0" ng-model="ephemeralData['推荐成功奖励']" type="tel">
+              </label>
+              元
+            </p>
+        
+          </li></a>
+
+  </ul>
+<div
+ class="item item-input">
+  <span class="input-label">报名截止</span>
+  <input type = "date" ng-model="ephemeralData['选择日期']" />
+
+</div>
+
+
+       
+      
+      </div>
+    </ion-content>
+
+
+<ion-footer-bar style="background: none">
+    <div class="buttonBox">
+     
+     <!--  go('tab.discover-index','discover'); -->
+ <a class="button button-left" ng-click="backClick(1)"  >
+               取消
+            </a>
+
+         <a class="button button-right" href="#/tab/{{pageMarking}}-toHire/preview/{{source}}/{{id}}" >
+             预览
+            </a>
+    </div>
+  </ion-footer-bar>
+
+ 
+  </ion-view>

@@ -1,0 +1,56 @@
+<ion-view title="圈子" hide-tabs="true">
+  <ion-content>
+      
+    <div class="circleBox">
+      <div class="banner">
+        <img ng-src="{{initImageUrl}}" ng-show="!heardData.heardImages.length">
+        <ion-slide-box class="blur" auto-play="true" style="height: 160px;"  ng-show="heardData.heardImages.length">
+          <ion-slide ng-repeat="url in heardData.heardImages">
+            <div class="box"><img src="{{url}}"></div>
+          </ion-slide>
+        </ion-slide-box>
+        <div class="circlePhoto">
+          <p class="image"><img src="{{heardData.photoUrl.images[0].tsrc||default_logo}}" img-auto></p>
+          <p class="name textOverHide" ng-bind="heardData.title"></p>
+        </div>
+        <a href="#/tab/{{pageMarking}}-member/{{id}}" ng-if="isMember&&manager"><div class="linkman">
+          <i class="ion-person-stalker"></i>
+        </div></a>
+      </div>
+      <div class="circleTabs">
+        <div class="tab" ng-class="heardIndex==0||!heardIndex?'hover':''" ng-click="heardIndex=0;heardClick(heardIndex);">通知</div>
+        <div class="tab" ng-class="heardIndex==1?'hover':''" ng-click="heardIndex=1;heardClick(heardIndex);">信息</div>
+        <div class="tab" ng-class="heardIndex==2?'hover':''" ng-click="heardIndex=2;heardClick(heardIndex);">活动</div>
+        <div class="tab" ng-class="heardIndex==3?'hover':''" ng-click="heardIndex=3;heardClick(heardIndex);">才聘</div>
+        <div class="tab" ng-class="heardIndex==4?'hover':''" ng-click="heardIndex=4;heardClick(heardIndex);">调查</div>
+       <div class="tab" ng-class="heardIndex==5?'hover':''" ng-click="heardIndex=5;heardClick(heardIndex);"><i class="ion-ios-arrow-down"></i></div>
+      </div>
+
+ <div class="circleContent" ng-include="tmpUrl">
+
+      </div>
+      <ion-infinite-scroll
+        ng-if="!allDataEnd"
+        on-infinite="loadMore()"
+        distance="1%">
+      </ion-infinite-scroll>
+    </div>
+
+
+
+
+  </ion-content>
+<div ng-show="isMembers" >
+<div class="circleLayer-tool ng-show">
+  
+  <div  class="icon-center active transition_3"  ng-click="$parent.openModel('templates/modal/cycle_publish.html','publish')"><i
+    class="ion-plus-round "></i></div>
+ 
+</div>
+</div>
+
+
+</ion-view>
+
+
+</ion-view>

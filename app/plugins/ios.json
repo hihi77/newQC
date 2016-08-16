@@ -1,0 +1,56 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cn.rongcloud.imlib": {
+            "PACKAGE_NAME": "com.csll0424"
+        },
+        "com.spout.phonegap.plugins.baidulocation": {
+            "PACKAGE_NAME": "com.csll0424"
+        },
+        "com.synconset.imagepicker": {
+            "PACKAGE_NAME": "com.csll0424"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "com.csll0424"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.csll0424"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.csll0424"
+        },
+        "cordova-plugin-file-transfer": {
+            "PACKAGE_NAME": "com.csll0424"
+        },
+        "cordova-plugin-geolocation": {
+            "PACKAGE_NAME": "com.csll0424"
+        },
+        "cordova-plugin-wechat": {
+            "WECHATAPPID": "wx79bcf8b025734922",
+            "PACKAGE_NAME": "com.csll0424"
+        },
+        "phonegap-plugin-barcodescanner": {
+            "PACKAGE_NAME": "com.csll0424"
+        },
+        "org.devgeeks.Canvas2ImagePlugin": {
+            "PACKAGE_NAME": "com.csll0424"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.csll0424"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.csll0424"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.csll0424"
+        }
+    }
+}

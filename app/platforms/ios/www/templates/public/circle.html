@@ -1,0 +1,24 @@
+<ion-view view-title="{{title}}">
+  <ion-content>
+    <div class="myCircle">
+      <div search>
+
+      </div>
+      <div class="button-bar bar-light" ng-show="title == '热门圈子'">
+        <a class="button icon-right ion-android-arrow-dropdown" href="#/tab/circle-circleArea" ng-model="circleMoreArea">{{circleMoreArea||"选择地区"}}</a>
+        <a class="button icon-right ion-android-arrow-dropdown" href="#/tab/circle-selectType" >
+{{circleEphemeralData['选择类型'].join(',')||"选择类型"}}
+        </a>
+      </div>
+      <ul class="list-style-E">
+        <a href="{{circleUrl?circleUrl+'/'+data.title+'/'+data.circleId:''}}" ng-repeat="data in circles" ng-show="!data.hide"><li class="list-item">
+          <div class="photo"><img ng-src="{{data.photoUrl.images[0].tsrc||default_logo}}" img-auto></div>
+          <div class="info">
+            <p class="title">{{data.title}}</p>
+            <p class="introduction">{{data.describe.text|limitTo:30}}{{data.describe.text.length>30?"...":''}}</p>
+          </div>
+        </li></a>
+      </ul>
+    </div>
+  </ion-content>
+</ion-view>

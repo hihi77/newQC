@@ -1,0 +1,13 @@
+<ion-view view-title="反馈及举报" hide-tabs="true">
+  <ion-nav-buttons side="left">
+    <button class="button button-clear" ng-click="goBack()"><i class="icon ion-ios-arrow-back" ></i> {{getPreviousTitle()||'back'}}</button>
+  </ion-nav-buttons>
+  <ion-content>
+    <div class="feedBack">
+      <div class="prompt">请填写手机号</div>
+      <div class="input"><input class="init" ng-model="$parent.phone" type="tel"></div>
+      <div class="prompt">请填写反馈或举报信息</div>
+      <div class="text"><textarea maxlength="100"  class="init" ng-model="$parent.text"></textarea></div>
+    </div>
+  </ion-content>
+</ion-view>

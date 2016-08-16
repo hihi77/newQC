@@ -1,0 +1,15 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cn.rongcloud.imlib": {
+            "PACKAGE_NAME": "com.ionicframework.starter.tina"
+        }
+    },
+    "dependent_plugins": {}
+}

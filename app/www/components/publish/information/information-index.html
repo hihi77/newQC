@@ -1,0 +1,49 @@
+<!--<a><li class="itme-A">-->
+
+<!--</li></a>-->
+<ion-view view-title="信息" hide-tabs="true" hide-back-button="true">
+
+  <ion-content style="background: #fff">
+    <!--中间内容-->
+    <ul class="list-style-A list-style-B">
+      <a href="#/newInformation/selectType">
+        <li class="itme-A">
+          选择类型(必选)
+          <p class="select-text textOverHide" ng-show="scope.informationEphemeralData['选择类型']?true:false">
+            {{scope.informationEphemeralData["选择类型"].join(',')}}</p>
+          <i class="ion-chevron-right size-12 icon-right" ng-if="true"></i>
+        </li>
+      </a>
+    </ul>
+    <div class="informationInputTitle">
+      <input class="init" placeholder="请输入标题" ng-model="scope.informationEphemeralData['信息标题']">
+    </div>
+    <div class="activityDetailed">
+      <div class="detailedBox">
+        <div class="detailedText">
+          <textarea class="init" ng-model="scope.informationEphemeralData['信息详情'].text" placeholder="多行输入"></textarea>
+        </div>
+        <div class="upload-photo-control" upload-photo-control>
+
+        </div>
+      </div>
+    </div>
+  </ion-content>
+
+<ion-footer-bar style="background: none">
+    <div class="buttonBox">
+     
+      
+ <a class="button button-left" ng-click="backClick(1)"  >
+               取消
+            </a>
+
+         <a class="button button-right" href="#/newInformation/preview/{{scope.source}}/{{scope.id}}">
+             预览
+            </a>
+    </div>
+  </ion-footer-bar>
+
+
+  
+</ion-view>

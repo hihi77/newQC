@@ -1,0 +1,20 @@
+<ion-view title="{{title}}" hide-tabs="true">
+  <ion-content>
+    <ion-list>
+
+      <ion-item class="item-remove-animate"  ng-repeat="data in lists" ng-class="'item item-icon-right'" href="{{url+$index}}">
+        {{data[showListKeyName]||"无名称"}}
+        <br>
+        <span  ng-bind="newDate(data.startTime).Format('yyyy年MM月dd日')+'-'+newDate(data.endTime).Format('yyyy年MM月dd日')">
+        </span>
+          <i class="icon ion-chevron-right"></i>
+        <ion-option-button class="button-assertive" ng-click="onDelete($index)">
+          删除
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+  <ion-footer-bar class="bar bar-footer bar-assertive" style="background-color:orange">
+    <a href="{{url+'new'}}"><h1 class="title">添加新的</h1></a>
+  </ion-footer-bar>
+</ion-view>

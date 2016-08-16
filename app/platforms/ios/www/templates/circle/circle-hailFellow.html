@@ -1,0 +1,28 @@
+<ion-modal-view>
+  <ion-header-bar class="bar-positive">
+    <div class="buttons">
+      <button class="button" ng-click="modal.hide()">取消</button>
+    </div>
+    <h1 class="title">邀请好友</h1>
+  </ion-header-bar>
+  <ion-content>
+    <div class="search">
+      <div class="searchInput">
+        <i class="icon ion-search"></i>
+        <angucomplete placeholder="查找" id="userId" selectedObject="selectedObject" results="results" localdata="userList" search-back="searchCallBack" ng-model="searchStr" pause="100" searchfields="nickname,userId" titlefield="nickname" minlength="1" inputclass="form-control form-control-small" resultshide="true"  matchclass="highlight"/>
+      </div>
+    </div>
+    <p class="center" ng-if="!results.length&&!userList.length">没有数据~</p>
+    <div class="list">
+      <div class="item item-button-right item-avatar item-checkbox" ng-repeat="data in searchStr?results:userList">
+        <img src="{{data.headUrl||data.originalObject.headUrl||default_headUrl}}" style="border-radius: 4px;">
+        <h2 ng-bind="data.nickname||data.originalObject.nickname"></h2>
+        <p ng-bind="(data.sex||data.originalObject.sex)+'-'+(data.area||data.originalObject.area)"></p>
+        <button style="font-size: 12px; height:30px;" class="button button-small button-positive" ng-click="inviteToCircle(data)">
+          <i class="icon ion-plus size-12"></i>
+          邀请加入
+        </button>
+      </div>
+    </div>
+  </ion-content>
+</ion-modal-view>

@@ -1,0 +1,44 @@
+<ion-view view-title="教育背景" hide-tabs="true">
+  <ion-content>
+    <div class="user-projectExperience">
+      <ul class="list-style-D list-style-A">
+        <li class="list-item">
+          <p class="leftText">学校名称</p>
+          <div class="rightText">
+            <angucomplete placeholder="请输入学校" pause="100" searchfields="name" titlefield="name" localdata="schoolNames" minlength="1" inputclass="form-control form-control-small"  ng-model="educationalBackground.schoolName" matchclass="highlight"/>
+          </div>
+        </li>
+        <li class="list-item">
+          <p class="leftText">开始时间</p>
+          <p class="rightText"><input class="init" ng-model="educationalBackground.startTime"  type="date"></p>
+        </li>
+        <li class="list-item">
+          <p class="leftText">结束时间</p>
+          <p class="rightText"><input class="init" ng-model="educationalBackground.endTime"  type="date"></p>
+        </li>
+        <li class="list-item">
+          <p class="leftText">专业</p>
+          <div class="rightText">
+            <angucomplete placeholder="请输入专业" pause="100" selectedobject="selectedCountry" searchfields="name" titlefield="name" localdata="specialtys" minlength="1" inputclass="form-control form-control-small"  ng-model="educationalBackground.specialty" matchclass="highlight"/>
+          </div>
+        </li>
+        <li class="list-item">
+          <p class="leftText">学历</p>
+          <div class="rightText">
+            <select class="init" ng-model="educationalBackground.recordOfFormalSchooling">
+              <option ng-repeat="text in educationalBackground.recordOfFormalSchoolings">{{text}}</option>
+            </select>
+        </li>
+        <li class="list-item">
+          <p class="leftText">统招</p>
+          <p class="rightText">
+            <select class="init" ng-model="educationalBackground.theEntranceExamination">
+              <option>是</option>
+              <option>否</option>
+            </select>
+          </p>
+        </li>
+      </ul>
+    </div>
+  </ion-content>
+</ion-view>

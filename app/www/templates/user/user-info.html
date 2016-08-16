@@ -1,0 +1,156 @@
+<ion-view view-title="我的资料" hide-tabs="true">
+  <ion-content>
+    <div class="myInfo">
+      <div class="heard">
+        <p class="photo" ng-click = "uploadHeadPhoto()"><img class="headUrl" img-auto src="{{userInfo.headUrl}}"></p>
+        <p class="name">{{userInfo.nickname}}</p>
+        <p class="integrity">信息完整度({{userInfo.complete}}%)</p>
+      </div>
+
+      <ul class="list-style-D">
+        <div class="item item-divider">
+          基本信息
+        </div>
+        <li class="list-item">
+          <p class="leftText">*昵称</p>
+          <div class="rightText"><input  ng-model="userInfo.nickname" maxlength="20" ng-blur="update('nickname',userInfo.nickname)" class="init"></div>
+          <i class="ion-edit ng-hide  icon-right"></i>
+        </li>
+      </ul>
+      <ul class="list-style-D">
+        <li class="list-item">
+          <p class="leftText">真实姓名</p>
+          <div class="rightText"><input ng-model="userInfo.name" maxlength="20" ng-blur="update('name',userInfo.name)" class="init"></div>
+          <i class="ion-edit ng-hide  icon-right"></i>
+        </li>
+        <li class="list-item">
+          <p class="leftText">*性别</p>
+          <div class="rightText">
+            <select class="init" ng-model="userInfo.sex" ng-change="update('sex',userInfo.sex)">
+              <option  >男</option>
+              <option  >女</option>
+            </select>
+          </div>
+          <i class="ion-edit  ng-hide icon-right"></i>
+        </li>
+        <li class="list-item">
+          <p class="leftText">出生年份</p>
+          <div class="rightText">
+            <select class="init" ng-model="userInfo.birthDate" ng-change="update('birthDate',userInfo.birthDate)">
+              <option ng-repeat="yerd in yerds">{{yerd}}</option>
+            </select>
+            <i class="ion-edit ng-hide  icon-right"></i>
+          </div>
+        </li>
+        <a href="#/tab/user/user-selectArea">
+          <li class="list-item">
+            <p class="leftText">所在地区</p>
+            <div class="rightText">
+              {{userInfo.area}}
+            </div>
+            <i class="ion-chevron-right  icon-right"></i>
+          </li>
+        </a>
+<!--        <li class="list-item">
+          <p class="leftText">*手机号码</p>
+          <div class="rightText">
+            <input ng-model="userInfo.phone" ng-readonly="" class="init">
+          </div>
+        </li>-->
+          <div class="item item-button-right">
+            <b>*手机号码</b>
+              <input ng-model="userInfo.phone" ng-readonly="" class="init">
+
+            <a href="#/mobile_verify/mobileVerify" class="button button-positive">
+              <p style="color:white" ng-bind="userInfo.phone?'更改号码':'绑定号码'"></p>
+
+            </a>
+          </div>
+
+        <li class="list-item">
+          <p class="leftText">电子邮箱</p>
+          <div class="rightText">
+            <input ng-model="userInfo.email" ng-blur="update('email',userInfo.email)" class="init">
+          </div>
+          <i class="ion-edit  icon-right ng-hide"></i>
+        </li>
+
+      </ul>
+      <ul class="list-style-D">
+        <li class="list-item">
+          <p class="leftText">当前公司</p>
+          <div class="rightText"><input class="init" ng-blur="update('currentCompany',userInfo.currentCompany)" maxlength="30" ng-model="userInfo.currentCompany"></div>
+          <i class="ion-edit ng-hide icon-right"></i>
+        </li>
+        <a href="#/tab/user-selectTrade"><li class="list-item">
+          <p class="leftText">当前行业</p>
+          <div class="rightText textOverHide">{{userInfo.currentTrade.join(',')}}</div>
+          <i class="ion-chevron-right  icon-right"></i>
+        </li></a>
+        <a href="#/tab/user-selectDuty"><li class="list-item">
+          <p class="leftText">当前职能</p>
+          <div class="rightText textOverHide">{{userInfo.currentFunction.join(',')}}</div>
+          <i class="ion-chevron-right  icon-right"></i>
+        </li></a>
+      </ul>
+      <ul class="list-style-D">
+        <a href="#/tab/user/user-beGoodAt">
+          <li class="list-item">
+            <p class="leftText ">擅长技能</p>
+            <div class="rightText textOverHide">{{userInfo.goodSkill.join(',')}}</div>
+            <i class="ion-chevron-right  icon-right"></i>
+          </li>
+        </a>
+
+        <a href="#/tab/user/user-interest">
+          <li class="list-item">
+            <p class="leftText">兴趣爱好</p>
+            <div class="rightText textOverHide">{{userInfo.hobbiesAndInterests.join(',')}}</div>
+            <i class="ion-chevron-right  icon-right"></i>
+          </li>
+        </a>
+        <div class="item item-divider">
+          扩展信息
+        </div>
+        <a href="#/tab/user/user-undergo/work" ><li class="list-item">
+          <p class="leftText">工作经历</p>
+          <div class="rightText"></div>
+          <i class="ion-chevron-right  icon-right"></i>
+        </li></a>
+
+        <a href="#/tab/user/user-undergo/project"><li class="list-item">
+          <p class="leftText">项目经验</p>
+          <div class="rightText"></div>
+          <i class="ion-chevron-right  icon-right"></i>
+        </li></a>
+
+        <a href="#/tab/user/user-undergo/education"><li class="list-item">
+          <p class="leftText">教育背景</p>
+          <div class="rightText"></div>
+          <i class="ion-chevron-right  icon-right"></i>
+        </li></a>
+        <a href="#/tab/user/user-language"><li class="list-item">
+          <p class="leftText">语言能力</p>
+          <div class="rightText">{{userInfo.linguisticCapacit.join(',')}}</div>
+          <i class="ion-chevron-right  icon-right"></i>
+        </li></a>
+        <li class="list-item">
+          <p class="leftText">自我评价</p>
+          <div class="rightText" style="height: 90px;">
+            <textarea maxlength="200" ng-blur="update('selfAssessment',userInfo.selfAssessment)" ng-model="userInfo.selfAssessment" class="init"></textarea>
+          </div>
+          <i class="ion-edit ng-hide icon-right"></i>
+        </li>
+
+        <a href="#/tab/user/user-moreInfo"><li class="list-item">
+          <p class="leftText">附加信息</p>
+          <div class="rightText"></div>
+          <i class="ion-chevron-right  icon-right"></i>
+        </li></a>
+
+
+        </li>
+      </ul>
+    </div>
+  </ion-content>
+</ion-view>

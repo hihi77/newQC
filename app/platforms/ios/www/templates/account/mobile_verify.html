@@ -1,0 +1,27 @@
+<ion-view view-title="绑定手机" align-title="left" animation="slide-left-right">
+    <ion-nav-buttons side="left">
+        <button class="button button-clear" ng-click="goBack()"><i class="icon ion-ios-arrow-back" ></i> {{getPreviousTitle()||'back'}}</button>
+    </ion-nav-buttons>
+
+    <ion-content >
+
+        <div align="center">
+            <img ng-src="./img/logoT.png" style="height:80px;width: 80px">
+        </div>
+
+        <div class="content">
+            <form class="list list-inset" name="postsForm">
+                <label class="item item-input">
+                    <i class="icon ion-iphone placeholder-icon"></i>
+                    <input placeholder="请输入手机号码" name="phone" type="tel" ng-model="user.phone" required ng-minlength="11" ng-maxlength="11">
+                </label>
+            </form>
+            <div class="padding">
+                <button ng-click="CheckbyPhoneNuber('mobileVerify')" class="button button-full button-positive"  ng-disabled="postsForm.$invalid"
+                >下一步
+                </button>
+            </div>
+        </div>
+
+    </ion-content>
+</ion-view>

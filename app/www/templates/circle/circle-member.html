@@ -1,0 +1,51 @@
+<ion-view title="全部成员" hide-tabs="true">
+  <ion-content>
+    <div class="member">
+      <div search>
+      </div>
+      <ul class="list-style-member">
+        <li class="list-title" ng-click="show.part=!show.part">
+          群主管理员({{allUser.authority.length}}人)
+          <i class="{{show.part?'ion-ios-arrow-down':'ion-ios-arrow-up'}} icon-right"></i>
+        </li>
+
+        <ion-list>
+          <ion-item class="item-remove-animate" ng-repeat="userInfo in allUser.authority" ng-show="show.part&&!userInfo.hide">
+            <a href="#/tab/{{pageMarking}}-userInfo/{{userInfo.userId}}" >
+              <p class="photo"><img src="{{userInfo.headUrl||default_headUrl}}"></p>
+              <p class="name textOverHide" ng-bind="userInfo.nickname"></p>
+              <!--<p class="duty manage" ng-bind="userInfo.authority"></p>-->
+
+
+            <ion-option-button ng-show="(creator!=userInfo.userId)&&manager" class="" style="background: #6699CC;color: #fff" ng-click="unsetManager($index,userInfo)">
+              删除管理员
+            </ion-option-button>
+            </a>
+          </ion-item>
+
+        </ion-list>
+      </ul>
+      <ul class="list-style-member">
+        <li class="list-title" ng-click="show.all=!show.all">
+          普通成员({{allUser.common.length||0}}人)
+          <i class="{{show.all?'ion-ios-arrow-down':'ion-ios-arrow-up'}} icon-right"></i>
+        </li>
+        <ion-list>
+        <ion-item class="item-remove-animate" ng-repeat="userInfo in allUser.common" ng-show="show.all&&!userInfo.hide">
+        <a href="#/tab/{{pageMarking}}-userInfo/{{userInfo.userId}}">
+          <p class="photo"><img src="{{userInfo.headUrl}}"></p>
+          <p class="name textOverHide" ng-bind="userInfo.nickname"></p>
+
+          <ion-option-button ng-show="(creator!=userInfo.userId)&&manager"  style="background: #6699CC;color: #fff" ng-click="setManager(userInfo)">
+            设为管理员
+          </ion-option-button>
+            <ion-option-button ng-show="(creator!=userInfo.userId)&&manager" class="button-assertive" ng-click="deleteMember($index,userInfo)">
+              删除
+            </ion-option-button>
+        </a>
+        </ion-item>
+        </ion-list>
+      </ul>
+    </div>
+  </ion-content>
+</ion-view>

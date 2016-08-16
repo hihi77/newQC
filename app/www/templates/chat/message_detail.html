@@ -1,0 +1,55 @@
+
+<ion-view align-title="center" view-title={{message.name}} cache-view=”false”  hide-tabs="true">
+
+ 
+
+    <ion-content class="rj-stable-content" delegate-handle="messageDetailsScroll" id="message-detail-content">
+       <ion-refresher
+                pulling-text="下拉刷新..."
+                on-refresh="doRefresh()">
+        </ion-refresher>
+<div  delegate-handle="listScroll" >
+        <div ng-repeat="item in messageDetails">
+            <p class="rj-message-time" ng-bind="item.time" ng-if="false"></p>
+            <div class="rj-message-wrap" ng-if="!(item.isFromMe==message.isFromMe)">
+                <img ng-src="{{item.face}}" class="rj-head-pic">
+                <span class="rj-triangle-left"></span>
+                <p class="rj-message" ng-bind="item.content.text"></p>
+                <img ng-src="{{item.pic}}">
+              <p align="center" >{{item.time| date:"MM-dd HH:mm"}}</p>
+            </div>
+            <div class="rj-message-wrap" ng-if="item.isFromMe==message.isFromMe">
+
+                <img ng-src="{{item.face}}" class="rj-head-pic-right">
+                <span class="rj-triangle-right"></span>
+
+                <p class="rj-message-right" ng-bind="item.content.text"></p>
+                <img ng-src="{{item.pic}}">
+
+                <p align="center" >{{item.time| date:"MM-dd HH:mm"}}</p>
+            </div>
+        </div>
+</div>
+    </ion-content>
+  
+    <ion-footer-bar keyboard-attach  align-title="left" class="bar-light" resize-foot-bar>
+        
+        <div class="rj-footer-btn-wrap">
+            <button class="button button-icon icon ion-ios-plus-outline rj-footer-btn-left"  ng-click="addMulti()">
+            </button>
+        </div>
+        <label  class="item item-input rj-footer-input">
+
+
+            <textarea placeholder="说点啥....." msd-elastic ng-model="send_content.text"></textarea>
+
+        </label>
+
+
+        <div class="rj-send-button" ng-hide="!send_content.text || send_content.text === ''">
+            <p ng-click="doSend(send_content.text);" class="rj-footer-btn button ">发送</p>
+        </div>
+
+    </ion-footer-bar>
+
+</ion-view>

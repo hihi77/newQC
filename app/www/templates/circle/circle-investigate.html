@@ -1,0 +1,20 @@
+<ion-header-bar class="bar-stable bar bar-header" align-title="center">
+  <button ng-click="backClick();" class="button back-button  buttons  button-clear header-item">
+    <i class="icon ion-ios-arrow-back"></i>
+    后退
+  </button>
+  <div class="title title-center header-item">
+    调查
+  </div>
+</ion-header-bar>
+<ion-content style="background: #fff">
+  <div class="categoryTab" ng-controller="categoryTab" ng-show="heardTabs.length">
+    <ion-scroll direction="x" scrollbar-x="true">
+      <div class="heardTabs" style="width:{{heardTabs.length*80+2}}px;min-width: 100%">
+        <div class="tab {{tab.hover}}" ng-repeat="tab in heardTabs" ng-click="tabClick(tab,$index)">{{tab.type}}<hr></div>
+      </div>
+    </ion-scroll>
+    <div class="list-box" ng-include="nowTab.tmpUrl">
+    </div>
+  </div>
+</ion-content>

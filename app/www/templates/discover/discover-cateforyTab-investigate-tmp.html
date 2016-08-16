@@ -1,0 +1,31 @@
+<ul class="investigate-list">
+    <li class="animated {{data.class}}" ng-repeat="data in nowData|orderBy:'createTime':true">
+      <a href="#/tab/{{pageMarking}}-questionnaireSurvey/{{data.id}}/{{id}}"><div class="infoBox list-item-investigate">
+        <div class="title">
+          {{data.title}}
+        </div>
+        <div class="info">
+          <p class="leftText">发布：{{newDate(data.startTime).Format('MM月dd日 hh:mm')}}</p>
+          <p class="rightText"><i class="blue">赏金:</i>&nbsp;&nbsp;&nbsp;{{data.moneyReward||0}}元</p>
+        </div>
+        <div class="info">
+          <p class="leftText">截止：{{newDate(data.endTime).Format('MM月dd日 hh:mm')}}</p>
+          <p class="rightText">限额:&nbsp;&nbsp;&nbsp;{{data.alreadyPortion||0}}/{{data.maxPortion}}份</p>
+        </div>
+      </div></a>
+      <div class="item tabs tabs-secondary tabs-icon-left ng-hide">
+        <a class="tab-item" href="#/tab/{{pageMarking}}-investigate-{{pageMarking}}-{{data.id}}">
+          编辑
+          <i class="icon ion-edit"></i>
+        </a>
+        <a class="tab-item">
+          查看结果
+          <i class="icon ion-edit"></i>
+        </a>
+        <a class="tab-item"  ng-click="deleteItem($index,data.id)">
+          删除
+          <i class="icon ion-close-round"></i>
+        </a>
+      </div>
+    </li>
+</ul>

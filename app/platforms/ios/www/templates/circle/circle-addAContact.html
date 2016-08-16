@@ -1,0 +1,33 @@
+<ion-view title="添加成员" hide-tabs="true">
+  <ion-content>
+    <div class="content ionic-pseudo">
+      <div class="list">
+        <a class="item item-icon-left item-icon-right" href="#/tab/{{pageMarking}}-selectContacts/{{name}}/{{id}}">
+          <i class="icon ion-ios-search"></i>
+          查找添加
+          <i class="icon ion-ios-arrow-right"></i>
+        </a>
+        <!--<a class="item item-icon-left item-icon-right" href="#/tab/{{pageMarking}}-selectContacts/{{id}}">-->
+          <!--<i class="icon ion-android-contacts"></i>-->
+          <!--通讯录添加-->
+          <!--<i class="icon ion-ios-arrow-right"></i>-->
+        <!--</a>-->
+        <div class="item item-divider">
+          其他渠道
+        </div>
+        <div >
+        <a class="item item-icon-left item-icon-right" ng-click="shareWeChatFriendCircle()">
+          <i class="icon ion-social-chrome"></i>
+          朋友圈
+          <i class="icon ion-ios-arrow-right"></i>
+        </a>
+        <a class="item item-icon-left item-icon-right" href="#" ng-click="shareWeChatFriend()">
+          <i class="icon ion-android-person"></i>
+          微信好友
+          <i class="icon ion-ios-arrow-right"></i>
+        </a>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

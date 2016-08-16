@@ -1,0 +1,40 @@
+<ion-view view-title="工作经历" hide-tabs="true">
+  <ion-content>
+    <div class="user-projectExperience">
+      <ul class="list-style-D">
+        <li class="list-item">
+          <p class="leftText">公司名称</p>
+          <p class="rightText"><input class="init" ng-model="workExperience.corporateName" placeholder="请输入公司名称"></p>
+        </li>
+        <li class="list-item">
+          <p class="leftText">职位名称</p>
+          <p class="rightText"><input class="init" ng-model="workExperience.jobTitle" placeholder="请输入职位名称"></p>
+        </li>
+        <li class="list-item">
+          <p class="leftText">工作地点</p>
+          <p class="rightText"><input class="init" ng-model="workExperience.workingPlace" placeholder="请输入工作地点"></p>
+        </li>
+        <li class="list-item">
+          <p class="leftText">开始时间</p>
+          <p class="rightText"><input class="init" ng-model="workExperience.startTime" type="date"></p>
+        </li>
+        <li class="list-item">
+          <p class="leftText">结束时间</p>
+          <p class="rightText"><input class="init" ng-model="workExperience.endTime" type="date"></p>
+        </li>
+        <li class="list-item">
+          <p class="leftText">年薪(万元)</p>
+          <p class="rightText"><input class="init input" ng-model="workExperience.yearlySalary" maxlength="10" type="tel" placeholder="元"></p>
+        </li>
+        <li class="list-item">
+          <p class="leftText">工作业绩</p>
+          <p class="rightText" style="height: 80px;"><textarea class="init" maxlength="500" ng-model="workExperience.jobPerformance" placeholder="请输入工作业绩"></textarea></p>
+        </li>
+        <li class="list-item">
+          <p class="leftText">工作职责</p>
+          <p class="rightText" style="height: 80px;"><textarea class="init"  maxlength="500"  ng-model="workExperience.operatingDuty" placeholder="请输入工作职责"></textarea></p>
+        </li>
+      </ul>
+    </div>
+  </ion-content>
+</ion-view>

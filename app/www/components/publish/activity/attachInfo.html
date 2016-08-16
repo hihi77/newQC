@@ -1,0 +1,21 @@
+<ion-view view-title="{{title}}">
+  <ion-content>
+    <!--中间内容-->
+    <div class="additionalRegistration" ng-controller="attachInfo">
+      <h1 class="title">{{heardTitle}}</h1>
+      <ul class="icon-list-A" id="icon-list">
+        <li class="icon-item" ng-click="(type.text!='姓名'&&type.text!='手机')?type.checkBox=!type.checkBox:''" ng-repeat="type in lists" ng-if="!type.removeDom">
+          <i class="icon icon-left {{type.icon}}"></i>
+          <p class="text"><input value="{{type.text}}" disabled="disabled" class="init"></p>
+          <i class="{{type.remove?'ion-android-remove':(type.checkBox?'ion-android-checkbox-outline':'ion-android-checkbox-outline-blank')}} icon icon-right" ng-click="removeFn(type)"></i>
+        </li>
+        <li class="icon-item" id="listItem" ng-show="addItemShow">
+          <i class="icon icon-left {{noeType.icon}}"></i>
+          <p class="text"><input ng-model="noeType.text" id="add-icon-input" class="init"></p>
+          <i class="ion-android-add icon icon-right" ng-click="addFn()"></i>
+        </li>
+      </ul>
+      <div class="add-icon-item" id="add-icon-item" on-touch="addItemShow=true;"><i class="ion-android-add size-16"></i>添加自定义填写项</div>
+    </div>
+  </ion-content>
+</ion-view>

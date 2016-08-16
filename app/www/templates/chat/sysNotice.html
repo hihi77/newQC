@@ -1,0 +1,18 @@
+<ion-view view-title="系统消息" hide-tabs="true">
+    <ion-content>
+        <div class="user-addressList">
+                    <ion-list >
+                        <ion-item ng-click="dealWithNotice(message,$event,$index)" class="item-avatar"  ng-repeat="message in sysNotice | orderBy:'-time'" >
+                            <img ng-src="{{default_logo}}">
+                            <h2  class="{{message.unread}}">系统消息</h2>
+                            <p ng-bind="message.message" style="overflow: visible"></p>
+                            <p>{{message.time|date:"MM-dd HH:mm"}}</p>
+                            <span class="rj-push-right" ng-bind="message.lastMessage.time|date:'MM-dd HH:mm'"></span>
+                            <ion-option-button class="button-assertive" ng-click="deleteSysNotice(message,$index)">
+                                删除
+                            </ion-option-button>
+                        </ion-item>
+                    </ion-list>
+        </div>
+    </ion-content>
+</ion-view>

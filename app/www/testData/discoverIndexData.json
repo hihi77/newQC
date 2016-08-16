@@ -1,0 +1,56 @@
+{
+  "heardPhoto":[
+    "./img/img.jpg"
+  ],
+  "activityData":[
+    {
+      "id":"0",
+      "title":"骑在路上",
+      "phoneUrl":"http://h.hiphotos.baidu.com/image/h%3D200/sign=a28cdfce86cb39dbdec06056e01609a7/8ad4b31c8701a18bf89ea96b992f07082838fe99.jpg",
+      "time":"02月15日(周一)16:00 ",
+      "address":"上海市 徐汇区 越界创业中心",
+      "price":"100",
+      "applicants":"100"
+    }
+  ],
+  "toHireData":[
+    {
+      "id":"0",
+      "title":"数据分析",
+      "time":"2016-1-2",
+      "address":"北京-海淀区",
+      "company":"阿里巴巴",
+      "salary":"10-20万"
+    }
+  ],
+  "investigateData":[
+    {
+      "id":"0",
+      "source":"捷豹汽车",
+      "startTime":"2016-02-18 14:23",
+      "moneyReward":"2.00",
+      "endTime":"2016-02-22 00:00",
+      "alreadyPortion":"79",
+      "maxPortion":"300"
+    }
+  ],
+  "informationData":[
+    {
+      "id":"0",
+      "heardPhotoUrl":"",
+      "name":"马云",
+      "ago":"1小时前",
+      "title":"真牛茶国内互联网健康茶饮",
+      "text":"有没有一款茶，是健康的，天热的。更可以代表时代的精神?",
+      "images":[
+        "http://h.hiphotos.baidu.com/image/h%3D200/sign=a28cdfce86cb39dbdec06056e01609a7/8ad4b31c8701a18bf89ea96b992f07082838fe99.jpg",
+        "http://g.hiphotos.baidu.com/image/h%3D200/sign=55c721bb29dda3cc14e4bf2031e83905/32fa828ba61ea8d3e3eecc20900a304e241f58c1.jpg",
+        "http://pic.nipic.com/2008-07-05/20087584237954_2.jpg"
+      ],
+      "browse":"666",
+      "clickALike":"100",
+      "comment":"200"
+    }
+  ]
+
+}

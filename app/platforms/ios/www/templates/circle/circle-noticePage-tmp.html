@@ -1,0 +1,16 @@
+
+
+<ion-list class="list-notice">
+  <ion-item class="item-notice" ng-repeat="data in nowData" ng-click="showNotice(data)">
+    <h2 class="title" ng-bind="data.data.noticeTitle"></h2>
+    <p class="text" ng-click="showNotice(data)" >{{data.data.notice|limitTo:30}}...</p>
+    <p class="foot-info">
+      <span class="name" ng-bind="data.creator.nickname"></span>
+      <span class="time" ng-bind="data.startTime|date:'MM月dd日 HH:mm'"></span>
+    </p>
+    <ion-option-button class="button-assertive" ng-click="deleteNotice(data)">
+      删除
+    </ion-option-button>
+  </ion-item>
+
+</ion-list>

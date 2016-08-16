@@ -1,0 +1,151 @@
+{
+    "requirement" : [
+        {
+            "icon" : "ion-person",
+            "text" : "姓名",
+            "checkBox" : true
+        },
+        {
+            "icon" : "ion-iphone",
+            "text" : "手机",
+            "checkBox" : true
+        },
+        {
+            "icon" : "ion-android-happy",
+            "text" : "公司"
+        },
+        {
+            "icon" : "ion-android-happy",
+            "text" : "邮箱"
+        },
+        {
+            "icon" : "ion-android-happy",
+            "text" : "是否需要上传认证",
+            "checkBox" : true
+        }
+    ],
+    "title" : "232",
+    "area" : "上海-徐汇区",
+    "describe" : {
+        "text" : "Hello Tina Test  test"
+    },
+    "photoUrl" : {
+        "images" : [
+            {
+                "name" : NumberLong(1463129618393),
+                "src" : "file:///Users/yeshuijuan/Library/Developer/CoreSimulator/Devices/88048A4F-5243-4A8B-AC47-62AB5333C330/data/Containers/Data/Application/362E0576-5429-43C6-91FD-DB06BFAC1B9D/tmp/cdv_photo_019.jpg",
+                "tsrc" : "http://192.168.27.161:8081/uploads/1463129618393.jpg"
+            }
+        ]
+    },
+    "type" : [
+        "亲友"
+    ],
+    "open" : true,
+    "userId" : "18650809701",
+    "creator" : {
+        "nickname" : "tina",
+        "phone" : "18650809701",
+        "userId" : "18650809701",
+        "config" : {
+            "手机号码可见" : false,
+            "基本信息可见" : true,
+            "扩展信息可见" : false
+        },
+        "sysSetting" : false
+    },
+    "draflag" : "1",
+    "circleId" : "1463129624735_circle",
+    "members" : {
+        "authority" : [
+            "18650809701",
+            "1232323"
+        ],
+        "common" : [
+            "18650809701",
+            "159806035177"
+        ],
+        "leave" : []
+    },
+    "messages" : [],
+    "information" : [],
+    "activity" : [],
+    "invest" : [],
+    "hire" : [],
+    "totalMembers" : 32,
+    "applicant" : [
+        {
+            "registrationAdditional" : [
+                {
+                    "icon" : "ion-person",
+                    "text" : "姓名",
+                    "checkBox" : true,
+                    "value" : "apple"
+                },
+                {
+                    "icon" : "ion-iphone",
+                    "text" : "手机",
+                    "checkBox" : true,
+                    "value" : "15980603577"
+                },
+                {
+                    "icon" : "ion-android-happy",
+                    "text" : "是否需要上传认证",
+                    "checkBox" : true,
+                    "value" : {
+                        "images" : [
+                            {
+                                "name" : NumberLong(1464249204438),
+                                "src" : "http://192.168.27.151:8081/uploads/1464249204438.jpg",
+                                "tsrc" : "http://192.168.27.151:8081/uploads/1464249204438.jpg"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "userId" : "159806035177",
+            "nickname" : "apple",
+            "headUrl" : "http://192.168.27.151:8081/uploads/1464225021582.jpg",
+            "status" : "1",
+            "id" : "1464249205284_1463129624735_circle_circle",
+            "time" : ISODate("2016-05-26T07:53:25.285Z")
+        },
+        {
+            "registrationAdditional" : [
+                {
+                    "icon" : "ion-person",
+                    "text" : "姓名",
+                    "checkBox" : true,
+                    "value" : "apple"
+                },
+                {
+                    "icon" : "ion-iphone",
+                    "text" : "手机",
+                    "checkBox" : true,
+                    "value" : "15980603577"
+                },
+                {
+                    "icon" : "ion-android-happy",
+                    "text" : "是否需要上传认证",
+                    "checkBox" : true,
+                    "value" : {
+                        "images" : [
+                            {
+                                "name" : 1464259762470,
+                                "src" : "http://192.168.27.151:8081/uploads/1464259762470.jpg",
+                                "tsrc" : "http://192.168.27.151:8081/uploads/1464259762470.jpg"
+                            }
+                        ]
+                    }
+                }
+            ],
+            "userId" : "15980603577",
+            "nickname" : "apple",
+            "headUrl" : "http://192.168.27.151:8081/uploads/1464225021582.jpg",
+            "status" : "0",
+            "id" : "1464259763391_1463129624735_circle_circle",
+            "time" : ISODate("2016-05-26T10:49:23.391Z")
+        }
+    ],
+    "notice" : []
+}

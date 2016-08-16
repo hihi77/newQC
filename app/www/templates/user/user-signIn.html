@@ -1,0 +1,12 @@
+<ion-view view-title="查看签到" hide-tabs="true">
+  <ion-content style="background: #fff">
+    <ion-toggle ng-model="signIn.signIn.startSignIn" ng-change="change();">打开签到功能</ion-toggle>
+    <div class="list">
+      <a class="item item-avatar" ng-repeat="noe in signIn.signInRecord">
+        <img src="{{noe.headUrl}}" style="border-radius: 5px">
+        <h2 ng-bind="noe.nickname||'空'"></h2>
+        <p>签到时间{{noe.date | date:"MM月dd日 HH:mm"}}</p>
+      </a>
+    </div>
+  </ion-content>
+</ion-view>

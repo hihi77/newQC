@@ -1,0 +1,62 @@
+<ion-view  view-title="{{circle.name}}"   cache-view=”false”  hide-tabs="true" >
+
+  
+  
+
+   <ion-content class="rj-stable-content" delegate-handle="messageDetailsScroll" id="message-detail-content">
+    <div class="content padding double-padding-x">最新消息</div>
+
+
+    
+  <ion-refresher pulling-text="下拉刷新..." on-refresh="doRefresh()">
+        </ion-refresher>  
+
+     
+
+ <div class="item card-item"     ng-repeat="message in circle.messages">
+            <div  class="card stable-bg ink ink-dark" >
+                <div class="item item-avatar item-text-wrap">
+                 <img ng-src="{{message.data.img}}" style="width: 64px; height: 64px">
+
+                    <strong>{{message.data.name}}</strong>
+                   <p>{{message.data.content}}</p>
+              
+                 <img ng-src="{{message.data.pic}}">
+               
+                    <div class="card-footer text-right">
+                    
+                        <div class="pull-left">
+                            <i class="icon ion-clock"></i> {{message.data.time| date:"MM-dd HH:mm"}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+             
+</div>
+     
+  
+
+
+
+</ion-content>
+
+<ion-footer-bar keyboard-attach align-title="left" class="bar-light" resize-foot-bar>
+    <!-- <div class="buttons rj-footer-buttons-left">
+        <button class="button button-icon icon ion-ios-mic-outline">
+        </button>
+    </div> -->
+    <div class="rj-footer-btn-wrap">
+        <button class="button button-icon icon ion-ios-plus-outline rj-footer-btn-left " ng-click="addMulti()">
+        </button>
+    </div>
+    <label  class="item item-input rj-footer-input">
+        <textarea placeholder="说点啥....." msd-elastic ng-model="send_content"></textarea>
+      
+    </label>
+        <div class="rj-send-button" ng-hide="!send_content || send_content === ''">
+           <p ng-click="doSend(send_content);" class="rj-footer-btn button">发送</p>
+        </div>
+
+</ion-footer-bar>
+
+</ion-view>

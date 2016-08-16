@@ -1,0 +1,21 @@
+<ion-view hide-tabs="true">
+  <ion-content>
+    <ul class="activity-list discover-activity">
+      <a href="#/tab/{{pageMarking}}/{{pageMarking}}-signUp-detailed/{{data.id}}" ng-repeat="data in nowData">
+        <li class="list-item-activity">
+          <div class="photo"><img ng-src="{{data.phoneUrl}}"></div>
+          <div class="content">
+            <h1 class="title">{{data.title}}</h1>
+            <p class="info textOverHide">{{data.time}} {{data.address}}</p>
+            <div class="prompt">
+              <p class="prompt-left">{{data.price}}元</p>
+              <p class="prompt-left">{{data.applicants}}人报名</p>
+              <p class="prompt-right blue">开始报名</p>
+            </div>
+          </div>
+        </li>
+      </a>
+    </ul>
+  </ion-content>
+
+</ion-view>

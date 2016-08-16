@@ -1,0 +1,11 @@
+<div class="expressionBox " ng-show="emojis.show">
+  <ion-slide-box>
+    <ion-slide ng-repeat="array in emojis" style="height:130px;">
+      <div class="noeExpressionBox"  ng-repeat="noe in array" ng-click="emojis.clickEmojis(noe)">
+        <p class="noeExpression">
+          {{noe}}
+        </p>
+      </div>
+    </ion-slide>
+  </ion-slide-box>
+</div>

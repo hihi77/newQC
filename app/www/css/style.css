@@ -1,0 +1,690 @@
+/* Empty. Add your own CSS if you like */
+a{color: inherit;text-decoration: none}
+p{margin: 0}
+body {
+    background: #fff;
+    color: #444;
+    font: 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+body,html{width:100%;height: 100%;}
+.button{min-height: 31px;}
+.button.blue{background: #368EF4;color: #fff;width: 100%}
+.mainContainer{width: 100%;height: 100%;position: absolute;left: 0;top:0}
+.mainContainer img{width: 100%;}
+.blur{-webkit-filter:blur(20px)}
+.pane, .view{background: #fff;}
+.badge_{background: red !important;color: #fff !important;}
+.bar .button-style1{width: 100%;border-radius: 0;background: #fff;border-top:1px solid #bfbfbf;border-bottom:1px solid #bfbfbf;color: #368EF4}
+.bar .button-style2{width: 80%;font-size: 16px;color: #fff;background: #368EF4;margin: 0 auto;display: block;margin-top: 10px;}
+.bar .button-style2.yellow{background: #F5A623}
+.bar .button-style3{width: 100%;line-height:44px;font-size: 16px;color: #fff;background: #F5A623;text-align: center;border-radius: 0;margin: 0}
+.bar .button-style3.yellow{background: #F5A623;margin: 0}
+.heardClass{top:42px;height: auto}
+.contentClass{width: 100%;height: 50px}
+
+
+.buttonBox{width: 100%;overflow: hidden;}
+.buttonBox .button.button-left{width: 45%;float: left;background: #F5A623;color: #fff}
+.buttonBox .button.button-right{width: 45%;float: right;background: #368EF4;color: #fff}
+.tab-item{position: relative}
+.item .news-badge{position: absolute;right: 10px;bottom:16px;background: red;top: auto;color: #fff}
+.item .left-text{float: left}
+.item .right-text{float: right}
+.item .bottom-box{width: 100%;height: 4px;background: #3399FD;float: left}
+
+/*by Tina*/
+
+/*form validation*/
+/*
+input.ng-invalid.ng-dirty {
+    border: 1px solid #ccc !important;
+    border-color: #f05050 !important;
+    border-radius: 2px;
+}
+*/
+
+/*end form validation*/
+.fixBottomButtonBox{height:45px;left:0; POSITION:relative; width:100%; top:1px;margin-bottom: 0px;z-index:100;}
+.fixBottomButtonBox .button.button-left{height:100%;width: 45%;float: left;background: #F5A623;color: #fff}
+.fixBottomButtonBox .button.button-right{height:100%;width: 45%;float: right;background: #368EF4;color: #fff}
+.messageUnread{
+
+    color:blue;
+}
+.messageRead{
+
+    color:black;
+}
+
+.badge_sysNotice{
+
+    font-size: 0px;
+}
+.item .item-badge {
+    position: absolute;
+    top: 9px;
+    right: 30px;
+    bottom: 25px;
+    font-size: 12px;
+}
+
+
+.tab-title
+{
+  left: 0;
+  top: 32px;
+  line-height: normal;
+  position: absolute;
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+.ion {
+    -webkit-touch-callout: text;
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+.transition_3{transition: all 0.3s linear;-webkit-transition: all 0.3s linear;}
+.size-12 { font-size: 12px; }
+.size-14 { font-size: 14px; }
+.size-16 { font-size: 16px; }
+.size-18 { font-size: 18px; }
+.size-21 { font-size: 21px; }
+.size-24 { font-size: 24px; }
+.size-32 { font-size: 32px; }
+.size-48 { font-size: 48px; }
+.size-64 { font-size: 64px; }
+.size-96 { font-size: 96px; }
+.bar-light .button{color: #368EF4;}
+.bar-light .button:hover{color: #444;}
+.page-content{padding-top: 42px;}
+/*初始化的样式*/
+.init{border: none !important;padding: 0 !important;margin: 0 !important;width: 100% ;height: 100%;line-height: inherit !important;text-align: inherit !important;background: none !important;font-size: inherit !important}
+.inputIng{color: #368EF4;}
+.error{color: red !important}
+.center{text-align: center;display: block}
+.button.button-light{color: #368EF4}
+.categoryTab{width: 100%;}
+.heardTabs{overflow: hidden;height: 32px;padding: 3px;border-top:1px solid #A6A6A6;border-bottom:1px solid #A6A6A6;}
+.heardTabs .tab{width: 79px;line-height: 24px;font-size: 16px;color: #A6A6A6;text-align: center;float: left;border-right:1px solid #A6A6A6; }
+.heardTabs .tab hr{padding: 0;width:80%;margin:0 auto;display: none;height: 2px;margin-top:2px;background: #368EF4;border: none}
+.heardTabs .tab.hover{color: #000;}
+.heardTabs .tab.hover hr{display: block}
+.item-date{position: absolute;right: 10px;top: 16px;color: #aaa;font-size: 12px;line-height: 16px;}
+.optionButton{width: 100%;overflow: hidden;height: 32px;border-bottom: 1px solid #BFBFBF;border-top: 1px solid #BFBFBF;}
+.optionButton .noe-button{width: 50%;float: left;height: 32px;line-height: 32px;text-align: center;background: #fff;border-right: 1px  solid #BFBFBF;color: #368EF4}
+.optionButton .noe-button:last-child{border: none;color: red}
+/*
+上传控件样式
+*/
+.upload-photo-control{
+    width: 100%;
+    overflow: hidden;
+    height: auto;
+    padding: 10px 0;
+}
+.upload-photo-control .noeImage{width: 64px;height: 64px;position: relative;float: left;margin-right: 10px}
+.upload-photo-control .noeImage .imageBox{width: 100%;height:100%;overflow: hidden}
+.upload-photo-control .noeImage img{width: 100%}
+.upload-photo-control .noeImage .close{position: absolute;font-size: 20px;right: -6px;top:-12px;color: red}
+.upload-photo-control .noeImage input{position: absolute;left: 0;top:0;opacity: 0}
+/*
+.tabs-icon-only span{
+    margin-top: -18px;
+    display: block;
+    font-size: 12px;
+}
+*/
+.textOverHide{white-space:nowrap; text-overflow:ellipsis; -o-text-overflow:ellipsis; overflow:hidden;}
+.foot-icon{width: 32px !important;height: 26px !important;display: block !important;margin-top: 6px!important;}
+.foot-icon-First-off{background: url(../img/footIcon/First-off.png) center no-repeat;background-size:auto 100%; }
+.foot-icon-First-on{background: url(../img/footIcon/First-on.png) center no-repeat;background-size:auto 100%; }
+
+.foot-icon-Second-off{background: url(../img/footIcon/Second-off.png) center no-repeat;background-size:auto 100%; }
+.foot-icon-Second-on{background: url(../img/footIcon/Second-on.png) center no-repeat;background-size:auto 100%; }
+
+
+.foot-icon-Third-off{background: url(../img/footIcon/Third-off.png) center no-repeat;background-size:auto 100%; }
+.foot-icon-Third-on{background: url(../img/footIcon/Third-on.png) center no-repeat;background-size:auto 100%; }
+
+.foot-icon-Fourth-off{background: url(../img/footIcon/Fourth-off.png) center no-repeat;background-size:auto 100%; }
+.foot-icon-Fourth-on{background: url(../img/footIcon/Fourth-on.png) center no-repeat;background-size:auto 100%; }
+
+.foot-icon-Fifth-off{background: url(../img/footIcon/Fifth-off.png) center no-repeat;background-size:auto 100%; }
+.foot-icon-Fifth-on{background: url(../img/footIcon/Fifth-on.png) center no-repeat;background-size:auto 100%; }
+
+.search{margin: 5px 8px;}
+.searchInput{background: #fff;padding:5px 0;padding-left: 24px;position: relative;font-size: 14px;line-height: 24px;border-radius: 5px;}
+.search .icon{position: absolute;left: 8px;top: 5px;}
+/*才聘列表样式A*/
+/*才聘列表样式A*/
+.list-style-A{
+    width: 100%;padding-left: 18px;box-sizing:border-box;border-bottom:1px solid #F1F1F1;border-top:1px solid #F1F1F1;background: #fff;margin-top: 24px;
+}
+.list-style-A .icon-right{right: 18px;left: auto;position: absolute;top: 0;color: #444;font-size: 20px}
+.list-style-A .itme-A{width: 100%;padding-right: 18px;line-height: 48px;font-size: 16px; position: relative;height:48px;color: #000000;background: #fff;overflow: hidden; }
+.list-style-A a{border-bottom:#F1F1F1 1px solid ;display: block}
+/*
+.list-style-A .itme-A:last-child{border:none;}
+*/
+.list-style-A .info-input,.list-style-A .info-select{float:right;width: 160px;height: 100%;text-align: right;padding-right: 16px;box-sizing:border-box;position: relative;color: inherit;font-size:inherit; }
+.list-style-A  .info-select{width: 80px;height: 30px;margin-top: 8px;border: 1px solid #bdbdbd;color: #bfbfbf;line-height: 30px;padding: 0;position: relative;border-radius: 5px;}
+.list-style-A  .info-select select{position: absolute;width: 100%;height: 100%;left: 0;top: 0;opacity: 0}
+.list-style-A  .info-select .text{float: left;padding-left: 5px;}
+.list-style-A  .info-select .icon-right{right: 6px;}
+.list-style-A .award{float: right;line-height: inherit;font-size: 12px;padding-right: 10px;font-weight: normal;}
+.list-style-A .award .number{display:inline-block;width: 60px;text-align: right;height: 100%;line-height: 48px;}
+.list-style-A .date{position:absolute;right:0;top: 0;line-height:48px;height:48px;display: block ;font-size: 12px !important;padding-right: 10px;font-weight: normal;color: #368EF4;width:180px;text-align: left; padding-top: 0!important;}
+.list-style-A .select-text{float: right;line-height: inherit;font-size: 16px;padding-right: 16px;font-weight: normal;color: #4A4A4A;width: 160px;text-align: right}
+.list-style-A .small{font-size:12px;color: rgb(180,180,180)}
+.button.button-color-blue{color: #368EF4;border-top:solid #F5A623 2px;}
+.list-style-A  .playbill{padding-left: 72px;margin-left:-72px;float: right}
+.list-style-A .photo-box{width: 20%;float: left;margin: 2.5%;}
+.list-style-A .itme-photo{height: auto}
+.list-style-A .photo-box .photo{width: 50px;height: 50px;overflow: hidden;background: #000;margin: 0 auto;}
+.list-style-A .photo-box .name{line-height: 24px;font-size: 16px;color: #444;text-align: center;}
+.list-style-A .photo-box .add{border:1px solid #BFBFBF;box-sizing: border-box;text-align: center;line-height: 50px;font-size: 24px;color: #bfbfbf;width: 50px;margin: 0 auto;}
+.jobDescription{width: 100%;height: auto;background: url("../img/othere/layer.png") no-repeat left top;background-size: 100%;padding: 12px;box-sizing: border-box;}
+.jobDescription-title{font-size: 16px;color: #000;}
+.jobDescription .text-input{width: 100%;margin: 0 auto;margin-top:12px;color: #000;font-size: 16px;height: 180px;}
+.jobDescription .surplus{text-align:right;color: #b2b2b2;font-size: 14px;margin-top: 10px;}
+
+.saveInfoOk{width: 100%;}
+.saveInfoOk .saveInfoOk-title{font-size: 30px;color: #ff6934;margin-top: 35px;text-align: center}
+.saveInfoOk .smilingFace{width: 186px;margin: 0 auto;margin-top: 12px;}
+.saveInfoOk .smilingFace img{width: 100%;}
+.saveInfoOk .saveInfoOk-button{width: 80px;height: 32px;background: #fff;border-radius:4px;border: 1px solid #bfbfbf;text-align: center;line-height: 32px;font-size: 16px;margin: 0 auto;margin-top:12px;display: block ;padding: 0}
+
+.selectArea-heard-text{overflow: hidden;width: 100%;padding: 0 10px;box-sizing: border-box;height: 36px;line-height: 36px}
+.selectArea-heard-text .left-text{float: left;font-size: 15px;color: #000}
+.selectArea-heard-text .right-text{float: right;font-size: 15px;color: #ff9800}
+.selectArea-selected{width: 100%;min-height: 26px;overflow: hidden;box-sizing: border-box;margin-bottom: 10px;}
+.selectArea-selected .noe{width: 29.3%;float: left;margin: 0 2%;border: 1px solid #FF9800;text-align: center;line-height: 24px;border-radius: 4px;color: #FF9800;position: relative;font-size: 12px;}
+.selectArea-selected .noe .icon{color: red;position: absolute;right:0;top:0;margin-right: 10px;}
+.selectArea .noe .noeText{padding-right: 24px}
+.selectArea .areaBox{width: 100%;overflow: hidden;}
+.selectArea .areaBox .city,
+.selectArea .areaBox .county
+{width: 50%;float: left}
+.selectArea .county-list,.selectArea .city-list{width: 100%;height: 100%;;border-right: 1px solid #e8e8e8;box-sizing: border-box}
+.selectArea .areaBox .area-item{width: 100%;height: 50px;line-height: 50px;font-size: 16px;color: #000;text-indent: 12px;background: #f7f7f7;border-bottom: 1px solid #E8E8E8;position: relative}
+.selectArea .areaBox .area-item.odd{background: #f2f2f2}
+.selectArea .areaBox .icon{position: absolute;right:0;top:0;margin-right: 10px;}
+.selectArea .areaBox .ion-checkmark{color: #FF9800}
+.selectArea .noeText{padding-right: 32px;}
+
+.technicalAbility-list{width: 100%;padding: 12px;box-sizing: border-box;overflow: hidden}
+.technicalAbility-item{width: 29.3%;padding:5px;margin: 1% 2%;background: #fff;border: 1px solid #bbbbbb;text-align: center;line-height: 32px;font-size: 16px;color: #000;border-radius: 4px;float: left;box-sizing: border-box}
+.technicalAbility-item.hover{background: #ff9800;color: #fff}
+.technicalAbility-item.space{margin-bottom: 16px;}
+
+.selectTechnicalAbility-pointOut{text-align: right;width: 100%;color: #000000;font-size: 14px;padding-right: 12px;}
+
+
+.activityDetailed{width: 100%;border-top:1px solid #e0e0e0;padding: 10px;box-sizing: border-box;background: #fff}
+.activityDetailed .title{margin-bottom: 10px;color: #010101;font-size: 16px;}
+.activityDetailed .detailedBox{width: 100%;height: auto;padding: 10px;box-sizing: border-box;border-radius: 5px;border: 1px solid #bbbbbb}
+.activityDetailed .detailedText{width: 100%;height: 175px;margin-bottom: 10px;}
+
+.selectTypeList{width: 100%;overflow: hidden}
+.selectTypeList .selectTypeList-ul{width: 100%;overflow: hidden}
+.selectTypeList .selectTypeList-li{float: left;width: 23.3%;margin: 4% 5%;border-radius: 5px;border: 1px solid #BBBBBB;text-align: center;line-height: 32px;font-size: 16px;}
+.selectTypeList .selectTypeList-li.hover{background: #ff9800;color: #fff}
+
+.additionalRegistration{padding: 10px;}
+.additionalRegistration .title{font-size: 15px;line-height: 32px;border-bottom: 1px solid #BBBBBB;font-weight: normal;}
+.additionalRegistration .icon-list-A{width: 80%;margin: 0 auto;margin-top: 15px}
+.additionalRegistration .icon-item{width: 100%;height: 32px;border: 1px solid #BBBBBB;border-radius: 4px;position: relative;padding: 0 32px;box-sizing: border-box;margin-bottom: 10px;}
+.additionalRegistration .icon{font-size: 24px;position: absolute;}
+.additionalRegistration .icon.icon-left{left: 6px;top:-4px;}
+.additionalRegistration .icon.icon-right{right: 6px;top:-3px;}
+.additionalRegistration .text{line-height: 30px;height: 30px;}
+.additionalRegistration .add-icon-item{width: 60%;margin: 0 auto;height: 32px;line-height: 32px;color: #fff;background: #FF9800;text-align: center;box-sizing: border-box;}
+.additionalRegistration .add-icon-item .icon{display: inline-block}
+
+.informationInputTitle{width: 90%;margin: 8px auto;border-radius: 5px;line-height: 22px;font-size: 16px;border: 1px solid #BBBBBB;box-sizing: border-box;padding: 5px;}
+.informationInput{padding: 0 20px;margin-top: 12px;}
+.informationInput .info-list{width: 100%;overflow: hidden;height: 32px;line-height: 32px;margin-bottom: 10px;}
+.informationInput .info-list .text{float: left;}
+.informationInput .info-list .info-input{float: right;width: 180px;border-radius: 5px;line-height: 20px;font-size: 16px;border: 1px solid #BBBBBB;box-sizing: border-box;padding: 5px;height: 32px;}
+.informationInput .info-list .info-input input{height: 100%!important;width: 100%!important;}
+
+.questionBox{width: 80%;margin: 0 auto;margin-top: 12px;}
+.questionBox .optionBox{width: 100%;overflow: hidden}
+.questionBox .optionBox .option{float: left;width: 27.3%; margin: 0 3%;background: #ffffff;border: 1px solid #BBBBBB;border-radius: 5px;text-align: center;line-height: 32px;}
+.questionBox .optionBox .option.hover{background: #FF9800;color: #fff}
+.question-input{width: 80%;margin: 0 auto;margin-top: 24px;}
+.question-input .input-box{margin-bottom: 10px;border: 1px solid #BBBBBB;border-radius: 5px;box-sizing: border-box;padding: 0 10px;padding-right:24px;position: relative;min-height: 24px;}
+.question-input .input-box .icon-right{position: absolute;right: 10px;top: 0;}
+.question-input .input{width: 100%;height: 100%}
+.question-textarea .input-box{padding: 5px;}
+.question-button-box .button{line-height: 44px;font-size: 16px;}
+
+.publishLayer{position: fixed;left: 0;top:0;width: 100%;height: 100%;z-index: 100;}
+.publishFunctionBox{width: 50px;height: 50px;position: absolute;bottom: 5px;left: 0;right: 0;margin: 0 auto;}
+.circleIcon{width: 50px;height: 50px;background: #000;border-radius: 30px;text-align: center;line-height: 50px;position: absolute;left: 0;top: 0;font-size:18px;color: #fff;opacity: 1 }
+.circleIcon .text{position: absolute;left: 0;bottom: -30px;line-height: 24px;font-size: 16px;color: #757575;text-align: center;width: 100%}
+.circleIcon.close{background: #3399fd;z-index: 2}
+.circleIcon.toHireButton{-webkit-transform: translate(-105px,-60px);background: #ffc03c;font-size: 24px;}
+.circleIcon.activityButton{-webkit-transform: translate(-42px,-114px);background: #fe792e;font-size: 24px;}
+.circleIcon.informationButton{-webkit-transform: translate(42px,-114px);background: #48ce85;font-size: 24px;}
+.circleIcon.investigateButton{-webkit-transform: translate(105px,-60px);background: #7f8cf5;font-size: 24px;}
+.circleIcon.initTranslate{-webkit-transform: translate(0px,-0px);opacity: 0}
+
+.list-style-C{background: none;padding-left: 0;}
+.list-style-C .itme-A{margin-top: 10px;padding-left: 42px;}
+.list-style-A .userInfo{width: 100%;overflow: hidden;position: relative;box-sizing: border-box;padding: 10px 60px;padding-left:78px;background: #fff}
+.list-style-A .userInfo .heardPhone{position: absolute;left: 18px;width: 50px;height: 50px;overflow: hidden;top: 15px;border-radius: 4px;}
+.list-style-A .userInfo .icon-right{top: 25px;font-size: 24px;color: #444;}
+.list-style-A .icon-left{font-size: 20px;position: absolute;left: 18px;top:0}
+.list-style-A .userInfo .baseInfo{width: 100%;line-height: 20px;height: 60px;}
+.list-style-A .userInfo .name{font-size: 16px;color: #000}
+.list-style-A .userInfo .info{font-size: 16px;color: #737373}
+.list-style-A .myConceal{padding:0 18px;}
+.list-style-A .myConceal-item{width: 100%;background: #fff;display: block;padding: 0;height: auto;border-width:0;border-bottom:1px solid #ddd;padding-left: 32px;margin-top: 0px;margin-bottom: 1px}
+.list-style-A .myConceal-item span{line-height: 48px;font-size: 14px;margin-top: 0}
+
+
+.myInfo{width: 100%;overflow: hidden;margin-bottom: 24px;}
+.myInfo .heard{width: 100%;padding: 10px 0;background: #fff}
+.myInfo .heard .photo{width: 50px;height: 50px;overflow: hidden;margin: 0 auto;background: #000;border-radius: 4px;}
+.myInfo .heard .name{text-align: center;font-size: 16px;color: #000;font-weight: bold}
+.myInfo .heard .integrity{text-align: center;line-height: 20px;font-size: 12px;}
+.list-style-D{width: 100%;margin-top: 10px;}
+.list-style-D .list-item{position: relative;width: 100%;padding-left: 96px;box-sizing: border-box;height: auto;background: #fff;line-height: 24px;}
+.list-style-D .list-item .rightText{border-bottom: 1px solid #BFBFBF;padding:10px 0;padding-right: 48px;min-height: 44px;position: relative;}
+.list-style-D .list-item .rightText .input{
+  position: absolute;
+  left: 0;
+  top: 5px;
+}
+.list-style-D .info-select{
+  position: absolute;
+  right: 8px;
+  top: 0px;
+}
+.list-style-D .list-item .leftText{position: absolute;left: 18px;top: 10px;font-size: 16px;color: #000;font-weight: bold}
+.list-style-D .list-item .icon-right{position: absolute;right: 18px;top:50%;margin-top: -10px;font-size: 20px;}
+.user-projectExperience .list-style-D {margin: 0;padding: 20px 0;background: #fff}
+.list-style-D .info-select .icon-right{line-height: normal;right: 4px;}
+
+
+.user-addressList{width: 100%;}
+.user-addressList .letter{padding-left: 20px;}
+.user-addressList .heardPhone{width: 36px;height: 36px;overflow: hidden;border-radius: 4px;float: left;background: #000;}
+.user-addressList .item-content{padding-top: 5px ;padding-bottom: 5px;}
+.user-addressList .name{line-height: 36px;font-size: 16px;color: #000;float: left;padding-left: 46px;margin-left: -36px;width: 100%;box-sizing: border-box}
+.user-addressList .my-item{padding-top: 5px;padding-bottom: 5px; }
+.user-addressList .icon-right{position: absolute;right: 10px;top: 50%;font-size: 16px;margin-top: -8px;}
+.categoryTab .list-box{width: 100%;}
+.activity-list{width: 100%;}
+.list-item-activity{padding: 10px;padding-left: 70px; border-bottom: 1px solid #BFBFBF;overflow: hidden}
+.list-item-activity .photo{margin-left: -60px;width: 50px;height: 50px;background: #000;border-radius: 3px;float: left;overflow: hidden}
+.list-item-activity .content{width: 100%;overflow: hidden}
+.list-item-activity .title{font-size: 16px;font-weight: normal;line-height: normal;margin-bottom: 0}
+.list-item-activity .info{font-size: 12px;color: #444;}
+.list-item-activity .prompt{width: 100%;overflow: hidden;margin-top: 4px;}
+.list-item-activity .prompt-left{padding:0 3px;float: left;font-size: 12px;border-radius: 3px;background: #fff;margin-right: 4px;color: #3399FD;border:1px solid #BFBFBF}
+.list-item-activity .prompt-right{padding:0 3px;float: right;font-size: 12px;margin-left: 4px;background: #fff;border-radius: 3px;}
+.list-item-activity .prompt-right.start{border:1px solid #BFBFBF;color: green}
+.list-item-activity .prompt-right.end{border:1px solid #FF9800;color: #FF9800}
+.list-item-activity .prompt-right.blue{border:1px solid #BFBFBF;color: #3399FD}
+.activity-list.discover-activity .list-item-activity{padding: 0;border-bottom: none;margin-top: 10px;}
+.activity-list.discover-activity .list-item-activity .photo{width: 100%;margin-left:0;height: auto;border-radius: 0;min-height: 120px;}
+.activity-list.discover-activity .list-item-activity .content{padding:0 10px;padding-top: 10px;padding-bottom: 4px;}
+
+
+.toHire-list{width: 100%;}
+.toHire-list .list-item-toHire{padding: 10px;padding-right: 140px;overflow: hidden;}
+.toHire-list .list-item-toHire .left-info{width: 100%;float: left;}
+.toHire-list .list-item-toHire .left-info p{height: 20px;}
+.toHire-list .list-item-toHire .title{font-size: 16px;color: #000}
+.toHire-list .list-item-toHire .info{font-size: 12px;color: #737373;line-height: 20px}
+.toHire-list .list-item-toHire .right-info{float: right;margin-right: -110px;font-size: 18px;color: #FF9800}
+
+.investigate-list{width: 100%;}
+.investigate-list .list-item-investigate{padding: 10px;}
+.investigate-list .list-item-investigate .infoBox{padding:8px ;border-radius: 5px;background: #f7f7f7}
+.investigate-list .list-item-investigate .title{font-size: 16px;color: #000}
+.investigate-list .list-item-investigate .info{width: 100%;overflow: hidden}
+.investigate-list .list-item-investigate .leftText{float: left;font-size: 12px;color: #434343}
+.investigate-list .list-item-investigate .rightText{float: right;font-size: 12px;color: #434343}
+.investigate-list .list-item-investigate .blue{color: #3399FD}
+
+.information-list{width: 100%;}
+.information-list .list-item-information{width: 100%;padding: 10px;box-sizing: border-box;}
+.information-list .list-item-information .title{width: 100%;font-size: 16px;color: #000;margin-top: 10px;}
+.information-list .list-item-information .text{text-indent: 0;font-size: 14px;color: #444}
+.information-list .list-item-information .component{width: 100%;overflow: hidden;margin-top: 10px;}
+.information-list .list-item-information .component-noe{font-size: 16px;color: #444444;line-height: 24px;}
+.information-list .list-item-information .component-noe.left{float: left;margin-right: 8px}
+.information-list .list-item-information .component-noe.right{float:right;margin-left: 8px;}
+.information-list .list-item-information .icon{opacity: 0.8}
+.information-list .imageBox{width: 100%;overflow: hidden;margin-top: 10px;}
+.information-list .imageBox .image{width: 60px;height:60px;float: left;margin: 1.5%;overflow: hidden}
+.information-list .heardInfo{width: 100%;overflow: hidden;padding-left: 60px;box-sizing: border-box}
+.information-list .heardInfo .photo{width: 45px;height: 45px;border-radius: 5px;overflow: hidden;float: left;margin-left:-60px;background: #000}
+.information-list .heardInfo .info{float: left;}
+.information-list .heardInfo .name{font-size: 16px;font-weight: bold;color: #000;}
+.information-list .heardInfo .time{color: #444}
+.myCircle{width: 100%;}
+.list-style-E{width:100%;background: #fff}
+.list-style-E .list-item{padding: 10px 20px;overflow: hidden;padding-left: 80px;border-bottom: 1px solid #BFBFBF}
+.list-style-E .list-item .photo{width: 50px;height: 50px;background: #000;float: left;margin-left: -60px;overflow: hidden;border-radius: 4px;}
+.list-style-E .list-item .info{float: left;}
+.list-style-E .list-item .title{font-size: 16px;color: #000;line-height: 24px;}
+.list-style-E .list-item .introduction{font-size: 14px;color: #aaa}
+
+.feedBack{padding: 20px;}
+.feedBack .prompt{font-size: 16px;margin: 10px 0;color: #444}
+.feedBack .input{border:1px solid #BFBFBF; border-radius: 5px;padding:0 5px;box-sizing: border-box;}
+.feedBack .text{padding: 5px;height: 120px;background: #fff;border:1px solid #BFBFBF; border-radius: 5px;box-sizing: border-box;}
+
+.discover{width: 100%;height: auto}
+.module{margin-bottom: 5px;padding:5px 10px;background: #fff}
+.module .module-title{width: 100%;font-size: 16px;}
+.module .module-title .text{float: left;color: #000;font-weight: bold;font-size: 16px;}
+.module .module-title .more{float: right;font-size: 14px;color: #3399FD}
+.module .module-title .box{border-bottom: 1px solid #888;overflow: hidden;line-height: 24px;}
+.module .list-item-activity{padding-left: 60px;padding-right: 0;}
+.module .list-item-toHire{padding-left: 0;padding-right: 110px;}
+.module .list-item-investigate{padding:0;}
+.module .list-item-investigate .infoBox{background: none}
+
+.detailed-list-box{width: 100%;}
+.detailed-list-box .detailed-list{width: 100%}
+.detailed-list-box .detailed-list .text{color: #444}
+
+.activityDetailedBox{position: relative;width: 100%;height: auto}
+.activityDetailedBox .image{position: relative;width: 100%;}
+.activityDetailedBox .image .signUp{position: absolute;right: 0; top:60%;padding:2px 10px; border-radius: 30px;text-align: center;background: green;color: #fff;font-size: 14px;}
+.detailed-list-box{width: 100%;overflow: hidden}
+.detailed-list{width: 100%;margin-bottom: 5px;background: #fff}
+.detailed-list .list-item{width: 100%;box-sizing: border-box;padding: 0 10px;border-bottom: 1px solid #bfbfbf;font-size: 12px;line-height: 20px;overflow: hidden}
+.detailed-list .list-item .image{margin: 5px 0;}
+.detailed-list .list-item .yellow{color: #ff9800}
+.detailed-list .list-item .right-text{float: right;color: #000;font-size: 12px;}
+.detailed-list .list-item .left-text{float: left;color: #000;font-size: 12px;}
+.foot-registrationSuccess{padding: 10px;overflow: hidden}
+.foot-registrationSuccess .text{line-height: 20px;color: #444;font-size: 12px;}
+.foot-registrationSuccess .imageBox{width: 100%;overflow: hidden}
+.foot-registrationSuccess .imageBox .heardPhone{width: 32px;height: 32px;margin-right: 4px;float: left;background: #000}
+
+.signUp-info{padding: 10px;}
+.signUp-info .input{width: 100%;font-size: 16px;line-height: 32px;color: #444}
+.signUp-info .input .inputBox{width: 100%;border-radius: 5px;background: #fff;height: 32px;line-height:normal;box-sizing: border-box;padding: 5px;}
+.signUp-info .protocol{text-align: center;line-height: 32px;color: #3399FD;font-size: 12px;}
+
+.activityEvaluation-list{width:100%;margin-top: 12px;border-bottom: 1px solid #bfbfbf}
+.activityEvaluation-list .list-item{padding: 0 10px;line-height: 24px;font-size: 14px;color: #000;overflow: hidden}
+.activityEvaluation-list .list-item:first-child{border-bottom: 1px solid #bfbfbf;}
+.activityEvaluation-list .list-item .right-text{float: right}
+.activityEvaluation-list .list-item .left-text{float: left;width: 150px;overflow: hidden}
+.activityEvaluation-list .list-item .icon{float: left;margin: 0 3px;font-size: 18px;}
+.activityEvaluation-list .list-item .icon.blue{color: #3399FD}
+
+.toHireDetailed{width: 100%;}
+.toHireDetailed .heardTitle{width: 100%;text-align: center;padding: 10px 0;border-bottom: 1px solid #bfbfbf}
+.toHireDetailed .heardTitle .title{font-size: 20px;color: #000}
+.toHireDetailed .heardTitle .name{font-size: 16px;color: #444}
+.toHireDetailed .info{width: 100%;overflow: hidden;border-bottom: 1px solid #bfbfbf}
+.toHireDetailed .info .yellow{color: #FF9800}
+.toHireDetailed .info .info-noe{width: 33.33%;text-align: center;height:48px;float: left;border-right: 1px solid #bfbfbf;box-sizing: border-box}
+.toHireDetailed .info .info-noe:last-child{border: none}
+.toHireDetailed .info .info-noe-center{margin: 0 auto;overflow: hidden;display: inline-block}
+.toHireDetailed .info .left-icon{line-height: 48px;font-size:32px;float: left}
+.toHireDetailed .info .right-text{float: left;margin-left: 10px;max-width: 72px;}
+.toHireDetailed .info .right-text .big{color: #000;font-size: 12px;text-align: center;}
+.toHireDetailed .info .right-text .small{font-size: 12px;color: #444;text-align: center;}
+
+.issuer{padding: 10px;border-bottom: 1px solid #bfbfbf}
+.issuer .title{font-size: 16px;color: #000;}
+.issuer .personage{padding:10px 60px;overflow: hidden}
+.issuer .personage .photo{margin-left: -60px;float: left;width: 50px;height: 50px;background: #000;overflow: hidden;border-radius: 5px;}
+.issuer .personage .personage-info{float: left}
+.issuer .personage .position{font-size: 16px;}
+.issuer .personage .icon-right{float: right;margin-right: -40px;font-size: 32px;line-height: 50px;}
+.issuer .personage .name{font-size: 16px;line-height: 24px;color: #000;margin-bottom: 0}
+.issuer .personage .name-small{font-size: 14px;color: #444}
+
+.toHire-detailed-list{width: 100%;}
+.toHire-detailed-list .list-item{width: 100%;border-bottom: 1px solid #BFBFBF;padding: 10px;box-sizing: border-box}
+.toHire-detailed-list .title{font-size: 16px;color: #000}
+.toHire-detailed-list .html{font-size: 14px;color: #444;line-height: 20px;overflow: hidden}
+.toHire-detailed-list .html .rect{float: left;margin: 1.5%;padding:0 10px;border:1px solid #bfbfbf;}
+.toHire-detailed-list .list-item.property{overflow: hidden}
+.toHire-detailed-list .list-item.property .title{float: left}
+.toHire-detailed-list .list-item.property .type{float: right}
+.toHire-detailed-list .list-item .text{text-indent: 2em;}
+.toHire-detailed-list .list-item.curriculumVitae{overflow: hidden}
+.toHire-detailed-list .list-item.curriculumVitae .noe{width: 50%;padding:0 10px;line-height:24px;float: left;border-right: 1px solid #BFBFBF;box-sizing: border-box;font-size: 16px;}
+.toHire-detailed-list .list-item.curriculumVitae .noe:last-child{border: none}
+
+.questionnaireSurvey{width: 100%;}
+.questionnaireSurvey .herdPrompt{width: 100%;padding:  10px;box-sizing: border-box;line-height: 24px;font-size: 16px;color: #000;background: #eff0f2;overflow: hidden}
+.questionnaireSurvey .left-text{float: left;}
+.questionnaireSurvey .right-text{float: right}
+.questionnaireSurvey .info{width: 100%;border-bottom: 1px solid #BFBFBF;padding: 0 10px;box-sizing: border-box}
+.questionnaireSurvey .info .noe{width: 100%;overflow: hidden;line-height: 20px;font-size: 12px;}
+.questionnaireSurvey .textBox{margin-top: 20px;padding: 0 10px;box-sizing: border-box}
+.questionnaireSurvey .textBox .title{margin-bottom: 20px;color: #000}
+.questionnaireSurvey .textBox .text{text-indent: 2em}
+.questionnaireSurvey-foot-button{background: #3399FD;color: #fff;font-size: 16px;line-height: 42px !important;}
+
+.question{width: 100%;}
+.question .title{width: 100%;line-height: 32px;background: #efeff2;font-size: 16px;color: #000;padding: 0 10px;box-sizing: border-box}
+.question .questionListBox{width: 100%;}
+.question .question-list{padding: 0 10px;}
+.question .list-item{padding:10px 0;border-bottom:1px solid #BFBFBF;}
+.question .text{width: 80%;margin: 0 auto;height: 240px;font-size: 16px;border: 1px solid #BFBFBF;border-radius: 5px;margin-top: 12px;padding: 5px;margin-bottom: 12px}
+.question-foot-buttonBox{width: 100%;overflow: hidden;position: absolute;left: 0;top:0;}
+.question-foot-buttonBox .next{width: 100%;background: #3399FD;font-size: 16px;color: #fff;text-align: center;line-height: 42px;}
+.question-foot-buttonBox .buttons{float: left;background: #3399FD;font-size: 16px;color: #fff;text-align: center;line-height: 32px;width: 50%;}
+.question-question-foot-buttonBox .buttons.prev{background: #FF9800}
+.question-foot-buttonBox .buttons.next{background: #3399FD}
+.question-foot-buttonBox .buttons.all{background: #3399FD}
+
+.information-list-detailed .imageBox .image{width: 100%;margin-bottom: 10px;height: auto}
+.information-list .message{width: 100%;box-sizing: border-box;position:relative}
+.information-list .message .text-message{font-size: 16px;line-height: 24px;}
+.information-list .message .imageBox{padding: 0 24px;position: relative;min-height: 50px;margin: 0}
+.information-list .message .assist{position: absolute;left: 0;top: 0;font-size: 24px;color: #444;line-height: 50px;}
+.information-list .message .more{position: absolute;right: 0;top: 0;font-size: 24px;color: #444;line-height: 50px;}
+.information-list .message .moreBox{width: 96px;height: 24px;background: #9F9F9F;position: absolute;left: -102px;top: 12px;font-size: 16px;border-radius: 5px;}
+.information-list .message .img{float: left;margin: 0 4px;width: 50px;height: 50px;overflow: hidden;border-radius: 5px;}
+.information-list .message .more{position: absolute;right: 0;top: 0;font-size: 24px;color: #444;line-height: 50px;}
+.information-list .message .more-button{float: left;width: 50%;line-height: 24px;color: #fff;text-align: center;font-size: 14px;border-right: 1px solid #fff;}
+.information-list .message .more-button:last-child{border: none}
+
+.comment-list{width: 100%;height: auto}
+.comment-list .comment-count{line-height: 24px;font-size: 14px;padding: 0 10px;}
+.comment-list .list-item{padding: 5px 70px;padding-right: 50px; position: relative;line-height: 24px;font-size: 16px;color: #000;border-bottom: 1px solid #BFBFBF;min-height: 60px}
+.comment-list .list-item .photo{position: absolute;left: 10px;top: 5px;width: 50px;height: 50px;border-radius: 5px;background: #000;overflow: hidden}
+.comment-list .list-item .comment-box{width: 100%;position: relative}
+.comment-list .list-item .comment-content{width: 100%;}
+.comment-list .list-item .date{position: absolute;right: 10px;top: 0px;}
+.comment-list .list-item .name{min-height: 24px;}
+.comment-list .list-item .comment-text{min-height: 24px;}
+
+
+.input-comment{width: 100%;position: absolute;left: 0;bottom:0px; background: #fff;}
+.input-comment .inputBox{width: 100%;box-sizing: border-box;padding: 5px 0;padding-left: 36px;padding-right: 54px;position: relative;font-size: 16px;color: #000;line-height: 24px;}
+.input-comment .inputBox .input{border-radius: 5px;border: 1px solid #BFBFBF;box-sizing: border-box;height: 30px;padding: 2px;}
+.input-comment .inputBox .icon-left{font-size: 20px;position: absolute;left: 10px;top: 8px;}
+.input-comment .inputBox .text-right{color:#3399FD;position: absolute;right: 5px;top: 3px;}
+.expressionBox{width: 100%;overflow: hidden;height: 130px;}
+.expressionBox .noeExpressionBox{width: 10.28%;float: left;margin: 2%;}
+.expressionBox .noeExpressionBox .noeExpression{width: 24px;height: 24px;margin: 0 auto;overflow: hidden;text-align: center;line-height: 24px;font-size: 24px;}
+.expressionBox .slider-pager{bottom: 10px;}
+
+.input-comment.show{transform: translate(0,-130px);-webkit-transform: translate(0,-130px);}
+
+.circle-list{width: 100%;overflow: hidden;position: relative}
+.circle-list .list-item{width: 20%;float: left;margin: 2.5%}
+.circle-list .list-item .noeCircle{width: 64px;margin:0 auto;overflow: hidden;text-align: center}
+.circle-list .list-item .image{width: 55px;height: 55px;overflow: hidden;border-radius: 5px;margin:0 auto;margin-bottom: 5px;background: #000}
+.circle-list .list-item .name{width: 100%;text-align: center;line-height: 24px;font-size: 16px;color: #000;height: 24px;}
+.circle-list .list-item .icon{font-size: 32px;color: #444;line-height: 50px}
+.circle-list .list-item .image-icon{border:1px solid #BFBFBF;box-sizing: border-box;background: none}
+
+.chatPage{width: 100%;height: auto;border-bottom: 2px solid #BFBFBF}
+.chatPage .heardTool{width: 100%;overflow: hidden;}
+.chatPage .heardTool .tool{width: 14.6%;overflow: hidden;margin: 1%;height: 32px;font-size: 16px;color: #444;line-height: 32px;float: left;box-sizing: border-box;border: 1px solid #3399FD;text-align: center}
+.chatContent{width: 100%;padding: 10px;position: relative}
+.chatContent .dialog{padding-left: 60px;padding-right: 60px;overflow: hidden;margin: 5px 0;}
+.chatContent .dialog .photo{width: 50px;height: 50px;border-radius: 5px;background: #000;float: left;margin-left: -60px}
+.chatContent .dialog .text{float: left;position: relative;width: 100%;box-sizing: border-box;border-radius: 5px;border: 1px solid #BFBFBF;padding: 5px;background: #fff;min-height: 36px;}
+.chatContent .dialog .arrow{display: block;width: 10px;height: 18px;background: url("../img/othere/arrow-white.png") no-repeat;background-size:100%;position: absolute; left: -9px; top: 5px;}
+.chatContent .dialog.other .photo{float: right;margin-left: 0;margin-right: -60px}
+.chatContent .dialog.other .text{float: right;background: rgb(141,250,105)}
+.chatContent .dialog.other .arrow{left: auto;right: -9px;background: url("../img/othere/arrow-green.png") no-repeat;background-size:100%;}
+.bar-footer-editMessage{height: auto;}
+.bar-footer-editMessage .tool{display: none}
+.bar-footer-editMessage .expressionBox{display: none}
+.bar-footer-editMessage.showTool .tool{display: block}
+.bar-footer-editMessage.showTool .expressionBox{display: none}
+.bar-footer-editMessage.showEmojis .tool{display: none}
+.bar-footer-editMessage.showEmojis .expressionBox{display: block}
+.editMessage{width: 100%;height: 100%;overflow: hidden;padding-left:38px;padding-right:90px;font-size: 16px;position: relative;line-height: 32px;}
+.editMessage .button-left{position: absolute;font-size: 24px;line-height: 32px;left: 2px;top: 0}
+.editMessage .edit{width: 100%;border: 1px solid #BFBFBF;border-radius: 5px;padding: 5px;box-sizing: border-box;line-height: normal;text-indent: 0;max-height: 64px;overflow: scroll;min-height: 30px;position: relative}
+.editMessage .edit .init{
+
+}
+.editMessage .button-right{position: absolute;right: 0px;top: 0;font-size: 16px;line-height: 32px;color: #000;}
+.editMessage .button-right1{
+  right: 54px;
+  padding: 0;
+  width: 32px;
+}
+.list-style-member{width: 100%;}
+.list-style-member .list-item{width: 100%;padding:5px 0;padding-left: 20px;box-sizing: border-box;overflow: hidden}
+.list-style-member .list-title{background: rgb(214,214,214);width: 100%;line-height: 20px;font-size: 12px;padding: 0 10px;box-sizing: border-box;overflow: hidden}
+.list-style-member .list-title .icon-right{float: right;font-size: 12px;color: #444}
+.list-style-member .photo{width: 36px;height: 36px;float: left;background: #000;border-radius: 5px;}
+.list-style-member .name{line-height: 36px;font-size: 16px;color: #444;float: left;width: 56px;margin-left: 10px;}
+.list-style-member .duty{padding:0 2px;border-radius: 3px;float: left;font-size: 12px;margin-top:8px}
+.list-style-member .duty.host{border:1px solid #3399FD;color: #3399FD}
+.list-style-member .duty.manage{border:1px solid #FF9800;color: #FF9800}
+
+.notice{padding: 10px;}
+.notice .title{width: 100%;line-height: 24px;font-size: 16px;color: #aaa}
+.notice .textarea{width: 100%;margin-top: 10px;font-size: 16px;background: #fff;height: 200px;border-radius: 5px;padding: 5px;border:1px solid #BFBFBF}
+.notice .input{width: 100%;margin-top: 10px;font-size: 16px;background: #fff;border-radius: 5px;padding: 5px;border:1px solid #BFBFBF}
+.list-notice{width: 100%;}
+.list-notice .list-item{width: 100%;box-sizing: border-box;padding: 5px 10px;background: #fff;margin-bottom: 5px;}
+.list-notice .list-item .title{font-size: 20px;color: #000;}
+.list-notice .list-item .text{font-size: 16px;color: #444;text-indent: 2em;max-height: 72px;overflow: hidden}
+.list-notice .list-item .foot-info{text-align: right;font-size: 12px;color: #888;}
+.list-notice .list-item .name{color: #444}
+
+.list-notice .item-notice .title{font-size: 20px;}
+.list-notice .item-notice .text{font-size: 16px;color: #444;text-indent: 2em;}
+.list-notice .item-notice .foot-info{text-align: right;font-size: 12px;color: #888;}
+
+.publishButtonBox{width: 96px;position: absolute;right: 10px;top: 120px;}
+.publishButtonBox .noeButton{width: 90px;overflow: hidden;margin-bottom: 20px;}
+.publishButtonBox .noeButton .type{line-height: 50px;font-size: 18px;color: #fff;float: left}
+.publishButtonBox .noeButton .icon{width:50px;height:50px;float: right;border-radius: 30px;background: #fff}
+
+.backgroundLayer{position: absolute;left: 0;top: 0;background: rgba(0,0,0,0.5);width: 100%;height: 100%;z-index: 100;}
+.shareBox{position: absolute;left: 0;bottom: 0;width: 100%;overflow:hidden;background: #fff;padding: 10px;box-sizing: border-box;}
+.shareBox .share{width: 25%;float: left;min-height: 72px;}
+.shareBox .shareIcon{width: 48px;height: 48px;overflow: hidden;border-radius: 40px;background: #fff;margin: 0 auto;line-height: 48px;text-align: center;font-size: 24px}
+.shareBox .shareIcon img{width: 100%;}
+.shareBox .shareText{width: 100%;text-align: center;;line-height: 24px;font-size: 12px;color: #444}
+.shareBox .cancel{width: 100%;text-align: center;line-height: 32px;color: #3399FD;float: left;margin-top: 10px;}
+
+
+
+.circleBox{width:100%;}
+.circleBox .banner{position: relative;width: 100%;min-height: 100px;background: #fff;border-bottom: 1px solid #BFBFBF}
+.circleBox .circlePhoto{width: 72px;position:absolute;left: 50%;top: 50%;margin-left: -32px;margin-top: -54px;}
+.circleBox .circlePhoto .image{width: 64px;height: 64px;overflow: hidden;border-radius: 40px;border:1px solid #fff;background: #000;margin: 0 auto;}
+.circleBox .circlePhoto .name{line-height: 24Px;font-size: 16px;text-align: center;color: #fff;width: 200px;margin-left: -62px;}
+.circleBox .linkman{width: 50px;height: 50px;border-radius: 100px;border:1px solid #fff;text-align: center;line-height: 50px;font-size: 32px;position: absolute;left: 10px;bottom: 10px;background: #fff}
+.circleBox .circleTabs{width: 100%;overflow: hidden;background: #fff;}
+.circleBox .tab{width: 16.6%;float: left;line-height: 36px;font-size: 16px;color: #000;text-align: center;}
+.circleBox .tab.hover{border-bottom: 1px solid #3399FD}
+
+.circleLayer{width: 100%;height: 100%;overflow: hidden;position: fixed;left: 0;top: 0;z-index: 21}
+.circleLayer-tool{width: 54px;height: 54px;background: green;position: absolute;right: 10px;bottom: 64px;border-radius: 50px;z-index: 22}
+.circleLayer-tool .icon-center{text-align: center;line-height: 54px;font-size: 26px;color: #fff;z-index: 22;position: relative}
+.circleLayer-tool .icon-center.hover{-webkit-transform: rotate(45deg);transform: rotate(45deg);}
+.circleLayer-tool .buttonBox{width: 90px;position: absolute;bottom: 100%;right: 0;overflow: auto;z-index: 22}
+.circleLayer-tool .circle-button{width: 100%;overflow: hidden;margin-bottom: 10px;line-height: 48px;font-size: 16px; }
+.circleLayer-tool .icon{width: 50px;height: 50px;border-radius: 34px;background: #000;overflow: hidden;text-align: center;line-height: 50px;font-size:24px;color:#fff;float: right}
+.circleLayer-tool .icon.groupChatButton{background: #3399FD}
+.circleLayer-tool .icon.toHireButton{background: #ffc03c}
+.circleLayer-tool .icon.investigateButton{background: #7f8cf5}
+.circleLayer-tool .icon.activityButton{background: #fe792e}
+.circleLayer-tool .icon.informationButton{background: #48ce85}
+
+
+.circleContent{background: #fff}
+.manage{width: 100%;}
+.manage .manageBlock{width: 100%;overflow: hidden}
+.manage .manageBlock .block{width: 45%;margin: 2.5%;background: #fff;float: left;clear: none}
+.manage .manageBlock .icon{width: 50px;font-size: 50px;margin: 10px auto;}
+.manage .manageBlock .text{text-align: center;line-height: 24px;font-size: 16px;margin-bottom: 16px;}
+
+.tabsBox{padding: 10px;border-bottom: 1px solid #BFBFBF;}
+.my-tabs{width:100%;box-sizing: border-box;border-radius: 4px;border:1px solid #BFBFBF;height: 32px;text-align: center;line-height: 32px;color: #BFBFBF;overflow: hidden}
+.my-tabs .my-tab-item{width: 33.33%;float: left;}
+.my-tabs .my-tab-item.center{border-left:1px solid #BFBFBF;border-right: 1px solid #BFBFBF;}
+.my-tabs .my-tab-item.hover{background: #BFBFBF;color: #fff}
+
+.examineAndVerify-content{width:100%;}
+.examineAndVerify-content .none{width: 100px;margin: 0 auto;margin-top: 20%;font-size: 32px;text-align: center}
+.examineAndVerify-content .none-text{font-size: 16px;line-height: 24px;color: #444}
+
+.list-examineAndVerify{width: 100%;border-bottom: 1px solid #BFBFBF;}
+.list-examineAndVerify .list-item{padding: 10px;overflow: hidden}
+.list-examineAndVerify .user{overflow: hidden;padding-left: 60px;}
+.list-examineAndVerify .user .photo{width: 50px;height: 50px;float: left;margin-left: -60px;background: #000;border-radius: 5px;overflow: hidden }
+.list-examineAndVerify .user .name{float: left;line-height: 50px;font-size: 16px;color: #444;}
+.list-examineAndVerify .icon-right{float: right;font-size: 24px;}
+.list-examineAndVerify .info{width: 100%;font-size: 16px;line-height: 24px;overflow: hidden}
+.list-examineAndVerify .info-item{border-bottom: 1px solid #BFBFBF;overflow: hidden;padding: 0 5px;box-sizing: border-box;margin-top: 5px}
+.list-examineAndVerify .info .left{float: left;width: 72px;margin-right: 10px;}
+.list-examineAndVerify .info .right{float: left;}
+
+
+.chat-tabs{width: 100%;height: 42px;}
+.chat-tabs .item-tab{width: 50%;float: left;line-height: 42px;font-size:16px;color: #444;text-align: center;position: relative;border-bottom: 1px solid #BFBFBF}
+.chat-tabs .item-tab.hover{border-bottom-color: #3399FD}
+.chat-tabs .item-tab .my-badge{position: absolute;right: 10px;background: red;color: #fff;top: 9px}
+
+.shareButton{position: absolute;right: 10px;bottom: 100px;width: 42px;height: 42px;background: rgba(0,0,0,0.5);border-radius: 30px;overflow: hidden;font-size: 24px;color: #fff;text-align: center;line-height: 42px;}
+
+.candidates .item img{border-radius: 4px;}
+.candidates .item-note{position: absolute;right: 54px;top: 16px;float: none}
+.candidates .item h2{width: 120px;min-height: 20px;}
+
+.answerDetails{padding: 10px;background: #fff}
+.answerDetails .list-item{width: 100%;overflow: hidden;height: auto;position: relative;border-bottom: 1px solid #BFBFBF;}
+.answerDetails .list-item .topBox{width: 100%;line-height: 32px;font-size: 16px;color: #444;overflow: hidden}
+.answerDetails .list-item .text{float: left}
+.answerDetails .list-item .schedule{float: right;}
+.answerDetails .list-item .progressBar{width: 100%;height: 5px; margin: 2px 0;background: #000;}
+
+.slither{width: 100%;position: fixed;left: 0;top: 0;z-index: 1111;}
+.slither img{width: 100%;}
+.slither .slider-pager{display: none !important;}
+.slither .close{position: absolute;right: 10px;top: 10px;}
+.slither .start{
+  position: absolute;
+  left: 21%;
+  bottom: 7%;
+  width: 58%;
+  height: 7%;
+}
+
+.editMessageBox{width: 100%;}
+.editMessageBox .tool{width: 100%;overflow: hidden}
+.editMessageBox .toolNoe{width: 25%;float: left;text-align: center;font-size: 16px;}
+.editMessageBox .iconTool{font-size: 32px;padding-bottom: 2px;display: block}
+.editMessageBox .toolNoe span{font-size: 12px;display: block;margin-top: -10px;}

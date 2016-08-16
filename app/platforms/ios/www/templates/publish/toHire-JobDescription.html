@@ -1,0 +1,11 @@
+<ion-view view-title="{{config.title}}" hide-tabs="true" >
+    <ion-content scroll="false">
+        <div class="jobDescription">
+            <div class="text-input">
+                <textarea class="init" id="text" maxlength="500" placeholder="请输入内容" ng-keydown="keydownEvent()" ng-bind="text"></textarea>
+            </div>
+            <div class="surplus">{{maxTextLength}}/500</div>
+        </div>
+        <hr>
+    </ion-content>
+</ion-view>

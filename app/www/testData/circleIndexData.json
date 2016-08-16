@@ -1,0 +1,23 @@
+{
+  "bannerImagesUrl":[
+    "1",
+    "2",
+    "3"
+  ],
+  "myCircle":[
+    {
+      "title":"万科集团",
+      "photoUrl":"xxx",
+      "introduction":"xxx",
+      "id":"111"
+    }
+  ],
+  "hotCircle":[
+    {
+      "title":"万科集团",
+      "photoUrl":"xxx",
+      "introduction":"xxx",
+      "id":"111"
+    }
+  ]
+}

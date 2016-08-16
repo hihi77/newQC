@@ -1,0 +1,51 @@
+{
+    "userInfo" : {
+        "nickname" : "hihi77",
+        "phone" : "18650809701",
+        "userId" : "1461225062107",
+        "headUrl" : "http://192.168.27.169:8081/uploads/1461308422427.jpg",
+        "heardPhoto" : "http://192.168.27.169:8081/uploads/1461308422427.jpg",
+        "config" : {
+            "位置隐身可见" : false,
+            "基本信息可见" : false,
+            "个人简历可见" : false
+        }
+    },
+    "createTime" : "2016-04-22T07:18:40.714Z",
+    "type" : [
+        "招标"
+    ],
+    "title" : "你是个人都",
+    "des" : {
+        "text" : "你是个人电脑",
+        "images" : [
+            {
+                "name" : 1461309476482,
+                "src" : "file:///var/mobile/Containers/Data/Application/31FB1C09-95BA-4702-8331-C6B28AE8EFCE/tmp/cdv_photo_007.jpg",
+                "tsrc" : "http://192.168.27.169:8081/uploads/1461309476482.jpg"
+            }
+        ]
+    },
+    "contacts" : "你的时候",
+    "contactmethod" : "11111111111",
+    "endtime" : 1968,
+    "draflag" : "1",
+    "userId" : "1461225062107",
+    "creator" : {
+        "nickname" : "hihi77",
+        "phone" : "18650809701",
+        "userId" : "1461225062107",
+        "headUrl" : "http://192.168.27.169:8081/uploads/1461308422427.jpg",
+        "heardPhoto" : "http://192.168.27.169:8081/uploads/1461308422427.jpg",
+        "config" : {
+            "位置隐身可见" : false,
+            "基本信息可见" : false,
+            "个人简历可见" : false
+        }
+    },
+    "id" : "1461309492782",
+    "browseRecord" : [
+        "1056969666"
+    ],
+    "browseNumber" : 12
+}

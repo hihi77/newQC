@@ -1,0 +1,15 @@
+<ion-view view-title="填写申请信息" hide-tabs="true">
+  <ion-content>
+    <div class="signUp-info">
+      <div class="input" ng-repeat="noe in registrationAdditional" ng-init="initData(noe)">
+        <p class="type">{{noe.text}}</p>
+        <p class="inputBox"><input placeholder="请输入{{noe.text}}" ng-model="noe.value" class="init"></p>
+      </div>
+      <div class="protocol">
+        <i class="ion-android-checkbox-outline" ng-init="checkbox=true"  ng-click="checkbox=!checkbox" ng-class="checkbox?'ion-android-checkbox-outline':'ion-android-checkbox-outline-blank'"></i>
+        <a href="#">同意《才商连联软件服务协议》</a>
+      </div>
+      <button class="button blue" ng-click="submitSignUp()" ng-disabled="!checkbox">加入</button>
+    </div>
+  </ion-content>
+</ion-view>

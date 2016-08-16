@@ -1,0 +1,11 @@
+<ion-view title="圈内通知" hide-tabs="true">
+  <ion-content>
+    <div class="notice">
+      <p class="input"><input class="init" ng-model="$parent.noticeTitle" maxlength="20" placeholder="请输入标题"></p>
+      <p class="textarea"><textarea class="init" ng-model="$parent.notice" placeholder="通知内容"></textarea></p>
+    </div>
+  </ion-content>
+  <ion-footer-bar style="padding: 0">
+    <button class="button button-style3 yellow" ng-click="submit()">发送通知</button>
+  </ion-footer-bar>
+</ion-view>

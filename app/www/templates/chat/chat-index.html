@@ -1,0 +1,92 @@
+<ion-view align-title="center" view-title="消息" cache-view=”false” hide-back-button='true'>
+<ion-nav-buttons name="nav-buttons" side="right">
+                <a class="button button-icon button-clear ionic ion-ios-people"   href="#/tab/chat-user-addressList">
+                </a>
+            </ion-nav-buttons> 
+
+    <ion-content >
+      <ion-refresher pulling-text="拉刷新..." on-refresh="doRefresh()" pulling-icon=""></ion-refresher>
+        <ion-list>
+<!--
+            <ion-item class="item-avatar"  href="#/tab/chat-sysNotice">
+                <img ng-src="{{default_logo}}">
+                <h2>系统消息</h2>
+
+                <span ng-if="allSysNotice" class="badge badge-assertive item-badge">{{allSysNotice}}</span>
+            </ion-item>
+-->
+
+            <ion-item class="item-icon-left" >
+                <a  href="#/tab/chat-sysNotice" style="display: block;width: 100%;">
+                    <i class="icon ion-gear-a">
+                    </i>
+                    系统消息
+                    <span ng-if="sysNoticeBadge" class="badge badge-assertive item-badge">{{sysNoticeBadge}}</span>
+                </a>
+            </ion-item>
+            <ion-item class="item-icon-left" >
+                <a  href="#/tab/chat-newFriend" style="display: block;width: 100%;">
+                    <i class="icon ion-person-add">
+
+                    </i>
+                    新朋友
+                    <span ng-if="userApplyFriend" class="badge badge-assertive item-badge">{{sysNoticeBadge.userApplyFriend}}</span>
+                </a>
+            </ion-item>
+            <ion-item class="item-icon-left">
+                <a  href="#/tab/chat-newCircle" style="display: block;width: 100%;">
+                    <i class="icon ion-person-stalker"></i>
+                    圈子
+                    <span ng-if="circleInvitation" class="badge badge-assertive item-badge">{{sysNoticeBadge.circleInvitation}}</span>
+                </a>
+            </ion-item>
+            <ion-item ng-show="message.lastMessage.id" class="item-avatar" ng-class="{'rj-item-top': message.isTop}" on-hold="popupMessageOpthins(message)" rj-hold-active ng-repeat="message in messages | orderBy:['isTop', 'lastMessage.timeFrome1970']:true" ng-click="messageDetils(message)">
+                <img has-badge ng-src="{{message.pic||default_headUrl}}" badge="12" >
+                <span class="rj-sm-red-icon" ng-show="message.noReadMessages>'0'">
+                <p ng-bind="message.noReadMessages" style="color:red"></p></span>
+                <h2 ng-bind="message.name"></h2>
+                <p class="rj-list-p" ng-bind="message.lastMessage.content.text"></p>
+                <span class="rj-push-right" ng-bind="message.lastMessage.time|date:'MM-dd HH:mm'"></span>
+                  <ion-option-button class="button-assertive" ng-click="deleteMessage(message,$index)">
+                    删除 
+                  </ion-option-button>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+
+
+
+ <script id="button-options.html" type="text/ng-template">
+        <ion-popover-view>
+
+       /*  <ion-header-bar>
+             <i class="icon iion-ios-plus-empty"  ></i>
+            </ion-header-bar>*/
+  <ion-content>
+    <ion-list  >
+      <ion-item ng-click="friends()" class="item item-icon-left ">
+       
+        <i class="icon ion-ios-people"></i>
+        <h2 align="center"  > 联系人</h2>
+       
+      </ion-item>
+
+     <ion-item class="item item-icon-left ">
+       
+        <i class="icon ion-ios-personadd"></i>
+        <h2 align="center"  > 添加朋友</h2>
+       
+      </ion-item>
+      <ion-item class="item item-icon-left ">
+       
+        <i class="icon ion-qr-scanner"></i>
+        <h2 align="center"  > 扫一扫</h2>
+      </ion-item>
+
+    </ion-list>
+         </ion-content>
+
+       
+        </ion-popover-view>
+    </script>
+</ion-view>

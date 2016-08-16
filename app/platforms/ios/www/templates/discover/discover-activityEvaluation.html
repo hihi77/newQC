@@ -1,0 +1,29 @@
+<ion-view view-title="活动">
+  <ion-content>
+    <div class="activityEvaluation">
+      <ul class="activityEvaluation-list">
+        <li class="list-item">
+          <p class="left-text">本次活动评价</p>
+        </li>
+        <li class="list-item" ng-init="noe.activityIndex=0" ng-repeat="noe in evaluationData.activity">
+          <p class="left-text">{{noe.text}}</p>
+          <p class="right-text">
+            <i class="icon ion-happy-outline {{$index<=noe.activityIndex?'blue':''}}" ng-click="noe.activityIndex=$index" ng-repeat="x in [1,2,3,4,5]"></i>
+          </p>
+        </li>
+      </ul>
+      <ul class="activityEvaluation-list">
+        <li class="list-item">
+          <p class="left-text">本次授课满意度</p>
+        </li>
+        <li class="list-item" ng-init="noe.giveLessonsIndex=0" ng-repeat="noe in evaluationData.giveLessons">
+          <p class="left-text">{{noe.text}}</p>
+          <p class="right-text">
+            <i class="icon ion-happy-outline {{$index<=noe.giveLessonsIndex?'blue':''}}" ng-click="noe.giveLessonsIndex=$index" ng-repeat="x in [1,2,3,4,5]"></i>
+          </p>
+        </li>
+      </ul>
+      <button class="button blue" ng-click="submitEvaluation()">提交评价</button>
+    </div>
+  </ion-content>
+</ion-view>

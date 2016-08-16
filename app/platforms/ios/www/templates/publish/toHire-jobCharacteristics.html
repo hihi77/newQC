@@ -1,0 +1,17 @@
+<ion-view view-title="岗位特点" hide-tabs="true" >
+    <ion-content ng-controller="selectType">
+        <!--样式继承于选择地区-->
+        <div class="selectArea selectTechnicalAbility">
+            <div class="areaBox">
+                <ion-scroll class="selectArea-ion-scroll">
+                    <ul class="technicalAbility-list">
+                        <li class="technicalAbility-item textOverHide {{elementShow[noeData]?'hover':''}} {{($index+1)%6==0?'space':''}}" ng-repeat="noeData in typeDatas" on-touch="addNoe(noeData)">
+                            {{noeData}}
+                        </li>
+                    </ul>
+                    <div class="selectTechnicalAbility-pointOut">最多选择5个</div>
+                </ion-scroll>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

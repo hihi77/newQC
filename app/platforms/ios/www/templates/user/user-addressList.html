@@ -1,0 +1,29 @@
+<ion-view view-title="通讯录" hide-tabs="true">
+  <ion-content class="ionic-pseudo">
+    <div class="user-addressList">
+      <div class="search">
+        <div class="searchInput">
+          <i class="icon ion-search"></i>
+          <angucomplete placeholder="" selectedObject="selectedObject" ng-model="searchStr" results="results" pause="100" searchfields="nickname,userId" titlefield="nickname" localdata="userFriends" minlength="1" inputclass="form-control form-control-small" resultshide="true"  matchclass="highlight"/>
+        </div>
+      </div>
+      <ion-list ng-if="userFriends.length">
+        <div class="letter" style="display: none">{{key}}</div>
+        <ion-item class="item-remove-animate  item-icon-right" ng-repeat="noe in searchStr?results:userFriends" ng-init="data=noe.originalObject?noe.originalObject:noe">
+          <a href="#/tab/user/user-userOtherInfo/{{data.userId}}" style="display: block;width: 100%;">
+            <div class="heardPhone"><img src="{{data.headUrl||default_headUrl}}"></div>
+            <div class="name">{{data.nickname}}</div>
+            <i class="icon ion-ios-arrow-right"></i>
+          </a>
+
+          <ion-option-button class="button-assertive" ng-click="deleteFriend(data)">
+            删除
+          </ion-option-button>
+          <ion-option-button class="" style="background: rgb(33,33,33);color: #fff" ng-click="defriend(data)">
+            拉黑
+          </ion-option-button>
+        </ion-item>
+      </ion-list>
+    </div>
+  </ion-content>
+</ion-view>

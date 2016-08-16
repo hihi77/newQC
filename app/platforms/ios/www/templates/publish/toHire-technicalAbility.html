@@ -1,0 +1,26 @@
+<ion-view view-title="选择技能" hide-tabs="true" >
+    <ion-content>
+        <!--样式继承于选择地区-->
+        <div class="selectArea selectTechnicalAbility">
+            <div class="selectArea-heard-text">
+                <p class="left-text">已选技能</p>
+                <p class="right-text">{{surplus}}/3</p>
+            </div>
+            <div class="selectArea-selected">
+                <div class="noe" ng-repeat="type in selectData" on-touch="removeNoe(type)">
+                    <p class="noeText textOverHide">{{type}}</p>
+                    <i class="icon ion-android-close "></i>
+                </div>
+            </div>
+            <div class="areaBox">
+                <ion-scroll class="selectArea-ion-scroll">
+                    <ul class="technicalAbility-list">
+                        <li class="technicalAbility-item textOverHide {{elementShow[noeData]?'hover':''}} {{($index+1)%6==0?'space':''}}" ng-repeat="noeData in technicalAbilitys" on-touch="clickNoe(noeData)">
+                            {{noeData}}
+                        </li>
+                    </ul>
+                </ion-scroll>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

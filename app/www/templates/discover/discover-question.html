@@ -1,0 +1,26 @@
+<ion-view view-title="正在答题">
+  <ion-content>
+    <div class="question" ng-repeat="question in questions">
+      <p class="title">{{($index+1)+'.'+question.question}}({{question.type}})</p>
+      <div class="questionListBox">
+        <ul class="question-list" ng-if="question.type!='问答'">
+          <li class="list-item" ng-repeat="option in question.option" ng-click="listClick(question,$index)">
+            <i class="{{option.pitchOn?question.noClass:question.offClass}}"></i>
+            &nbsp;
+            {{option.text}}
+          </li>
+        </ul>
+        <div class="text" ng-if="question.type=='问答'">
+          <textarea class="init" ng-model="question.text"></textarea>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+  <ion-footer-bar style="margin: 0;padding: 0">
+    <div class="question-foot-buttonBox">
+      <div class="next" ng-click="submittedQuestionnaire()">
+        提交
+      </div>
+    </div>
+  </ion-footer-bar>
+</ion-view>

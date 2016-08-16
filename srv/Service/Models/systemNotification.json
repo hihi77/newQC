@@ -1,0 +1,15 @@
+{
+  "type" : "userApplyFriend",
+  "from" : {
+    "userId" : "15980603577",
+    "nickname" : "apple"
+  },
+  "to" : {
+    "userId" : "18650809701",
+    "nickname" : "tina"
+  },
+  "time" : "2016-05-26T13:22:01.597Z",
+  "message" : "apple 发出好友申请!",
+  "status" : 1,
+  "id" : "1464268921611"
+}

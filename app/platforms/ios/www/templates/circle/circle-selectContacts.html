@@ -1,0 +1,35 @@
+
+<ion-view view-title="通讯录" hide-tabs="true">
+  <ion-content>
+    <div class="user-addressList">
+      <div class="search">
+        <div class="searchInput">
+          <i class="icon ion-search"></i>
+          <angucomplete placeholder="" selectedObject="selectedObject" ng-model="searchStr" results="results" pause="100" searchfields="nickname,userId" titlefield="nickname" localdata="userFriends" minlength="1" inputclass="form-control form-control-small" resultshide="true"  matchclass="highlight"/>
+        </div>
+      </div>
+      <ion-list ng-if="userFriends.length">
+        <div class="letter" style="display: none">{{key}}</div>
+        <ion-item class="item-remove-animate  item-button-right item-checkbox" ng-repeat="noe in searchStr?results:userFriends" ng-init="data=noe.originalObject?noe.originalObject:noe">
+          <label class="checkbox">
+            <input type="checkbox" ng-model="data.checked">
+          </label>
+          <a style="display: block;width: 100%;">
+            <!--<a href="#/tab/user/user-userOtherInfo/{{data.userId}}" style="display: block;width: 100%;">-->
+            <div class="heardPhone"><img src="{{data.headUrl}}"></div>
+            <div class="name">{{data.nickname}}</div>
+
+            <button class="button button-small button-positive" ng-click="inviteToCircle(data)">
+              <i class="icon ion-plus"></i>
+              邀请加入
+            </button>
+          </a>
+        </ion-item>
+      </ion-list>
+
+    </div>
+  </ion-content>
+  <ion-footer-bar style="padding: 0"  ng-show = "1">
+    <button class="button blue" ng-click="inviteMany()">邀请加入</button>
+  </ion-footer-bar>
+</ion-view>

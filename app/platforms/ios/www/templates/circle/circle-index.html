@@ -1,0 +1,85 @@
+<ion-view view-title="圈子" >
+  <ion-content>
+    <div class="circleIndex">
+      <div class="search" search>
+      </div>
+      <ul class="list-style-E">
+        <a href="{{circleUrl?circleUrl+'/'+data.title+'/'+data.circleId:''}}" ng-repeat="data in circles" ng-show="!data.hide"><li class="list-item">
+          <div class="photo"><img ng-src="{{data.photoUrl||default_logo}}"></div>
+          <div class="info">
+            <p class="title">{{data.title}}</p>
+            <p class="introduction">{{data.introduction}}</p>
+          </div>
+        </li></a>
+      </ul>
+      <div class="circleIndexContent" ng-show="!searchText" >
+        <ion-slide-box does-continue="true" slide-interval="3000">
+          <ion-slide ng-repeat="url in circleData.bannerImagesUrl">
+            <div class="slideBox"><img src="{{url||initImagesRand()}}"></div>
+          </ion-slide>
+        </ion-slide-box>
+        <div class="module">
+          <div class="module-title">
+            <div class="box">
+              <p class="text">我的圈子</p>
+              <a href="#/tab/circle-myCircle"><p class="more">更多</p></a>
+            </div>
+          </div>
+          <ul class="circle-list">
+            <a href="#/tab/circle-enterTheCircle/{{data.title}}/{{data.circleId}}" on-hold="onHold($event,data)" ng-repeat="data in circleData.myCircle">
+              <li class="list-item">
+              <div class="noeCircle">
+                <p class="image"><img src="{{data.photoUrl.images[0].tsrc||default_logo}}" img-auto></p>
+                <p class="name textOverHide" ng-bind="data.title"></p>
+              </div>
+            </li></a>
+            <li class="list-item">
+              <a ng-click="checkLogin()" ><div class="noeCircle noeCircle-icon">
+                <p class="image image-icon">
+                  <i class="ion-plus-round icon" ></i>
+                </p>
+              </div></a>
+            </li>
+          </ul>
+        </div>
+        <div class="module" ng-show="circleData.participateCircle.length">
+          <div class="module-title">
+            <div class="box">
+              <p class="text">我加入的圈子</p>
+              <a href="#/tab/circle-participateCircle"><p class="more">更多</p></a>
+            </div>
+          </div>
+          <ul class="circle-list">
+            <a href="#/tab/circle-enterTheCircle/{{data.title}}/{{data.circleId}}" on-hold="onHold($event,data)" ng-repeat="data in circleData.participateCircle">
+              <li class="list-item">
+              <div class="noeCircle">
+                <p class="image"><img src="{{data.photoUrl.images[0].tsrc||default_logo}}" img-auto></p>
+                <p class="name textOverHide" ng-bind="data.title"></p>
+              </div>
+            </li>
+            </a>
+          </ul>
+        </div>
+        <div class="module">
+          <div class="module-title">
+            <div class="box">
+              <p class="text">热门圈子</p>
+              <a href="#/tab/circle-hotCircle"><p class="more">更多</p></a>
+            </div>
+          </div>
+          <ul class="circle-list">
+            <a href="#/tab/circle-enterTheCircle/{{data.title}}/{{data.circleId}}" on-hold="onHold($event,data)" ng-repeat="data in circleData.hotCircle">
+              <li class="list-item">
+              <div class="noeCircle">
+                <p class="image"><img src="{{data.photoUrl.images[0].tsrc||default_logo}}" img-auto></p>
+                <p class="name textOverHide" ng-bind="data.title"></p>
+              </div>
+            </li>
+            </a>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

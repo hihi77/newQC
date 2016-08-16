@@ -1,0 +1,15 @@
+<ion-view view-title="应聘人员" hide-tabs="true">
+  <ion-content>
+    <div class="content candidates">
+      <div class="list">
+        <a class="item item-avatar item-icon-right" ng-repeat="data in (candidates|noDuplicate)" href="#/tab/{{pageMarking}}-candidatesUserInfo/{{data.userId}}">
+          <img src="{{data.headUrl}}">
+          <h2 ng-bind="data.nickname"></h2>
+          <p ng-bind="data.currentCompany"> </p>
+          <span class="item-note" ng-bind="data.time | date :'MM/dd hh:mm'"></span>
+          <i class="icon ion-chevron-right"></i>
+        </a>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,89 @@
+<ion-view view-title="活动">
+  <ion-content style="background: #fff">
+    <div class="activityDetailedBox">
+      <div class="image">
+        <img ng-src="{{initUrl}}">
+        <p ng-show="signUpDetailed.alreadySignUp" class="signUp" >已报名</p>
+        <p ng-show="signUpDetailed.applyAvr" class="signUp" ng-click="activitySignUp()" >活动报名</p>
+
+      </div>
+      <div class="title center" ng-bind="signUpDetailed.title"></div>
+      <br/>
+      <div class="detailed-list-box">
+        <ul class="detailed-list">
+          <li class="list-item">
+            <p class="text">
+              <i class="ion-calendar icon"></i>&nbsp;&nbsp;
+              {{newDate(signUpDetailed.activityStartTime).Format('MM月dd日 hh:mm')+'-'+newDate(signUpDetailed.activityEndTime).Format('MM月dd日 hh:mm')}}
+            </p>
+          </li>
+          <li class="list-item">
+            <a ng-show="signUpDetailed.activeAddress"><p class="text">
+              <i class="ion-ios-paperplane icon"></i>&nbsp;&nbsp;
+              线上活动
+            </p></a>
+            <a ng-click="location()" ng-show="!signUpDetailed.activeAddress"><p class="text">
+              <i class="ion-ios-paperplane icon"></i>&nbsp;&nbsp;
+              线下活动
+              <i class="ion-location icon" style="float: right" ></i>
+            </p></a>
+          </li>
+          <li class="list-item">
+            <p class="text">
+              <i class="ion-social-yen icon"></i>&nbsp;&nbsp;
+              {{signUpDetailed.price?signUpDetailed.price+"元":"免费"}}
+            </p>
+          </li>
+          <li class="list-item">
+            <p class="text">
+              <i class="ion-person icon"></i>&nbsp;&nbsp;
+              {{signUpDetailed.signUpCount||0}}人<span class="yellow">({{signUpDetailed.signUpSuccess||0}}报名成功)</span>
+            </p>
+          </li>
+        </ul>
+        <ul class="detailed-list">
+<!--          <li class="list-item">
+            <p class="left-text">活动评价</p>
+            <a href="#/tab/{{pageMarking}}/{{pageMarking}}-activityEvaluation/{{id}}/{{pageMarking}}" ng-show="signUpDetailed.evaluateAvr">
+              <p class="right-text">{{signUpDetailed.alreadyEvaluate?"已经评价":"立即评价"}}</p>
+            </a>
+            <p class="right-text" ng-show="signUpDetailed.alreadyEvaluate">已评价</p>
+          </li>-->
+          <li class="list-item">
+            <p class="text">综合评分:{{signUpDetailed.overallMerit}}</p>
+            <p class="text">评价人数:{{signUpDetailed.evaluationNumber||0}}</p>
+          </li>
+        </ul>
+        <ul class="detailed-list">
+          <li class="list-item">
+            <p class="left-text">活动详情</p>
+          </li>
+          <li class="list-item" style="border-bottom: none">
+            <img  crop-image ng-repeat="image in (signUpDetailed.eventDetails.images||signUpDetailed.images)" src="{{image.tsrc}}">
+            <p class="text" ng-bind-html="signUpDetailed.eventDetails.text.replace(_n,'<br>')">
+            </p>
+          </li>
+        </ul>
+        <button class="button button-style1" ng-click="develop=!develop" style="display: none">查看完整介绍</button>
+      </div>
+      <div class="foot-registrationSuccess">
+        <p class="text">{{signUpDetailed.signUpSuccess||0}}人报名成功</p>
+        <div class="imageBox">
+          <p class="heardPhone" ng-repeat="url in signUpDetailed.signUpSuccessImages"><img src="{{url}}"></p>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+  <div class="shareButton" ng-click="modal.show()" ng-controller="shareController">
+    <i class="ion-share"></i>
+  </div>
+  <ion-footer-bar style="padding: 0"  ng-show = "signUpDetailed.checkInAvr">
+    <button class="button blue" ng-click="signIn()">立即签到</button>
+  </ion-footer-bar>
+  <ion-footer-bar style="padding: 0"  ng-show = "signUpDetailed.evaluateAvr">
+      <a href="#/tab/{{pageMarking}}/{{pageMarking}}-activityEvaluation/{{id}}/{{pageMarking}}" class="button blue">立即评价</a>
+    </ion-footer-bar>
+  <ion-footer-bar style="padding: 0"  ng-show = "signUpDetailed.alreadyEvaluate">
+    <button class="button blue" disabled="disabled">已评价</button>
+  </ion-footer-bar>
+</ion-view>

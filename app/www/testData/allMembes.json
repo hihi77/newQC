@@ -1,0 +1,17 @@
+{
+  "authority":[
+    {
+      "userId":"",
+      "name":"",
+      "heardPhoneUrl":"",
+      "authority":"群主"
+    }
+  ],
+  "common":[
+    {
+      "userId":"",
+      "heardPhoneUrl":"",
+      "name":""
+    }
+  ]
+}

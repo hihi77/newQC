@@ -1,0 +1,30 @@
+{
+  "source":"捷豹汽车",
+  "startTime":"2016-02-18 14:23",
+  "moneyReward":"2.00",
+  "endTime":"2016-02-22 00:00",
+  "alreadyPortion":"79",
+  "maxPortion":"300",
+  "questions":[
+    {
+      "type": "单选",
+      "question":"单选",
+      "option":[
+        "fsaf",
+        "fsa"
+      ]
+    },
+    {
+      "type": "多选",
+      "question":"多选",
+      "option":[
+        "多选fsaf",
+        "多选fsa"
+      ]
+    },
+    {
+      "question": "fsfasfasf",
+      "type": "问答"
+    }
+  ]
+}

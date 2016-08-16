@@ -1,0 +1,27 @@
+<ion-view view-title="选择行业" hide-tabs="true">
+    <ion-content ng-controller="selectType">
+        <!--样式继承于选择地区-->
+        <div class="selectArea selectTrade">
+            <div class="selectArea-heard-text">
+                <p class="left-text">已选行业</p>
+                <p class="right-text">{{surplus}}/{{maxSurplus}}</p>
+            </div>
+            <div class="selectArea-selected">
+                <div class="noe" ng-repeat="name in selectData" on-touch="removeNoe(name)">
+                    <p class="noeText textOverHide">{{name}}</p>
+                    <i class="icon ion-android-close "></i>
+                </div>
+            </div>
+            <div class="areaBox">
+                <ion-scroll class="selectArea-ion-scroll" style="height:{{contentHeight}}px">
+                    <ul class="city-list">
+                        <li class="city-item area-item {{$odd?'odd':''}}" ng-repeat="trade in typeDatas" ng-click="addNoe(trade,this)">
+                            <p class="noeText textOverHide">{{trade}}</p>
+                            <i class="ion-checkmark icon" ng-show="elementShow[trade]"></i>
+                        </li>
+                    </ul>
+                </ion-scroll>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,69 @@
+<ion-view view-title="{{scope.activityEphemeralData['活动主题']}}" hide-tabs="true" >
+  <ion-content style="background: #fff">
+    <div class="activityDetailedBox">
+      <div class="image">
+        <img src="./img/banner/banner_background_1.png">
+      </div>
+      <div class="detailed-list-box">
+        <ul class="detailed-list">
+          <li class="list-item">
+            <p class="text">
+              <i class="ion-calendar icon"></i>&nbsp;&nbsp;
+              {{newDate(scope.activityEphemeralData['活动开始时间']).Format('MM-dd hh:mm')+' -- '+newDate(scope.activityEphemeralData['活动结束时间']).Format('MM-dd hh:mm')}}
+            </p>
+          </li>
+          <li class="list-item">
+            <p class="text">
+              <i class="ion-ios-paperplane icon"></i>&nbsp;&nbsp;
+              {{scope.activityEphemeralData['线上活动']?"线上活动":scope.activityEphemeralData["线下活动地址"]}}
+              <i class="ion-location icon" style="float: right"></i>
+            </p>
+          </li>
+          <li class="list-item">
+            <p class="text">
+              <i class="ion-social-yen icon"></i>&nbsp;&nbsp;
+              {{scope.activityEphemeralData['活动费用']?scope.activityEphemeralData['活动费用']+"元":"免费"}}
+            </p>
+          </li>
+          <li class="list-item">
+            <p class="text">
+              <i class="ion-person icon"></i>&nbsp;&nbsp;
+              {{scope.activityEphemeralData.signUpCount||0}}人<span class="yellow">({{scope.activityEphemeralData.signUpSuccess||0}}报名成功)</span>
+            </p>
+          </li>
+        </ul>
+        <ul class="detailed-list">
+          <li class="list-item">
+            <p class="left-text">活动评价</p>
+            <p class="right-text ng-hide">立即评价</p>
+          </li>
+          <li class="list-item">
+            <p class="text">综合评分:0</p>
+            <p class="text">评价人数:0</p>
+          </li>
+        </ul>
+        <ul class="detailed-list">
+          <li class="list-item">
+            <p class="left-text">活动详情</p>
+          </li>
+          <li class="list-item" style="border-bottom: none">
+            <img src="{{scope.image.src}}"  crop-image="9/16" ng-repeat="image in (scope.activityEphemeralData['活动详情'].images||scope.activityEphemeralData.images)">
+            <p class="text">
+             {{scope.activityEphemeralData['活动详情'].text}}
+            </p>
+          </li>
+        </ul>
+        <button class="button button-style1" ng-click="develop=!develop" style="display: none">查看完整介绍</button>
+      </div>
+      <div class="foot-registrationSuccess">
+        <p class="text">0人报名成功</p>
+        <div class="imageBox">
+          <p class="heardPhone" ng-repeat="url in scope.activityEphemeralData.signUpSuccessImages"><img src="{{url}}"></p>
+        </div>
+      </div>
+    </div>
+  </ion-content>
+  <ion-footer-bar style="background: #FF9800" ng-disabled="false" ng-click="publishEvent()">
+    <p style="line-height: 34px;text-align: center;color: #fff;width: 100%;font-size: 16px">发布</p>
+  </ion-footer-bar>
+</ion-view>

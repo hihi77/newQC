@@ -1,0 +1,65 @@
+<ion-view view-title="信息" hide-tabs="true">
+  <ion-content delegate-handle="messageDetailsScroll">
+    <ul class="information-list information-list-detailed">
+      <li class="list-item-information">
+        <a href="#/tab/{{pageMarking}}/{{pageMarking}}-toHire-userIfo/{{userId}}/{{pageMarking}}">
+          <div class="heardInfo">
+            <div class="photo"><img src="{{data.creator.headUrl}}"></div>
+            <div class="info">
+              <p class="title ng-binding">{{data.title}}</p>
+              <!--            <p class="name">{{data.creator.nickname}}</p>-->
+              <p class="time">{{data.createTime|date : 'MM月dd日 HH:mm'}}</p>
+            </div>
+          </div>
+        </a>
+
+        <!--<p class="text ng-binding">{{data.des.text}}</p>-->
+        <p class="text" ng-bind-html="data.des.text.replace(_n,'<br>')"></p>
+        <div class="imageBox">
+          <p class="image" ng-repeat="image in data.des.images"><img crop-image="9/16" src="{{image.tsrc}}"></p>
+        </div>
+        <div class="message">
+          <p class="text-message">{{data.browseNumber||0}}人看过 {{data.alikeNumber||0}}个赞</p>
+          <div class="imageBox">
+            <p class="assist" ng-click="clickALike()"><i class="ion-thumbsup"></i></p>
+            <div>
+              <p class="img" ng-repeat="url in data.heardPhotos"><img  src="{{url}}"></p>
+            </div>
+            <div class="more ng-hide"  ng-click="moreBoxShow=!moreBoxShow">
+              <i class="ion-more"></i>
+              <div class="moreBox ng-hide" ng-show="moreBoxShow">
+                <p class="more-button" ng-click="clickALike()">点赞</p>
+                <p class="more-button" ng-click="comment()">评论</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <ul class="comment-list">
+      <li class="comment-count">{{data.commentNumber||0}}条评论</li>
+      <li class="list-item" ng-repeat="noe in data.commentInfo">
+        <p class="photo"><img src="{{noe.heardPhoto}}"></p>
+        <div class="comment-box">
+          <div class="comment-content">
+            <p class="name">{{noe.name}}</p>
+            <p class="comment-text">{{noe.text}}</p>
+          </div>
+        </div>
+        <p class="date">{{newDate(noe.date).Format("MM/dd hh:mm")  }}</p>
+      </li>
+    </ul>
+  </ion-content>
+
+  <div class="shareButton" ng-click="modal.show()" ng-controller="shareController">
+    <i class="ion-share"></i>
+  </div>
+  <ion-footer-bar keyboard-attach>
+    <label  class="item item-input rj-footer-input">
+      <textarea placeholder="说点啥....." msd-elastic ng-model="commentText"></textarea>
+    </label>
+    <div class="rj-send-button" ng-hide="!commentText || commentText === ''">
+      <p ng-click="submitComment()" class="rj-footer-btn button ">发送</p>
+    </div>
+  </ion-footer-bar>
+</ion-view>

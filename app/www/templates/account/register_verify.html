@@ -1,0 +1,37 @@
+<ion-view view-title="填写验证码" align-title="left">
+    <ion-content >
+        <div class="content">
+            <br/>
+            <p align="center">验证码已经发送到号码：{{$parent.user.phone}} </p>
+            <form class="list list-inset" name="postsForm">
+
+                　
+                <label class="item item-input">
+                    <lable class="input-label">验证码</lable>
+                    <input  placeholder="请输入短信验证码" type="text"  ng-model="obj.Vnumber"  required
+                            ng-minlength="6" ng-maxlength="6">
+                </label>
+            </form>
+            <div class="padding">
+                <p>{{flag.mobileVerify}}</p>
+                <button ng-show="!mobileVerify" ng-click="DoVerify()" class="button button-full button-positive"  ng-disabled="postsForm.$invalid"
+                >下一步</button>
+                <button ng-show="mobileVerify" ng-click="DoVerify()" class="button button-full button-positive"  ng-disabled="postsForm.$invalid"
+                >绑定</button>
+            </div>
+        </div>
+
+        <div align="center">
+ 
+    　<button ng-disabled="obj.resend" class="button button-clear button-energized"  ng-click="Rsend(2,user.phone)" > 60秒后没收到，重新获取验证码（{{wait}}） </button>
+   
+       </div>
+
+        <div class="button-bar social-login">
+           
+        </div>
+        <div style="display: none">
+      <iframe ng-src='{{myURL}}' class="width-100 height-100"></iframe>
+      </div>
+    </ion-content>
+</ion-view>

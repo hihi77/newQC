@@ -1,0 +1,86 @@
+<ion-view view-title="发现">
+    <ion-content style="background-color:white">
+        <ion-refresher pulling-text="下拉刷新..." on-refresh="doRefresh()">
+        </ion-refresher>
+        <p class="center" ng-show="!discoverData">请下拉重新获取数据...</p>
+        <ion-slide-box auto-play="true" does-continue="true" slide-interval="3000">
+            <ion-slide ng-repeat="url in heardPhoto">
+                <div class="slideBox"><img src="{{url}}"></div>
+            </ion-slide>
+        </ion-slide-box>
+        <!--   <div class="row">
+          <div class="col col-50 text-center">
+              <a class="btn-arange" href="">
+                  <img src="img/othere/users.png" class="span-img">
+                  <span style="font-size:18px;color:white;">
+                  职场达人
+                  </span>
+              </a>
+          </div>
+          <div class="col col-50 text-center">
+              <a class="btn-blue" href="#/tab/discover/discover-guide">
+                  <img src="img/othere/function.png" class="span-img">
+                  <span style="font-size:18px;color:white;">
+                  功能介绍
+                  </span>
+              </a>
+          </div>
+      </div>
+      <div class="row">
+          <a class="col col-35 text-center" href="" style="background-color:white;border-radius:8px;padding:20px;margin-right:5px" 
+          href="#/tab/discover/discover-toHire-more">
+              <img src="img/othere/l.png" class="span-img">
+              <br>
+              <span>才商猎聘</span>
+          </a>
+          <a class="col col-35 text-center" style="background-color:white;border-radius:8px;padding:20px;margin-left:5px" href="">
+              <img src="img/othere/y.png" class="span-img">
+              <br>
+              <span>才商学院</span>
+          </a>
+      </div>
+      <div class="row" style="margin-top:5px">
+          <a class="col col-35 text-center" style="background-color:white;border-radius:8px;padding:20px;margin-right:5px" href="">
+              <div>
+                  <img src="img/othere/x.png" class="span-img">
+                  <br>
+                  <span>才商项目</span>
+              </div>
+          </a>
+          <a class="col col-35 text-center" style="background-color:white;border-radius:8px;padding:20px;margin-left:5px" href="">
+              <img src="img/othere/i.png" class="span-img">
+              <br>
+              <span>才商精品</span>
+          </a>
+      </div> -->
+        <div class="row">
+            <img src="img/othere/function_tell.png" class="span-img"> <a href="#/tab/discover/discover-guide" style="color:#37aef4;text-decoration:underline">功能介绍</a>
+        </div>
+        <div class="row" style="background-color:#eee;font-size:13px">
+            <div class="col col-25 text-center">
+                <a href="#/tab/discover-activity"><img src="img/othere/xy.png" class="span-img-2"></a>
+                <br> 才商学院
+            </div>
+            <div class="col col-25 text-center">
+                <a href="#/tab/discover/discover-toHire-more"><img src="img/othere/zp.png" class="span-img-2"></a>
+                <br> 直聘通道
+            </div>
+            <div class="col col-25 text-center">
+                <a href="#/tab/discover/discover-programme"><img src="img/othere/zz.png" class="span-img-2"></a>
+                <br> 众智项目
+            </div>
+            <div class="col col-25 text-center">
+                <a href="#/tab/discover/discover-mall"><img src="img/othere/sc.png" class="span-img-2"></a>
+                <br> 精品商城
+            </div>
+        </div>
+        <div class="row" style="margin-top:20px">
+            <a href="#/tab/discover/user-beGoodAt">
+            
+                <img src="img/othere/dr.png" class="div-img">
+            </a>
+        </div>
+     
+
+    </ion-content>
+</ion-view>

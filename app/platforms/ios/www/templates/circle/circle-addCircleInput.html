@@ -1,0 +1,31 @@
+<ion-view view-title="填写信息" hide-tabs="true">
+  <ion-content>
+    <div class="signUp-info">
+      <div class="input" ng-repeat="noe in registrationAdditional|filter:'手机'" ng-init="initData(noe)">
+        <form name="form">
+        <p class="type">{{noe.text}}</p>
+        <p class="inputBox"><input name="phone" type="tel" required ng-minlength="11" ng-maxlength="11" placeholder="请输入{{noe.text}}" ng-model="noe.value" class="init" ng-disabled="phoneDisable"><li ng-show="checkPass&&noe.text == '手机'">验证通过</li></p>
+        <p ng-if="(!sverifyHide)&&noe.text == '手机'"><button class="button blue" ng-disabled="form.$invalid" ng-click="sendMS(noe.value)" >发送验证码</button></p>
+        <p ng-if="(verifyShow)&&noe.text == '手机'&&!checkPass">已发送到该手机,请在下方输入验证码</p>
+        <p ng-if="verifyShow&&noe.text == '手机'&&!checkPass"class="inputBox"><input  ng-blur="checkVerify(verifyNumber)" placeholder="请输入验证码" ng-model="verifyNumber" class="init"></p>
+        </form>
+      </div>
+      <div class="input" ng-repeat="noe in registrationAdditional|filter:'!是否需要上传认证'|filter:'!手机'" ng-init="initData(noe)">
+        <p class="type">{{noe.text}}</p>
+        <p class="inputBox"><input placeholder="请输入{{noe.text}}" ng-model="noe.value" class="init"></p>
+      </div>
+      <div class="activityDetailed" ng-repeat="noe in registrationAdditional|filter:'是否需要上传认证'">
+        <h1 class="title">上传证件</h1>
+        <div class="detailedBox">
+          <div class="upload-photo-control" ng-model="save" upload-photo-control>
+          </div>
+        </div>
+      </div>
+      <div class="protocol">
+        <i class="ion-android-checkbox-outline" ng-init="checkbox=true"  ng-click="checkbox=!checkbox" ng-class="checkbox?'ion-android-checkbox-outline':'ion-android-checkbox-outline-blank'"></i>
+        <a href="#">同意《才商连联软件服务协议》</a>
+      </div>
+      <button class="button blue" ng-click="submitSignUp()" ng-disabled="!checkbox">加入</button>
+    </div>
+  </ion-content>
+</ion-view>

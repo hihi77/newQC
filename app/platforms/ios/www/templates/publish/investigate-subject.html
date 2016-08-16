@@ -1,0 +1,50 @@
+<ion-modal-view hide-tabs="true" >
+  <ion-header-bar align-title="center" class="bar-positive">
+    <div class="buttons">
+      <button class="button" ng-click="modal.hide()">取消</button>
+    </div>
+    <h1 class="title" ng-bind="'第'+(sub+1)+'题'"></h1>
+    <div class="buttons">
+      <button class="button buttons-right" ng-click="nextQuestion()">保存</button>
+    </div>
+  </ion-header-bar>
+  <ion-content style="background: #fff;">
+    <!--中间内容-->
+    <div class="questionBox">
+      <div class="optionBox">
+        <p class="option {{nowData.type=='单选'?'hover':''}}" ng-click="nowData.type='单选'">单选</p>
+        <p class="option {{nowData.type=='多选'?'hover':''}}" ng-click="nowData.type='多选'">多选</p>
+        <p class="option {{nowData.type=='问答'?'hover':''}}" ng-click="nowData.type='问答'">问答</p>
+      </div>
+    </div>
+    <div class="question-input" ng-show="nowData.type!='问答'">
+      <div class="input-box">
+        {{+sub+1}}.
+        <label class="input" style="width: 90%; display: inline-block;">
+          <input class="init" placeholder="请输入题目" ng-model="nowData.question">
+        </label>
+      </div>
+      <div class="input-box" ng-repeat="text in nowData.option">
+        {{text}}
+        <i class="ion-minus icon-right" ng-click="removeOption(text)"></i>
+      </div>
+      <div class="input-box">
+        <label class="input">
+          <input class="init" ng-model="questionScope.nowOptionText" ng-blur="addOption()" placeholder="填选项处：有">
+        </label>
+      </div>
+      <div>
+        <button class="button button-block button-clear icon ion-plus" style="margin: 0;line-height: 44px;font-size: 16px;border-radius: 0" ng-click="addOption()"></button>
+      </div>
+    </div>
+    <div class="question-input question-textarea" ng-show="nowData.type=='问答'">
+      {{+sub+1}}.请输入题目
+      <div class="input-box">
+        <textarea class="init" placeholder="请输入" ng-model="$parent.nowData.question"></textarea>
+      </div>
+    </div>
+  </ion-content>
+  <ion-footer-bar style="padding: 0">
+    <button class="button button-block button-assertive" style="margin: 0;line-height: 44px;font-size: 16px;border-radius: 0" ng-click="deleteQuestion()">删除</button>
+  </ion-footer-bar>
+</ion-modal-view>

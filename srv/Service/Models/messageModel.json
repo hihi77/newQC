@@ -1,0 +1,27 @@
+{
+  "id" : "1464142539986",
+  "members" : [
+    {
+      "id" : "1464142539986",
+      "members" : [
+        "18650809701",
+        "159806035177"
+      ],
+      "isFromMe" : 0,
+      "userId" : "159806035177",
+      "type" : "toPerson",
+      "name" : "apple",
+      "pic" : null,
+      "lastMessage" : {},
+      "noReadMessages" : 0,
+      "showHints" : true,
+      "isTop" : 0,
+      "messageBadge" : 0
+    }
+  ],
+  "message" : [],
+  "18650809701" : 0,
+  "159806035177" : 1
+}
+
+

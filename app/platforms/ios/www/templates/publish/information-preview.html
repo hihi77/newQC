@@ -1,0 +1,42 @@
+<ion-view view-title="信息" hide-tabs="true" >
+  <ion-content style="position: relative">
+    <ul class="information-list information-list-detailed">
+      <li class="list-item-information">
+        <div class="heardInfo">
+            <div class="photo"><img src="{{informationEphemeralData.creator.headUrl}}"></div>
+          <div class="info">
+            <p class="name">{{informationEphemeralData.creator.nickname}}</p>
+            <p class="time">0分钟前</p>
+          </div>
+        </div>
+        <p class="title ng-binding">{{informationEphemeralData['信息标题']}}</p>
+        <p class="text ng-binding">{{informationEphemeralData['信息详情'].text}}</p>
+        <div class="imageBox">
+          <p class="image" ng-repeat="image in (informationEphemeralData.images||informationEphemeralData['信息详情'].images)"><img src="{{image.src}}"></p>
+        </div>
+        <div class="message">
+          <p class="text-message">{{informationEphemeralData.browseNumber||0}}人看过 {{informationEphemeralData.alikeNumber||0}}个赞</p>
+          <div class="imageBox">
+            <p class="assist"><i class="ion-thumbsup"></i></p>
+            <div>
+              <p class="img" ng-repeat="url in informationEphemeralData.heardPhotos"><img src="{{url}}"></p>
+            </div>
+            <div class="more ng-hide" ng-click="moreBoxShow=!moreBoxShow">
+              <i class="ion-more"></i>
+              <div class="moreBox ng-hide" ng-show="moreBoxShow">
+                <p class="more-button">点赞</p>
+                <p class="more-button">评论</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <ul class="comment-list">
+      <li class="comment-count">{{informationEphemeralData.commentNumber||0}}条评论</li>
+    </ul>
+  </ion-content>
+  <ion-footer-bar style="background: #FF9800" ng-click="publishEvent()">
+    <p style="line-height: 34px;text-align: center;color: #fff;width: 100%;font-size: 16px">发布</p>
+  </ion-footer-bar>
+</ion-view>

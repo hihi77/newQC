@@ -1,0 +1,34 @@
+<!--
+发布按钮事件的浮层
+-->
+<div class="publishLayer ng-hide" ng-show="publishLayerShow">
+  <div class="publishFunctionBox" ng-click="publishLayerHideEvent()">
+    <div class="close circleIcon" ng-show="publishLayerEs" ng-click="publishLayerCloseEvent()">
+      <i class="ion-close-round icon"></i>
+    </div>
+    <a href="#/tab/publish-toHire-publish-new">
+      <div class="circleIcon transition_3 toHireButton {{publishLayerEs?'':'initTranslate'}}">
+        <i class="icon ion-android-wifi"></i>
+        <p class="text">才聘</p>
+      </div>
+    </a>
+    <a href="#/newActivity/index">
+      <div class="circleIcon transition_3 activityButton {{publishLayerEs?'':'initTranslate'}}">
+        <i class="icon ion-ios-pulse-strong"></i>
+        <p class="text">活动</p>
+      </div>
+    </a>
+    <a href="#/tab/publish-information-publish-new">
+      <div class="circleIcon transition_3 informationButton {{publishLayerEs?'':'initTranslate'}}">
+        <i class="icon ion-eye"></i>
+        <p class="text">信息</p>
+      </div>
+    </a>
+    <a href="#/tab/publish-investigate-publish-new">
+      <div class="circleIcon transition_3 investigateButton {{publishLayerEs?'':'initTranslate'}}">
+        <i class="icon ion-ios-color-wand"></i>
+        <p class="text">调查</p>
+      </div>
+    </a>
+  </div>
+</div>

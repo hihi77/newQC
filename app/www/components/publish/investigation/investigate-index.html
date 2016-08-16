@@ -1,0 +1,113 @@
+<!--<a><li class="itme-A">-->
+
+<!--</li></a>-->
+<ion-view view-title="调查" hide-tabs="true" hide-back-button="true">
+
+  <ion-content>
+    <!--中间内容-->
+    <ul class="list-style-A list-style-B">
+      <a href="#/tab/publish-investigate/selectType">
+        <li class="itme-A">
+          选择类型
+          <p class="select-text textOverHide" ng-show="investigateEphemeralData['选择类型']?true:false">
+            {{investigateEphemeralData["选择类型"].join(',')}}</p>
+          <i class="ion-chevron-right size-12 icon-right" ng-if="true"></i>
+        </li>
+      </a>
+      <a>
+        <li class="itme-A">
+          填写标题
+          <label class="info-input">
+            <input class="init" placeholder="请输入标题" maxlength="30" ng-model="investigateEphemeralData['标题']" name="标题">
+          </label>
+        </li>
+      </a>
+    
+      <a>
+        <li class="itme-A">
+          问卷份额
+          <p class="award">
+            <label class="number">
+              <input class="init" placeholder="0" ng-model="investigateEphemeralData['问卷份数']" type="tel">
+            </label>
+            份
+          </p>
+          <label class="info-select">
+            <p class="text">{{investigateEphemeralData['问卷份数']||'请选择'}}</p>
+            <i class="ion-arrow-down-b  icon-right"></i>
+            <select class="init" ng-model="investigateEphemeralData['问卷份数']">
+              <option ng-repeat="data in PHR">{{data}}</option>
+            </select>
+          </label>
+        </li>
+      </a>
+      <a>
+        <li class="itme-A">
+          问卷赏金
+          <p class="award">
+            <label class="number">
+              <input class="init" placeholder="0" ng-model="investigateEphemeralData['问卷赏金']" type="tel">
+            </label>
+            元
+          </p>
+        </li>
+      </a>
+      <a>
+        <li class="itme-A">
+          报告查看权限
+          <label class="info-select">
+            <p class="text">{{investigateEphemeralData['报告查看权限']||'请选择'}}</p>
+            <i class="ion-arrow-down-b  icon-right"></i>
+            <select class="init" ng-model="investigateEphemeralData['报告查看权限']">
+              <option ng-repeat="data in authoritys">{{data}}</option>
+            </select>
+          </label>
+        </li>
+      </a>
+    </ul>
+<div
+ class="item item-input">
+  <span class="input-label">截止日期</span>
+  <input type = "date" ng-model="investigateEphemeralData['截止日期']" />
+</div>
+
+
+    <div class="activityDetailed">
+      <h1 class="title">问卷描述</h1>
+      <div class="detailedBox">
+        <div class="detailedText">
+          <textarea class="init" ng-model="investigateEphemeralData['问卷描述'].text" placeholder="{{investigateEphemeralData['问卷描述'].placeholder}}"></textarea>
+        </div>
+        <div class="upload-photo-control" upload-photo-control>
+        </div>
+      </div>
+    </div>
+    <div class="content  ionic-pseudo">
+      <div class="list" ng-repeat="question in investigateEphemeralData['问题']">
+        <div class="item item-divider item-icon-right">
+          {{($index+1)+'.'+question.question+'('+question.type+')'}}
+          <i class="icon ion-compose size-16" ng-click="addQuestion($index)"></i>
+        </div>
+        <a class="item" ng-repeat="option in question.option" ng-bind="option">
+        </a>
+      </div>
+    </div>
+    <button class="button button-block button-light" ng-click="addQuestion(investigateEphemeralData['问题'].length)">添加一个题目</button>
+  </ion-content>
+ 
+
+
+  <ion-footer-bar style="background: none">
+    <div class="buttonBox">
+     
+      
+ <a class="button button-left"  ng-click="backClick(1)"  >
+               取消
+            </a>
+
+         <a class="button button-right"  ng-click="publishInfo()">
+           发布
+            </a>
+    </div>
+  </ion-footer-bar>
+</ion-view>

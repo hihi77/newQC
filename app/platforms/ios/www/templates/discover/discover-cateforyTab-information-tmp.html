@@ -1,0 +1,45 @@
+<ul class="information-list">
+  <li class="animated {{data.class}}" ng-repeat="data in nowData|orderBy:'createTime':true">
+    <a href="#/tab/{{pageMarking}}-information-detailed/{{data.id}}/{{id}}" class="list-item-information" style="display: block;"><div class="heardInfo">
+      <div class="photo"><img src="{{data.creator.headUrl||default_logo}}" img-auto></div>
+      <div class="info">
+        <!--<p class="name" ng-bind="data.nickname"></p>-->
+        <p class="title ng-binding" ng-bind="data.title"></p>
+        <p class="time" ng-bind="data.createTime|date:'MM月dd日 HH:mm'"></p>
+      </div>
+    </div>
+
+    <p class="text ng-binding" ng-bind="data.des.text"></p>
+    <div class="imageBox">
+      <p class="image" ng-repeat="image in data.des.images"><img ng-src="{{image.tsrc}}" img-auto></p>
+    </div>
+    <div class="component">
+      <p class="component-noe left">
+        <i class="ion-eye icon"></i>
+        {{data.browseNumber||0}}
+      </p>
+      <p class="component-noe right">
+        <i class="ion-chatbubble-working icon"></i>
+        {{data.commentNumber||0}}
+      </p>
+      <p class="component-noe right">
+        <i class="ion-thumbsup icon"></i>
+        {{data.alikeNumber||0}}
+      </p>
+    </div></a>
+    <div class="item tabs tabs-secondary tabs-icon-left ng-hide">
+      <a class="tab-item" href="#/tab/{{pageMarking}}-information-{{pageMarking}}-{{data.id}}">
+        编辑
+        <i class="icon ion-edit "></i>
+      </a>
+      <a class="tab-item" href="#">
+        查看结果
+        <i class="icon ion-eye "></i>
+      </a>
+      <a class="tab-item"  ng-click="deleteItem($index,data.id)">
+        删除
+        <i class="icon ion-close-round "></i>
+      </a>
+    </div>
+  </li>
+</ul>

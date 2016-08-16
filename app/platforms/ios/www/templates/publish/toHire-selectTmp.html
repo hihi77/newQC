@@ -1,0 +1,39 @@
+<ion-view view-title="选择{{config.title}}" hide-tabs="true" >
+    <ion-content>
+        <!--此模板页第一次是选择地区 所以名字是地区模板页-->
+        <div class="selectArea">
+            <div class="selectArea-heard-text">
+                <p class="left-text">已选{{config.title}}</p>
+                <p class="right-text">{{surplus}}/3</p>
+            </div>
+            <div class="selectArea-selected">
+                <div class="noe" ng-repeat="noe in selectData"  ng-click="removeNoe(noe.city,noe.county)">
+                    <p class="noeText textOverHide">{{noe.county}}</p>
+                    <i class="icon ion-android-close "></i>
+                </div>
+            </div>
+            <div class="areaBox">
+                <div class="city">
+                    <ion-scroll class="">
+                        <ul class="city-list">
+                            <li class="city-item area-item {{$odd?'odd':''}}"  ng-repeat="(key,value) in citys" ng-click="cityClick($index,key)">
+                                <p class="noeText textOverHide">{{key}}</p>
+                                <i class="ion-chevron-right icon" ng-show="$index==cityIndex"></i>
+                            </li>
+                        </ul>
+                    </ion-scroll>
+                </div>
+                <div class="county">
+                    <ion-scroll class="set-ion-scroll-height">
+                        <ul class="county-list">
+                            <li class="county-item area-item {{$odd?'odd':''}}"  ng-repeat="county in countys"  ng-click="countyClick($index,county)">
+                                <p class="noeText textOverHide">{{county}}</p>
+                                <i class="ion-checkmark icon cityClick" ng-show="countyShow['{{nowKey+county}}']"></i>
+                            </li>
+                        </ul>
+                    </ion-scroll>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

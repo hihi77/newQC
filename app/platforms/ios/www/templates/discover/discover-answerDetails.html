@@ -1,0 +1,20 @@
+<ion-view title="答案详情">
+  <ion-content>
+    <div class="bar bar-light">
+      <h1 class="title">一共收到有效问卷{{maxLength}}份</h1>
+    </div>
+    <div class="content has-header ionic-pseudo">
+
+      <div class="list" ng-repeat="data in questions" ng-init="data.index=$index">
+        <div class="item item-divider">
+          {{$index+1}}.{{data.question}}
+        </div>
+        <a class="item" href="#" ng-init="data.result=res[data.index]" ng-repeat="noe in (data.option.length?data.option:res[data.index])">
+          <p class="left-text">{{noe}}</p>
+          <p class="right-text" ng-if="data.type!='问答'">{{data.result[$index]}}票</p>
+          <div style="width: 100%;float: left;overflow: hidden"><p class="bottom-box" ng-if="data.type!='问答'" style="width:{{(data.result[$index]/maxLength*100).toFixed(2)}}%"></p></div>
+        </a>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

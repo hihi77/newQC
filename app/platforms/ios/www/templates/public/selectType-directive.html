@@ -1,0 +1,17 @@
+<div class="selectArea">
+    <div class="selectArea-heard-text">
+        <p class="left-text ng-binding">{{selectTypeText}}</p>
+        <p class="right-text ng-binding" ng-show="hide">0/3</p>
+    </div>
+    <div class="selectArea-selected">
+        <div class="noe" ng-repeat="noe in selectData" ng-click="removeNoe(noe)">
+            <p class="noeText textOverHide">{{noe}}</p>
+            <i class="icon ion-android-close "></i>
+        </div>
+    </div>
+    <div class="selectTypeList">
+        <ul class="selectTypeList-ul">
+            <li class="selectTypeList-li {{elementShow[data]?'hover':''}}" ng-repeat="data in typeDatas" ng-click="addNoe(data,this)">{{data}}</li>
+        </ul>
+    </div>
+</div>

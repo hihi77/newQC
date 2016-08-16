@@ -1,0 +1,42 @@
+
+
+   <div class="modal"   >
+
+<div class="circleLayer-tool ng-show" >
+
+  <div  class="icon-center hover transition_3"  ng-click="closeModal(1)"><i
+    class="ion-plus-round "></i></div>
+  <div class="buttonBox" ng-show="true" ng-click="closeModal()">
+    <a href="#/tab/{{pageMarking}}-circle-message/{{circleStateParams.id}}"  ng-click="setTab()">
+      <div class="circle-button ">
+        群聊
+        <p class="icon groupChatButton"><i class="ion-chatbubbles"></i></p>
+      </div>
+    </a>
+    <a href="#/tab/{{pageMarking}}-toHire-circle-{{circleStateParams.id}}">
+      <div class="circle-button">
+        直聘
+        <p class="icon  toHireButton"><i class="ion-android-wifi"></i></p>
+      </div>
+    </a>
+    <a href="#/tab/publish-investigate-circle-{{circleStateParams.id}}">
+      <div class="circle-button">
+        调查
+        <p class="icon   investigateButton"><i class="ion-ios-color-wand"></i></p>
+      </div>
+    </a>
+    <a href="#/tab/publish-activity-circle-{{circleStateParams.id}}">
+      <div class="circle-button ">
+        活动
+        <p class="icon  activityButton"><i class="ion-ios-pulse-strong"></i></p>
+      </div>
+    </a>
+    <a href="#/tab/{{pageMarking}}-information-circle-{{circleStateParams.id}}">
+      <div class="circle-button ">
+        信息
+        <p class="icon  informationButton"><i class="ion-eye"></i></p>
+      </div>
+    </a>
+  </div>
+</div>
+  </div>

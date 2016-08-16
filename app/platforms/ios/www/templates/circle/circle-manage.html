@@ -1,0 +1,65 @@
+<ion-view title="圈子管理" hide-tabs="true">
+  <ion-content>
+    <div class="manage">
+      <div class="manageBlock">
+          <div class="block" ng-show="(!manager)&&(!isMember)">
+         <a href="#/tab/{{pageMarking}}-addCircleInput/{{id}}/{{name}}"><div class="box">
+            <p class="icon"><i class="ion-person-add"></i></p>
+            <p class="text">申请加入</p>
+          </div></a>
+        </div>
+
+        <div class="block" ng-show="manager">
+          <a href="#/tab/{{pageMarking}}-addAContact/{{name}}/{{id}}"><div class="box">
+            <p class="icon"><i class="ion-person-add"></i></p>
+            <p class="text">添加成员</p>
+          </div></a>
+        </div>
+        <div class="block" ng-show="manager">
+          <a href="#/tab/{{pageMarking}}-examineAndVerify/{{id}}"><div class="box">
+            <p class="icon"><i class="ion-ios-search-strong"></i></p>
+            <p class="text">成员审核</p>
+          </div></a>
+        </div>
+        <div class="block" ng-show="isMember">
+          <a href="#/tab/{{pageMarking}}-member/{{id}}"><div class="box">
+            <p class="icon"><i class="ion-person-stalker"></i></p>
+            <p class="text">圈子成员</p>
+          </div></a>
+        </div>
+        <div class="block" ng-show="(!manager)&&isMember">
+          <a ng-click="leaveCircle()"><div class="box">
+            <p class="icon"><i class="ion-android-exit"></i></p>
+            <p class="text">退出圈子</p>
+          </div></a>
+        </div>
+        <div class="block" ng-show="manager">
+          <a href="#/tab/{{pageMarking}}-notice/{{id}}"><div class="box">
+            <p class="icon"><i class="ion-chatboxes"></i></p>
+            <p class="text">群发通知</p>
+          </div></a>
+        </div>
+        <div class="block" ng-show="manager">
+        <a href="#/tab/{{pageMarking}}-addCircle/{{id}}">
+        <div class="box">
+          <p class="icon"><i class="ion-android-create"></i></p>
+          <p class="text">圈子编辑</p>
+        </div></a>
+      </div>
+        <div class="block" ng-show="manager">
+          <a ng-click="deleteCircle()"><div class="box">
+            <p class="icon"><i class="ion-android-delete"></i></p>
+            <p class="text">删除圈子</p>
+          </div></a>
+        </div>
+            <div class="block" ng-show="manager">
+          <a ng-click="encodeCircle()"><div class="box">
+            <p class="icon"><i class="ion-ios-barcode"></i></p>
+            <p class="text">圈子二维码</p>
+          </div></a>
+    
+        </div>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,15 @@
+<ion-view view-title="圈子邀请" hide-tabs="true">
+    <ion-content>
+        <ion-list>
+            <a class="item item-avatar item-button-right" ng-repeat="data in circleInvitation" ng-href="#/tab/chat/user-userOtherInfo/{{data.from.userId}}">
+
+                <img src="{{data.from.headUrl||default_headUrl}}">
+                <h2>{{data.from.nickname}}</h2>
+                <p>{{data.message}}</p>
+                <button ng-show="data.status==0||data.status==2" class="button button-positive icon-left ion-plus size-8" style="font-size:15px" ng-click="agreeCircleInvitation($index,data,$event);$event.stopPropagation();">同意</button>
+                <p ng-show="data.status==1">已同意</p>
+
+            </a>
+        </ion-list>
+    </ion-content>
+</ion-view>

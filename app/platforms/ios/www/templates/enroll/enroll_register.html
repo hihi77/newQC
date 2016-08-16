@@ -1,0 +1,43 @@
+<ion-view view-title="新用户注册" align-title="left">
+
+    <ion-content >
+
+
+
+        <!--<form name ="postsForm">
+               <div class="item item-input">
+                        <span class="input-label">手机号＋86</span>
+                        <input  placeholder="输入短信验证手机号" type="tel" name="ninpt" ng-model="$parent.user.phone"  required
+                           ng-minlength="11" ng-maxlength="11">
+                  </div>
+                 &lt;!&ndash;  <span class="glyphicon glyphicon-ok form-control-feedback" ng-show="postsForm.ninpt.$error&&!postsForm.ninpt.$dirty">输入手机号有误</span> &ndash;&gt;
+               </form>
+         <button ng-click="CheckbyPhoneNuber()" class="button button-full button-positive"  ng-disabled="postsForm.$invalid"
+                   >下一步</button>-->
+
+        <div align="center">
+            <img ng-src="./img/logoT.png" style="height:80px;width: 80px">
+        </div>
+
+        <div class="content">
+            <form class="list list-inset" name="postsForm">
+                <label class="item item-input">
+                    <i class="icon ion-iphone placeholder-icon"></i>
+                    <input placeholder="输入注册手机号" name="phone" type="tel" ng-model="user.phone" required ng-minlength="11" ng-maxlength="11">
+                </label>
+            </form>
+            <div class="padding">
+                <button ng-click="CheckbyPhoneNuber()" class="button button-full button-positive"  ng-disabled="postsForm.$invalid"
+                >注册
+                </button>
+            </div>
+        </div>
+<!--        <div>
+
+            　<p style="font-size:0.875em;" class="padding">我已阅读并同意 <a style="text-decoration:underline;" href=""  >《才商连联协议》</a> </p>
+
+        </div>-->
+
+
+    </ion-content>
+</ion-view>
